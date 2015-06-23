@@ -1,6 +1,6 @@
 //	Typography
 
-.gigantic, .huge, .large, .bigger, .big, 
+.gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
   color: $accent-color
   font-weight: bold
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6
   font-size: 42px
   line-height: 1.14
 
-.bigger, h3 
+.bigger, h3
   font-size: 26px
   line-height: 1.38
 
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6
   font-size: 22px
   line-height: 1.38
 
-.small, small 
+.small, small
   font-size: 10px
   line-height: 1.2
 
@@ -57,7 +57,7 @@ a
   color: $link-color
   text-decoration: none
   outline: 0
-  
+
 a:hover, a:focus
   color: lighten($link-color, 20%)
 
@@ -67,22 +67,26 @@ a:hover, a:focus
 
 ::selection
   background: $selection-color
-  
+
 ::-moz-selection
   background: $selection-color
-  
+
 img::selection
   background: transparent
-  
+
 img::-moz-selection
   background: transparent
-  
+
 body
   -webkit-tap-highlight-color: $selection-color
 
 
 
 // Basic Styles
+
+html,
+body
+  min-height: 100vh
 
 body
   background: $bg-color
