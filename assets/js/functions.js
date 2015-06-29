@@ -5,3 +5,8 @@ $(window).scroll(function(){
   $('.video-strip').css('background-position', 'center -'+ wScroll +'px');
 
 });
+
+
+$(function(){
+  mentoringBubble();
+});

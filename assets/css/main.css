@@ -651,6 +651,65 @@ section.youtube {
         -ms-transform: scale(1);
             transform: scale(1); } }
 
+section.mentoring {
+  background-image: url(../img/mentoring-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  overflow: hidden; }
+  section.mentoring .home-cta {
+    color: #2cb4db; }
+  section.mentoring .home-lead {
+    margin-top: 250px; }
+  section.mentoring .face-wrap {
+    min-width: 300px;
+    position: relative; }
+  section.mentoring .faces {
+    list-style: none;
+    margin: -50px 0px;
+    height: calc(100% - 100px);
+    position: absolute; }
+  section.mentoring .face {
+    width: 85px;
+    height: 85px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 35px;
+    cursor: pointer; }
+  section.mentoring .bubble {
+    position: absolute;
+    width: 300px;
+    bottom: 50%;
+    left: 100%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 40px 40px 40px 4px;
+    padding: 20px;
+    font-style: italic;
+    font-size: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.19, 0.68, 0.31, 1.44);
+    pointer-events: none; }
+  section.mentoring .face:hover .bubble {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+    section.mentoring .face:hover .bubble cite {
+      display: block;
+      text-align: right; }
+
 .home-wrap {
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -1,0 +1,64 @@
+section.mentoring
+  background:
+    image: url(../img/mentoring-bg.jpg)
+    position: center
+    size: cover
+  color: white
+  overflow: hidden
+
+  .home-cta
+    color: #2cb4db
+
+  .home-lead
+    margin-top: 250px
+
+  .face-wrap
+    min-width: 300px
+    position: relative
+
+  .faces
+    list-style: none
+    margin: -50px 0px
+    height: calc(100% - 100px)
+    position: absolute
+
+  .face
+    width: 85px
+    height: 85px
+    background:
+      size: cover
+      position: center
+    border-radius: 50%
+    position: relative
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.5)
+    margin-bottom: 35px
+    cursor: pointer
+
+  .bubble
+    position: absolute
+    width: 300px
+    bottom: 50%
+    left: 100%
+    margin-left: 5px
+    margin-bottom: 5px
+    background: rgba(0,0,0,0.8)
+    border-radius: 40px 40px 40px 4px
+    padding: 20px
+    font:
+      style: italic
+      size: 16px
+    border: 3px solid rgba(255,255,255,0.9)
+    transform-origin: bottom left
+    transform: scale(0)
+    opacity: 0
+    transition: all 0.2s cubic-bezier(0.19, 0.68, 0.31, 1.44)
+    pointer-events: none
+
+  .face:hover .bubble
+    transform: scale(1)
+    opacity: 1
+
+
+    cite
+      display: block
+      text-align: right

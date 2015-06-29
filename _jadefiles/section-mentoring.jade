@@ -1,0 +1,22 @@
+mixin face(url, words, cite)
+  li.face(style="background-image:url(#{url});")
+    .bubble
+      p #{words}
+      cite — #{cite}
+
+section.mentoring
+  .flex.flex--center
+    .col-1.face-wrap
+      ul.faces
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+        +face("http://fillmurray.com/85/85", "I could've spent hours with Travis peeling back the layers of his experience to understand more about his perspective, his experience, and what a typical day might be like in his field..", "Nathan Jacobs")
+          
+    
+    .col-1
+      p.home-lead.outdented ...Mentoring people like you...
+      a(href="").home-cta Schedule a Call
+      
