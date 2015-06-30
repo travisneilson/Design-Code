@@ -15,6 +15,12 @@ section.mentoring
   .face-wrap
     min-width: 300px
     position: relative
+    top: 500px
+    left: 0px
+    transition: all 0.3s ease-in-out
+
+    &.launched
+      top: 0px
 
   .faces
     list-style: none
@@ -32,7 +38,16 @@ section.mentoring
     position: relative
     box-shadow: 0px 3px 8px rgba(0,0,0,0.5)
     margin-bottom: 35px
+    margin-right: 35px
     cursor: pointer
+    transition: all 1s ease-in-out
+    top: 0
+
+    &.back-btn
+      background: #fff url(../img/back-icon.svg) center no-repeat
+      background-size: 15px 26px
+      display: none
+
 
   .bubble
     position: absolute
@@ -54,11 +69,41 @@ section.mentoring
     transition: all 0.2s cubic-bezier(0.19, 0.68, 0.31, 1.44)
     pointer-events: none
 
-  .face:hover .bubble
-    transform: scale(1)
-    opacity: 1
+  .face.has-open-bubble
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.5), 0px 0px 0px 3px white
+
+    .bubble
+      transform: scale(1)
+      opacity: 1
 
 
     cite
       display: block
       text-align: right
+
+
+@media (max-width: 640px)
+  section.mentoring
+
+    .faces
+      position: relative
+      width: 120px * 7
+      margin: 270px 0 0
+      padding: 0
+
+    .face
+      display: inline-block
+      top: 240px
+      position: static
+
+      &.back-btn
+        display: inline-block
+
+    .home-lead
+      margin-top: 30px
+
+    .bubble
+      bottom: 100%
+      left: 0px
+      width: 300px
+      box-sizing: border-box
