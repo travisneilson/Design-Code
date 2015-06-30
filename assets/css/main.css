@@ -805,6 +805,10 @@ section.mentoring {
   line-height: 1.1; }
   .home-lead.outdented {
     text-indent: -0.75em; }
-    @media (max-width: 640px) {
-      .home-lead.outdented {
-        text-indent: 0; } }
+
+@media (max-width: 640px) {
+  .home-lead {
+    text-align: center;
+    text-indent: 0; }
+    section.about .home-lead {
+      text-align: left; } }
