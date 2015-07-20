@@ -427,15 +427,6 @@ td, th {
   font-size: 10px;
   line-height: 1.2; }
 
-.lead {
-  line-height: 1.1;
-  font-size: 36px; }
-  .lead.outdented {
-    text-indent: -0.8em; }
-    @media (max-width: 640px) {
-      .lead.outdented {
-        text-indent: 0; } }
-
 p {
   margin: 0 0 20px 0; }
 
@@ -724,6 +715,82 @@ section.youtube {
         section.youtube .col-1:last-child {
           padding: 0px 20px 50px; } }
 
+section.mentoring {
+  background-image: url(../img/mentoring-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden; }
+  section.mentoring .home-cta {
+    color: #2cb4db; }
+  section.mentoring .home-lead {
+    margin-top: 250px; }
+  section.mentoring .faces {
+    list-style: none;
+    margin: -50px 0;
+    height: calc(100% + 100px);
+    padding: 0;
+    position: relative;
+    top: 800px;
+    transition: all 0.3s ease-in-out; }
+    section.mentoring .faces.launched {
+      top: 0px; }
+  section.mentoring .face {
+    height: 80px;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 35px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+    cursor: pointer; }
+    section.mentoring .face.back-btn {
+      background: white url(../img/back-icon.svg) center no-repeat;
+      background-size: 15px 26px;
+      display: none; }
+  section.mentoring .bubble {
+    opacity: 0;
+    position: absolute;
+    left: 100%;
+    bottom: 50%;
+    margin-left: 10px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 40px 40px 40px 5px;
+    border: 3px solid white;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0, 0.53, 0.34, 1.5);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left; }
+  section.mentoring .face.has-bubble-open .bubble {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
+
+@media (max-width: 640px) {
+  section.mentoring .faces {
+    margin: 0;
+    width: 805px;
+    top: 230px;
+    left: 0px; }
+  section.mentoring .face {
+    display: inline-block;
+    margin-right: 35px; }
+    section.mentoring .face.back-btn {
+      display: inline-block; }
+  section.mentoring .bubble {
+    bottom: 100px;
+    left: 0px;
+    box-sizing: border-box;
+    margin-left: 0px; } }
+
 .home-wrap {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -781,3 +848,15 @@ section.youtube {
     width: auto; }
   .push-right {
     margin-left: 0; } }
+
+.home-lead {
+  line-height: 1.1;
+  font-size: 36px; }
+  .home-lead.outdented {
+    text-indent: -0.8em; }
+
+@media (max-width: 640px) {
+  .home-lead {
+    text-align: center; }
+    .home-lead.outdented {
+      text-indent: 0; } }
