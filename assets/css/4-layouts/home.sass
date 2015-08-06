@@ -1,9 +1,8 @@
 .home-wrap
-  display: flex
   min-height: 100vh
 
-  @media (max-width: 775px)
-    display: block
+  @media (min-width: 776px)
+    display: flex
 
 .home-sections
   flex: 1
@@ -65,7 +64,5 @@
   line-height: 1.1
 
   &.outdented
-    text-indent: -0.75em
-
-    @media (max-width: 640px)
-      text-indent: 0
+    @media (min-width: 641px)
+      text-indent: -0.75em
