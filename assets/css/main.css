@@ -887,6 +887,16 @@ section.vine {
     section.vine .description {
       margin-top: 50px; } }
 
+section.design .home-lead {
+  text-align: center;
+  font-size: 30px; }
+
+section.design .dribbble .home-cta {
+  color: #ea4c89; }
+
+section.design .behance .home-cta {
+  color: #1769ff; }
+
 .home-wrap {
   display: -webkit-flex;
   display: -ms-flexbox;

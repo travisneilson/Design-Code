@@ -1,0 +1,15 @@
+mixin design-img(img, link)
+  a(href="#(link)").design-img-link
+    img(src="img")
+    
+
+section.design
+  .flex.flex--space-around
+    .col-1.dribbble
+      p.home-lead ...Updating Dribbble...
+      +design-img('/assets/img/design-img/drib-1.jpg','https://dribbble.com/shots/854327-Midlife-Crisis')
+      a(href="https://www.youtube.com/user/DevTipsForDesigners").home-cta See more on Dribbble
+    
+    .col-1.behance
+      p.home-lead ...and behance...
+      a(href="https://www.youtube.com/user/DevTipsForDesigners").home-cta See more on Behance
