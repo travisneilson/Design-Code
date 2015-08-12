@@ -3,8 +3,9 @@ $(window).scroll(function() {
   var wScroll = $(window).scrollTop();
 
   $('.video-strip').css('background-position', 'center -'+ wScroll +'px');
-
-  startMentoring(wScroll);
+  
+  if ($('section.mentoring').offset().top - 200 < wScroll) {
+    startMentoring(wScroll);
 
 });
 
@@ -79,7 +80,7 @@ function mentoringNarrowStart() {
 }
 
 function startMentoring(wScroll) {
-  if ($('section.mentoring').offset().top - 200 < wScroll) {
+  
     $('.face-wrap').addClass('launched');
 
     setTimeout(function() {
@@ -91,7 +92,7 @@ function startMentoring(wScroll) {
         }
       }
     }, 300);
-  }
+  
 }
 
 $(window).resize(function() {
