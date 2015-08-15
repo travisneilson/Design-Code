@@ -19,33 +19,6 @@ var TN = function() {
     this.wScroll    = $(window).scrollTop();
 };
 
-
-/**
- * ===============================================
- *  Window Changes
- *  @(Description): Main Window Changes Functions
- * ===============================================
- */
-
-TN.prototype.windowScroll = function() {
-    $(window).scroll(function() {
-        this.wScroll = $(window).scrollTop();
-        this.youtubeScroll();
-        this.mentoringStart();
-        this.articlesStart();
-    });
-};
-
-TN.prototype.windowResize = function() {
-    $(window).resize(function() {
-        if($(window).width() > 640) {
-            this.mentoringWide();
-        } else {
-            this.mentoringNarrow();
-        }
-    });
-};
-
 /**
  * ================================================
  *  Youtube
@@ -77,7 +50,7 @@ TN.prototype.mentoringStart = function() {
         if($(window).width() > 640) {
             $('.faces').addClass('launched');
             if(!$('.face').hasClass('has-bubble-open')) {
-                setTimeout(function(){
+                setTimeout(function() {
                     $('.face:nth-child(3)').addClass('has-bubble-open');
                 }, 400);
             }
@@ -167,6 +140,34 @@ TN.prototype.articlesShow = function() {
 
 /**
  * ===============================================
+ *  Window Changes
+ *  @(Description): Main Window Changes Functions
+ * ===============================================
+ */
+
+TN.prototype.windowScroll = function() {
+    var fn = this;
+    window.onscroll = function() {
+        fn.wScroll = $(window).scrollTop();
+        fn.youtubeScroll();
+        fn.mentoringStart();
+        fn.articlesStart();
+    };
+};
+
+TN.prototype.windowResize = function() {
+    var fn = this;
+    window.onresize = function() {
+        if($(window).width() > 640) {
+            fn.mentoringWide();
+        } else {
+            fn.mentoringNarrow();
+        }
+    };
+};
+
+/**
+ * ===============================================
  *  Initialization
  *  @(Description): Main Functions Initialization
  * ===============================================
@@ -182,4 +183,3 @@ TN.prototype.init = function() {
 // Initialize App
 var app = new TN();
 app.init();
-// Keep on hacking ;)
