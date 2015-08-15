@@ -42,7 +42,7 @@ TN.prototype.youtubeScroll = function(self) {
  */
 
 TN.prototype.mentoring = function(self) {
-    self.mentoringBubble();
+    self.mentoringBubble(self);
 };
 
 TN.prototype.mentoringStart = function(self) {
@@ -55,7 +55,7 @@ TN.prototype.mentoringStart = function(self) {
                 }, 400);
             }
         } else {
-            self.mentoringNarrow();
+            self.mentoringNarrow(self);
         }
     }
 };
@@ -72,7 +72,7 @@ TN.prototype.mentoringBubble = function(self) {
             $this.parent().css('top', + vertMath +'px');
         } else {
             if($this.hasClass('back-btn')) {
-                self.mentoringNarrow();
+                self.mentoringNarrow(self);
             } else {
                 $this.parent().css('left', + horizMath +'px');
             }
@@ -122,7 +122,8 @@ TN.prototype.articlesStart = function(self) {
     if($('section.articles').offset().top - $(window).height()/2 < self.wScroll) {
         $('.article-thumb').each(function(i) {
             setTimeout(function() {
-                $('.article-thumb').eq(i).addClass('is-visible');
+                $('.article-thumb').eq(i)
+                                   .addClass('is-visible');
             }, 200 * i);
         });
     }
