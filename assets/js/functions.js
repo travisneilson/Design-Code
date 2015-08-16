@@ -1,8 +1,20 @@
 $(function() {
   mentoringBubbleClick();
   setInterval(function(){articleTada()}, 4000);
+  designBGStuff();
 
 });
+
+function designBGStuff() {
+  $('.design-img-link').hover(function(){
+    $(this).parent().parent().css('background-color', $(this).data('color'));
+  }, function(){
+    // off > revert the color
+    $(this).parent().parent().css('background-color', $(this).parent().parent().data('orig-color'));
+  });
+
+
+}
 
 function articleTada(){
   var randNum = Math.floor(Math.random() * $('.article-thumb').length) +1
