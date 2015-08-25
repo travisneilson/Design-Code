@@ -40,3 +40,5 @@ _site/
 ### Sass ###
 .sass-cache
 *.css.map
+
+assets/css/3-sections/header.sass
