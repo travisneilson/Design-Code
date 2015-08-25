@@ -118,4 +118,5 @@ $(window).resize(function() {
   } else {
     mentoringNarrowStart();
   }
+
 });
