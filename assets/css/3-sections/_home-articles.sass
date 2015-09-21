@@ -25,10 +25,12 @@ section.articles
     position: relative
     overflow: hidden
     opacity: 0
+    transform: translateX(-20px)
     transition: all 300ms ease-in-out
 
     &.is-visible
       opacity: 1
+      transform: translateX(0px)
 
     &.is-emph
       animation-name: tada
@@ -68,6 +70,7 @@ section.articles
   @media(max-width: 640px)
     .desc-wrap
       margin-top: 100px
+      width: 100%
 
   @media(max-width: 999px) and (min-width: 640px)
     .article-thumb

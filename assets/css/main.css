@@ -1000,9 +1000,15 @@ section.articles {
     position: relative;
     overflow: hidden;
     opacity: 0;
+    -webkit-transform: translateX(-20px);
+        -ms-transform: translateX(-20px);
+            transform: translateX(-20px);
     transition: all 300ms ease-in-out; }
     section.articles .article-thumb.is-visible {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transform: translateX(0px);
+          -ms-transform: translateX(0px);
+              transform: translateX(0px); }
     section.articles .article-thumb.is-emph {
       -webkit-animation-name: tada;
               animation-name: tada;
@@ -1041,7 +1047,8 @@ section.articles {
             transform: translate(0%, 0%) scale(1); }
   @media (max-width: 640px) {
     section.articles .desc-wrap {
-      margin-top: 100px; } }
+      margin-top: 100px;
+      width: 100%; } }
   @media (max-width: 999px) and (min-width: 640px) {
     section.articles .article-thumb {
       width: 33.33%; } }
