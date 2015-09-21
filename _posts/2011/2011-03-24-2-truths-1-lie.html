@@ -1,0 +1,372 @@
+---
+layout: post
+type: post
+title: 2 Truths, 1 Lie
+cover: /assets/post-assets/012-2-truths-1-lie/truths-cover.jpg
+styles: ['<link href="solomon.css" media="screen" rel="stylesheet" type="text/css" />',
+         '<link href="/assets/post-assets/012-2-truths-1-lie/alternate-gothic.css" media="screen" rel="stylesheet" type="text/css" />',
+         '<link href="/assets/post-assets/012-2-truths-1-lie/la-carte.css" media="screen" rel="stylesheet" type="text/css" />']
+height: 618px
+blurb: Horizontal scroll FTW!
+---
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript" src="/assets/post-assets/012-2-truths-1-lie/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/assets/post-assets/012-2-truths-1-lie/jquery.scrollTo-1.4.2-min.js"></script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+		
+	$('.truth-nav').localScroll({axis:'x', duration:2000, easing:'easeOutExpo'});
+
+
+	var things = $('.panels li');
+	
+	$(window).scroll(function() {
+		var offset = window.pageXOffset;
+				
+	/* panel-1 */
+		$('.panel-1 h1').css({
+			"left" : (4+(offset/30))+"%"
+		});
+		$('.wires').css({
+			"left" : (-0.1+(offset/-40))+"%"
+		});
+	
+	/* panel-2 */
+		$('.panel-2 h1').css({
+			"left" : (80+(offset/-26.4))+"%"
+		});
+		
+		
+	/* panel-3 */
+		$('.panel-3 h1').css({
+			"left" : (80+(offset/-53))+"%"
+		});
+		
+	/* panel-4 */
+		$('.panel-4 h1').css({
+			"left" : (80+(offset/-80))+"%"
+		});
+	
+	/* panel-5 */
+		$('.panel-5 h1').css({
+			"left" : (80+(offset/-105))+"%"
+		});
+
+		
+	});
+	
+	
+});
+
+
+/*$(window).load(function() {
+	$('.loading').animate({"left" : "100%"});
+});*/
+
+/* END SCRIPTS
+----------------------------------------------------------------------------------------------------*/
+</script>
+
+<style type="text/css">
+
+
+/* Initial Structure
+----------------------------------------------------------------------------------------------------*/
+
+
+html, body {height: 100%;}
+
+body {overflow-y: hidden;}
+
+.panels {
+	list-style-type: none;
+	margin: 0px;
+	height: 100%;
+	width: 10000px;
+	background: #e8cb32;
+	background: -moz-linear-gradient(left,  #e8cb32,  #32e8b2);
+	background: -webkit-gradient(linear, left top, right top, from(#e8cb32), to(#32e8b2));
+	overflow: hidden;
+	
+/*	background: #e8cb32 url(/assets/post-assets/012-2-truths-1-lie/blend3.png) repeat ;
+	-webkit-animation-name: pan;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	position: relative;
+	z-index: -1;
+*/	}
+/*@-webkit-keyframes pan {
+	0% {background-position: left bottom;}
+	100% {background-position: right bottom;}
+	}*/
+
+.panels li {
+	margin: 0px;
+	float: left;
+	height: 100%;
+	width: 2000px;
+	position: relative;
+	overflow: visible;
+	background: top left repeat url(/assets/post-assets/012-2-truths-1-lie/diagonal-big-grid-20.png);
+
+	}
+. panels li:nth-child(2n) {background-color: rgba(0, 0, 0, 0.06)}
+.pan els li:last-child {
+	overflow: hidden;
+	}
+
+
+.truth-nav {
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+	display: none;
+	}
+
+.truth-nav a {	
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: rgba(255, 255, 255, 0.6);
+	float: left;
+	margin-left: 4px;
+	border-radius: 10px;
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+	}
+	
+.truth-nav a:hover{	
+	background: #f05a29;
+	}
+	
+	
+	
+/* Moving Elements
+----------------------------------------------------------------------------------------------------*/
+
+h1 {position: absolute;}
+
+.panel-1 h1 {left: 4%;}
+.wire-trav {
+	position: absolute;
+	left:0px;
+	}
+.wire-nes {
+	position: absolute;
+	left:2304px;
+	padding-left: 304px;
+	}
+.wire-hands {
+	position: absolute;
+	left:2304px;
+	padding-left: 1424px;
+	}
+.wire-money {
+	position: absolute;
+	left:2304px;
+	padding-left: 2365px;
+	padding-top: 1px;
+	}
+.wire-frame {
+	position: absolute;
+	left:2304px;
+	padding-left: 2793px;
+	}
+
+
+p {
+	}
+
+.panel-2 h1,
+.panel-3 h1,
+.panel-4 h1,
+.panel-5 h1
+	{left: 80%}
+
+/* Type Fun
+----------------------------------------------------------------------------------------------------*/
+
+h1 {
+	font-family: 'alternate-gothic-1', sans-serif;
+	font-weight: normal;
+	font-size: 120px;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 100px;
+	}
+h1:nth-child(2n) {
+	color: #2d343a;
+	}
+
+p.lead {
+	position: absolute;
+	left:88px;
+	top: 310px;
+	width: 300px;
+
+	font-size: 16px;
+	border-left: 4px solid rgba(255, 255, 255, 0.6);
+	padding-left: 15px;
+	}
+
+.fa { text-shadow: 1px 1px 0px #33d1e8, 2px 2px 0px #33d1e8, 3px 3px 0px #33d1e8, 4px 4px 0px #33d1e8, 5px 5px 0px #33d1e8, 6px 6px 0px #33d1e8, 7px 7px 0px #33d1e8, 8px 8px 0px #33d1e8, 9px 9px 0px #33d1e8, 10px 10px 0px #33d1e8; }
+.la { font-family: 'la-carte-regular'; text-transform: none; color: #f05a29; }
+
+
+/* Comments Styles
+----------------------------------------------------------------------------------------------------*/
+
+.comments-wrap{
+	padding: 20px;
+	position: absolute;
+	top: 50px;
+	left: 600px;
+	width: 400px;
+	background: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 1px 1px 0px #f05a29, 2px 2px 0px #f05a29, 3px 3px 0px #f05a29, 4px 4px 0px #f05a29, 5px 5px 0px #f05a29, 6px 6px 0px #f05a29, 7px 7px 0px #f05a29, 8px 8px 0px #f05a29;
+	   -moz-box-shadow: 1px 1px 0px #f05a29, 2px 2px 0px #f05a29, 3px 3px 0px #f05a29, 4px 4px 0px #f05a29, 5px 5px 0px #f05a29, 6px 6px 0px #f05a29, 7px 7px 0px #f05a29, 8px 8px 0px #f05a29;
+	        box-shadow: 1px 1px 0px #f05a29, 2px 2px 0px #f05a29, 3px 3px 0px #f05a29, 4px 4px 0px #f05a29, 5px 5px 0px #f05a29, 6px 6px 0px #f05a29, 7px 7px 0px #f05a29, 8px 8px 0px #f05a29;
+	height: 570px;
+	overflow: scroll;
+	}
+
+
+#dsq-pagination,
+.dsq-brlink,
+#dsq-new-post h3,
+.dsq-item-trackback,
+.dsq-options,
+#dsq-global-toolbar
+	{ display: none !important; }
+
+#dsq-comments {
+	margin: 0px;
+	max-height: 240px;
+	overflow-y: auto;
+	padding-right: 7px !important;
+	}
+
+
+
+/* END CSS
+----------------------------------------------------------------------------------------------------*/
+
+
+
+</style>
+
+<div class="truth-nav">
+	<a href="#panel-1"></a>
+	<a href="#panel-2"></a>
+	<a href="#panel-3"></a>
+	<a href="#panel-4"></a>
+	<a href="#panel-5"></a>
+</div>
+
+<ul class="panels">
+
+	<li class="panel-1" id="panel-1">
+	
+		<h1><span class="fa">Two&nbsp;Truths,</span><br /><span class="la">One&nbsp;Lie</span></h1>
+		
+		<p class="lead">Hey let's play a game, it's a get-to-know-you game. I'll start first. I'll tell you three stories about myself, two of them will be actual events that took place in my life, and one will be a total fabrication. It's up to you to guess which is which.</p>
+		
+		<img class="wires wire-trav" src="/assets/post-assets/012-2-truths-1-lie/wire-trav.png" />
+	
+	</li>
+	<li class="panel-2" id="panel-2">
+	
+		<h1><span class="fa">Story&nbsp;1:</span><br /><span class="la">NES&nbsp;Champ</span></h1>
+		
+		<p class="lead">When I was eleven years old I was unstoppable ... in the playing fields of the Nintendo Entertainment System, that is. I was such an accomplished NES gamer that I went to Hollywood to compete in a regional competition. I did well, but ultimately I was eliminated in the Excite Bike round, I remember overheating. I can still see that frustrated, embarrassed little boy. I cried, my mom hugged me.</p>
+
+		<img class="wires wire-nes" src="/assets/post-assets/012-2-truths-1-lie/wire-nes.png" />
+
+	
+	</li>
+	<li class="panel-3" id="panel-3">
+	
+		<h1><span class="fa">Story&nbsp;2:</span><br /><span class="la">Gone&nbsp;Fishing</span></h1>
+		
+		<p class="lead">When I was in highschool my buddy and I thought it a good idea to skateboard into town in our underwear and use fishing poles to catch lunch in the public fountains ... at 2AM. We drew maps on our bodies with permanent marker of where we had been so we wouldn't get lost. We had a blast until the cops showed up. There, in our underwear, in handcuffs, they photographed us (not restraining their laughter) and called our parents to come get us. We were still very hungry.</p>
+
+		<img class="wires wire-hands" src="/assets/post-assets/012-2-truths-1-lie/wire-hands.png" />
+
+	
+	</li>
+	<li class="panel-4" id="panel-4">
+	
+		<h1><span class="fa">Story&nbsp;3:</span><br /><span class="la">Big&nbsp;Money&nbsp;Makeout</span></h1>
+		
+		<p class="lead">When I was younger I got a job selling electronics. It was fun and it paid (what I considered at the time) very well. I took my first paycheck (over one thousand big ones!) to the bank, and cashed it ... all in singles. I carried around a backpack full of 1,000 one-dollar bills for a while and convinced my girlfriend (who is now my wife) to roll around in it with me. We made out in a pile of money for over two hours. The newly minted ones were uncomfortable, and the old ones smelt nasty.</p>
+
+		<img class="wires wire-money" src="/assets/post-assets/012-2-truths-1-lie/wire-money2.png" />
+
+	
+	</li>
+	<li class="panel-5" id="panel-5">
+	
+		<h1><span class="fa">And&nbsp;Now...</span><br /><span class="la">Your&nbsp;Answer?</span></h1>
+		
+		<p class="lead">All right, these are my three stories. I had a blast reminiscing on (and making up) some of the more interesting events in my life. And now its time for you to guess which were true, and what one was a lie. Answer in the comments to the right...</p>
+
+
+
+		<img class="wires wire-frame" src="/assets/post-assets/012-2-truths-1-lie/wire-frame.png" />
+	
+	
+	<div class="comments-wrap">
+		<?php// comments_template(); ?>
+	
+	
+	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'travisneilson'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+     var disqus_identifier = '2-truth-post';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+	
+	
+	
+	</div>
+	
+	
+	</li>
+
+</ul>
+
+
+
+
+
+
+

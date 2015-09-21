@@ -1,0 +1,135 @@
+---
+layout: post
+type: post
+title: Fun with jQuery show
+cover: /assets/post-assets/034-show/img/show-cover.png
+styles: <link rel="stylesheet" href="/assets/post-assets/034-show/css/show.css">
+height: 352px
+blurb: The all seeing eye of jQuery
+---
+
+<article class="jquery-show">
+  <div class="bar"></div>
+  <div class="eye"></div>
+  
+  <div class="title">
+    <h1><span>Fun with<br><em>jQuery .show()</em></span></h1>
+  </div>
+  
+  <div class="text-container">
+    <h2>I said look, not touch</h2>
+    <p>Jquery's <code>.show()</code> effect is more powerful than it would seem on the surface. When we look at the jQuery api for .show() we get this piece of information:</p>
+    
+    <blockquote><strong>Description:&nbsp;</strong>Display the matched elements.</blockquote>
+  
+    <p>The most common, and obvious use is to reveal, or show, that which was presumably hidden. In other words we are taking an element from <code>display:hidden;</code> to <code>display:block;</code> when the effect is called. This effect is used quite often, for obvious reasons. And the opposite also: <code>.hide()</code> when used together, they make a great team.</p>
+    
+    <p>The fun really begins when you use the duration property inside the <code>.show()</code> effect. In the demo I cranked up the duration on the effect and you can see in the inspector that all kinds of attributes are being manipulated over time. Most notably <code>height</code>, <code>width</code>, <code>margins</code>, and <code>opacity</code>.</p>
+    
+    <p><img src="/assets/post-assets/034-show/img/inline.gif" /></p>
+    
+    <p>This is great, by just adding a duration we get some awesome and easy animations (e.g. <code>.show(150);</code>). Keep in mind however, when ever you grow an elements height or width, the point of origin from which the element visually <em>springs</em> is the top left (unless it is floating right, or absolutely positioned to the right or bottom.) This makes sense, but what if we want it to <em>spring</em> from the center?</p>
+    
+    <p>This is my favorite part: If you think to the box model you will remember that the outermost edge of an element is actually the margin. Being creative with this we can define the top and left margin as exactly negative half of the defined height and width. (Make sure to actually define the <code>height</code> and <code>width</code> in the css, or jQuery won’t know what to grow the object to.) Moving the outer most edge of the element (the margin) into the center of the element means that the animation will appear to <em>spring</em> from the elements center. (to be clear, for an element that is 100px wide and 100px tall, you would define the <code>margin-top</code> and <code>margin-left</code> as -50px.)</p>
+    
+    <p>Cool Huh?</p>
+    
+    
+    
+    
+    <h2>Okay, now you can touch it</h2>
+    <p>Lets take a look at some demos &mdash;</p>
+    
+    
+    
+    <h3>Speed Demo</h3>
+    
+    <p>Inspect element on the circles that appear here. Note that the default <code>.show();</code> (that has no duration) jumps from <code>display:hidden;</code> to <code>display:block;</code> immediately. Then note that the slow verson has a whole bunch of crap going on before it arrives as <code>display:block;</code></p>
+    
+    <ul class="triggers">
+  		<li class="trigger8">Default Setting</li>
+  		<li class="trigger9">Extra Slow</li>
+  	</ul>
+    
+    <div class="second-base">
+  		<div class="third-loupe" style="display: none;"></div>
+  		<div class="fourth-loupe" style="display: none;"></div>
+  	</div>
+    
+    
+    <h3>Speed Demo</h3>
+    <p>By placing the <code>margin-top</code> and <code>margin-left</code> css properties at different combinations of values you can make the element appear to come from different directions.</p>
+    
+    <ul class="triggers">
+  		<li class="trigger3">Center Center</li>
+  		<li class="trigger4">Center Top</li>
+  		<li class="trigger5">Left Center</li>
+  		<li class="trigger6">Center Bottom</li>
+  		<li class="trigger7">Right Bottom</li>
+  	</ul>
+    
+    <div class="second-base">
+  		<div class="second-loupe"></div>
+  	</div>
+  	
+  	
+		<h2>Image Demo</h2>
+		
+		<p>You can use this trick in different ways, here I am using it to create a sort of graphic loupe on this image.</p>
+		
+		<ul class="triggers">
+			<li class="trigger1">Boy Wonder</li>
+			<li class="trigger2">Man of Steel</li>
+		</ul>
+		
+		<div class="loupe-base">
+			<img class="loupe1" src="/assets/post-assets/034-show/img/loupe-1.png">
+			<img class="loupe2" src="/assets/post-assets/034-show/img/loupe-2.png">
+		</div>
+
+  	<div style="height: 200px;"></div>
+    
+    
+    
+    <style type="text/css">
+        /* Disqus Styles
+        ----------------------------------------------------------------------------*/
+        
+        #dsq-global-toolbar,
+        #dsq-new-post h3,
+        .dsq-item-trackback,
+        .dsq-options
+        	{ display: none !important; }
+        
+        </style>
+        
+        
+        <div class="comments-wrap">
+    
+        	<div id="disqus_thread"></div>
+        	<script type="text/javascript">
+        	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        	    var disqus_shortname = 'travisneilson'; // required: replace example with your forum shortname
+        	
+        	    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+        	     var disqus_identifier = 'hackWP';
+        	    // var disqus_url = 'http://example.com/permalink-to-page.html';
+        	
+        	    /* * * DON'T EDIT BELOW THIS LINE * * */
+        	    (function() {
+        	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        	    })();
+        	</script>
+        	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        	</noscript>		
+        	
+        </div>
+    
+    
+  </div> <!--/.text-container-->
+</article>
+
+
+<script src="/assets/post-assets/034-show/js/functions.js"></script>

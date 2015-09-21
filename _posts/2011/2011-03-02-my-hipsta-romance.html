@@ -1,0 +1,853 @@
+---
+layout: post
+type: post
+title: My Hipsta-romance
+cover: /assets/post-assets/009-my-hipsta-romance/img/hipsta-cover.jpg
+height: 600px
+blurb: "Wait, hold that smile while I load vintage hipster film into my phone."
+---
+
+<style type="text/css">
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Ubuntu'), local('Ubuntu-Regular'), url('http://themes.googleusercontent.com/font?kit=sVvvcJDRTINJla2R4XwPVevvDin1pK8aKteLpeZ5c0A') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Ubuntu Bold'), local('Ubuntu-Bold'), url('http://themes.googleusercontent.com/font?kit=0ihfXUL2emPh0ROJezvraCZ2oysoEQEeKwjgmXLRnTc') format('truetype');
+}
+
+@font-face {
+  font-family: 'Reenie Beanie';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Reenie Beanie'), local('ReenieBeanie'), url('http://themes.googleusercontent.com/font?kit=ljpKc6CdXusL1cnGUSamX4WcQgv0WMKv2x2qfcALabs') format('truetype');
+}
+
+.hipsta-article-wrap {
+	background: top center repeat url(/assets/post-assets/009-my-hipsta-romance/img/hipsta-bg.jpg);
+	position: relative;
+	}
+.last-post {
+	position: absolute;
+	width: 239px; height: 782px;
+	top: 370px;
+	left: -160px;
+	background: top left no-repeat url(/assets/post-assets/009-my-hipsta-romance/img/hipsta-last-post.png);
+	}
+
+.a-while {
+	position: absolute;
+	width: 625px; height: 98px;
+	bottom: 0px;
+	right: -14px;
+	background: top left no-repeat url(/assets/post-assets/009-my-hipsta-romance/img/hipsta-last-post2.png);
+	}
+h2.hipsta-title{
+	text-indent: -9999px;
+	position: absolute;
+	display: block;
+	left: 50%;
+	margin: 0px 0px 0px -472px;
+	padding: 0px;
+	width: 940px;
+	height:223px;
+	background: top center no-repeat url(/assets/post-assets/009-my-hipsta-romance/img/hipsta-title.png);
+	}
+.hipsta-pic-wrap {
+	padding-top: 200px;
+	padding-bottom: 80px;
+	margin: 0px auto;
+	width: 956px;
+	position: relative;
+	}
+.hipsta-container {
+    width: 235px; height: 235px;
+    -webkit-perspective: 1000;
+    float: left;
+    margin: 2px;
+	}
+.hipsta-container:nth-child(3n),.hipsta-container:nth-child(1) {
+	-webkit-transform: rotate(-2deg); 
+	-moz-transform: rotate(-2deg);
+	}
+.hipsta-container:nth-child(5n), .hipsta-container:nth-child(32) {
+	-webkit-transform: rotate(2deg); 
+	-moz-transform: rotate(2deg);
+	}
+.hipsta-container:nth-child(4n-1) {
+	-webkit-transform: rotate(-4deg); 
+	-moz-transform: rotate(-4deg);
+	}
+.hipsta-article-wrap .hipsta-container:nth-child(9n-2), .hipsta-article-wrap .hipsta-container:nth-child(9n) {
+	-webkit-transform: rotate(3deg); 
+	-moz-transform: rotate(3deg);
+	}
+
+ 
+.card, .carded /*.hipsta-container .card*/ {
+    width: 235px; height: 235px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+	}
+    .hipsta-container .carded /*.hipsta-container:hover .card*/ {
+        -webkit-transform: rotateY(180deg);             
+	    }
+.face {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+	width: 235px; height: 235px;
+	}
+	.face img {
+		width: 235px;
+		height: 235px;
+		position: relative;
+	    -webkit-transition: all 0.2s ease-in-out;
+		-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+		   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);
+		        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6);	
+		}
+.back {
+	-webkit-transform: rotateY(180deg);
+	}
+
+.front {
+    z-index: 10;
+	}
+	
+.hipsta-container .carded .front {
+    z-index: 0;
+	} 
+.reverse-side {
+	height: 235px;
+	width: 235px;
+	}
+.reverse-side img {	
+	width: 120px; height: 120px;
+	margin: 15px 15px 3px 15px;
+	position: relative;
+	-webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	}
+.reverse-side .bg {
+	position: absolute;
+	width: 235px; height: 235px;
+	background: #e5e5e5; /* old browsers */
+	background: -moz-linear-gradient(left, #e5e5e5 1%, #F7F7F7 50%, #e5e5e5 99%); /* firefox */
+	background: -webkit-gradient(linear, left top, right top, color-stop(1%,#e5e5e5), color-stop(50%,#F7F7F7), color-stop(99%,#e5e5e5)); /* webkit */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#e5e5e5',GradientType=1 ); /* ie */
+	text-shadow: 1px 1px 0px white;
+	-webkit-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	   -moz-box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.3);
+	}
+
+.reverse-side dl {
+	margin: 5px 0px 0px; cursor: default;
+	font-family: 'Ubuntu', helvetica, arial, serif;
+	font-size: 14px;
+	}
+.reverse-side dt {	font-family: 'Ubuntu', helvetica, arial, serif;
+
+	margin-left: 45px; float:left; clear: left;
+	font-weight: bold;
+	color: #878787 
+	}
+.reverse-side dd {	font-family: 'Ubuntu', helvetica, arial, serif;
+
+	color: #3b3b3b;
+	margin-left: 90px;
+	}
+	
+.pic-title {
+	margin: 0px 20px 0px 20px; cursor: default;
+	font-family: 'Reenie Beanie', helvetica, arial, serif;
+	font-size: 20px;
+	color: #3b3b3b;
+	clear: left;
+	text-align: center;
+	line-height: 18px;
+	}
+
+
+</style>
+
+
+
+	
+<script type="text/javascript">
+
+
+	$(document).ready(function(){
+		$('.card').click(function() {
+			$(this).toggleClass('carded');
+		});
+	});
+</script>	
+    
+
+
+<div class="hipsta-article-wrap">
+<h2 class="hipsta-title">My Hipsta-Romance</h2>
+
+
+
+<div class="hipsta-pic-wrap">
+
+<div class="last-post"></div>
+<div class="a-while"></div>
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip01.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip01.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">Before leaving Vegas</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip02.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip02.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title"> we visited the Cosmopolitan.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip031.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip031.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">On the day we packed</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip04.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip04.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">our lives into a trailer</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip05.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip05.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">Parker and I went to</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip06.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip06.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">the park to play.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip07.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip07.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Jimmy</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">We packed all our things</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip08.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip08.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Jimmy</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">and at two in the morning</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip09.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip09.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Jimmy</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">we hit the road.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip10.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip10.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Ina&#8217;s 1969</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">Safe and sound, with the</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip11.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip11.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>John S</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">help of our family we</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip13.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip13.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Cano Cafenol</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">arrived at our new home</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip121.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip121.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>Cano Cafenol</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">in the beautiful Bay Area.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip14.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip14.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Kaimal Mark II</dd>
+						<dt>Film:</dt><dd>Pistil</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">So many new things to see,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip20.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip20.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Lucifer IV</dd>
+						<dt>Film:</dt><dd>Blanko Noir</dd>
+						<dt>Flash:</dt><dd>Cadet Blue Gel</dd>
+					</dl>
+					<p class="pic-title">so many things to get done.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip16.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip16.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Kaimal Mark II</dd>
+						<dt>Film:</dt><dd>Ina&#8217;s 1969</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">Our little home,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip17.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip17.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Kaimal Mark II</dd>
+						<dt>Film:</dt><dd>Pistil</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">and a new city around us,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip18.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip18.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Kaimal Mark II</dd>
+						<dt>Film:</dt><dd>Blanko Noir</dd>
+						<dt>Flash:</dt><dd>Cherry Shine</dd>
+					</dl>
+					<p class="pic-title">we explored and enjoyed</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip19.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip19.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>John S</dd>
+						<dt>Film:</dt><dd>Blanko</dd>
+						<dt>Flash:</dt><dd>RedEye Gel</dd>
+					</dl>
+					<p class="pic-title">as much as we could.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip15.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip15.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>John S</dd>
+						<dt>Film:</dt><dd>Pistil</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">I love this new place,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip21.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip21.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Lucifer IV</dd>
+						<dt>Film:</dt><dd>BlacKeys B+W</dd>
+						<dt>Flash:</dt><dd>Off</dd>
+					</dl>
+					<p class="pic-title">I love my new job,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip22.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip22.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Jimmy</dd>
+						<dt>Film:</dt><dd>Pistil</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">even the weather!</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip24.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip24.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Kaimal Mark II</dd>
+						<dt>Film:</dt><dd>BlacKeys B+W</dd>
+						<dt>Flash:</dt><dd>None</dd>
+					</dl>
+					<p class="pic-title">We are trying new things,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip23.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip23.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Bettie XL</dd>
+						<dt>Film:</dt><dd>Pistil</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">making new habits,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip25.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip25.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Lucifer IV</dd>
+						<dt>Film:</dt><dd>BlacKeys B+W</dd>
+						<dt>Flash:</dt><dd>Cherry Shine</dd>
+					</dl>
+					<p class="pic-title">and breaking old ones.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip26.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip26.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Chunky</dd>
+						<dt>Film:</dt><dd>BlacKeys SuperGrain</dd>
+						<dt>Flash:</dt><dd>Redeye Gel</dd>
+					</dl>
+					<p class="pic-title">Our new church is very nice,</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip27.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip27.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Lucifer IV</dd>
+						<dt>Film:</dt><dd>Claunch Mono</dd>
+						<dt>Flash:</dt><dd>Cadet Blue Gel</dd>
+					</dl>
+					<p class="pic-title">it&#8217;s on temple grounds.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip28.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip28.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>John S</dd>
+						<dt>Film:</dt><dd>Alfred Infrared</dd>
+						<dt>Flash:</dt><dd>Laser Lemon Gel</dd>
+					</dl>
+					<p class="pic-title">A beautiful temple indeed</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip29.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip29.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Jimmy</dd>
+						<dt>Film:</dt><dd>BlacKeys B+W</dd>
+						<dt>Flash:</dt><dd>Standard</dd>
+					</dl>
+					<p class="pic-title">&#8230;and a beautiful family.</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip30.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip30.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Bettie XL</dd>
+						<dt>Film:</dt><dd>BlacKeys B+W</dd>
+						<dt>Flash:</dt><dd>Cadet Blue Gel</dd>
+					</dl>
+					<p class="pic-title">We have just begun</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip-33.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip-33.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>Melodie</dd>
+						<dt>Film:</dt><dd>Cano Cafenol</dd>
+						<dt>Flash:</dt><dd>Cherry Shine</dd>
+					</dl>
+					<p class="pic-title">our experience here</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+<div class="hipsta-container">
+    <div class="card">
+        <div class="face front"><img src="/assets/post-assets/009-my-hipsta-romance/img/hip32.jpg" alt="front" /></div>
+        <div class="face back">
+			<div class="reverse-side">
+				<div class="bg">
+					<img src="/assets/post-assets/009-my-hipsta-romance/img/hip32.jpg" alt="back" />
+					<dl>
+						<dt>Lens:</dt><dd>John S</dd>
+						<dt>Film:</dt><dd>Blackeys B+W</dd>
+						<dt>Flash:</dt><dd>Cherry Shine</dd>
+					</dl>
+					<p class="pic-title">and I cant wait for more!</p>
+				</div><!-- /bg -->
+			</div><!-- /reverse-side -->
+        </div><!-- /face back -->
+    </div><!-- /card -->
+</div><!-- /container -->
+
+
+
+
+<div style="clear:both;"></div>
+</div><!--/hipsta-pic-wrap-->
+
+</div><!--/hipsta-article-wrap--> 
+    
+

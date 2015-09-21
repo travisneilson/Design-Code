@@ -1,0 +1,114 @@
+nav.tn-nav-wrap
+  height: 45px
+  width: 100%
+  background: white
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.2)
+  position: fixed
+  bottom: 0px
+  display: block
+  z-index: 99
+
+
+.logo-small
+  top: 50%
+  +size(35px 36px)
+  line-height: 36px
+  margin-top: -20px
+  position: absolute
+  left: 18px
+  font-size: 35px
+  color: #333 !important
+  padding: 0
+
+
+.title-string
+  position: absolute
+  height: 45px
+  top: 0
+  left: 0
+  padding-left: 75px
+
+  font-family: georgia, serif !important
+  color: rgba(0, 0, 0, 0.5) !important
+  font-size: 13px !important
+  letter-spacing: .1em !important
+
+  text-decoration: none !important
+  border: none !important
+  font-weight: normal !important
+  font-style: normal !important
+  overflow: hidden
+  display: inline-block
+
+  &:hover
+    color: rgba(0, 0, 0, 0.5) !important
+    text-decoration: none !important
+    border: none !important
+
+    p.blurb
+      margin-top: -45px
+
+  p
+    margin: 0px
+    font-size: 12px
+    line-height: 45px
+    height: 45px
+    text-transform: uppercase
+    font-family: georgia, serif  !important
+    display: block
+    -moz-transition: all 0.15s ease-in-out
+    -webkit-transition: all 0.15s ease-in-out
+
+    &.back-message
+      text-transform: none
+      font-style: italic
+      font-size: 13px
+
+      .icon-reply
+        margin-right: 8px
+
+.next-prev-btn
+  position: absolute
+  height: 24px
+  width: 80px
+  top: 50%
+  margin-top: -12px
+  right: 14px
+  list-style-type: none
+
+  li
+    margin: 0px 8px
+    float: right
+
+    a
+      display: block
+      width: 19px
+      height: 24px
+      border: none !important
+      text-decoration: none
+      color: #999
+      font-size: 24px
+      line-height: 24px
+
+      &:hover
+        color: $link-color
+
+      &:before
+        +icon-font
+
+
+
+.prev-post-link a:before
+  content: "\e002"
+
+  &:hover
+    background-position: 0px 0px
+
+.next-post-link a:before
+  content: "\e000"
+
+  &:hover
+    background-position: -19px 0px
+
+.next-prev-btn a:hover
+  border: none !important

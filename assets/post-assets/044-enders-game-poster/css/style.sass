@@ -1,0 +1,77 @@
+@import '../../../css/plugins/plugin-dir'
+@import 'font'
+// post styles here...
+
+
+body
+  background: url(../img/enders-game-1500.jpg) center center no-repeat fixed
+  background-size: cover
+
+.enders-game-poster
+  max-width: 700px
+  margin: 0 auto
+  padding: 30px
+  
+  h1
+    font-family: "franklin", sans-serif
+    font-size: 70px
+    letter-spacing: 2px
+    font-weight: 700
+    text-transform: uppercase
+    line-height: 1
+    padding: 0
+    margin: 70px 0 0
+    
+  h2
+    @extend h1
+    font-size: 30px
+    margin: 0 0 30px
+    font-weight: 400
+    
+  p
+    font-family: sans-serif
+    text-align: justify
+    padding-right: 30%
+
+
+
+  .buy-now
+    background: #222
+    color: #fff
+    font-family: "franklin", sans-serif
+    font-weight: 700
+    font-size: 18px
+    padding: .5em 1.5em
+    border-radius: 5px
+    text-transform: uppercase
+    //margin-top: 20px
+    display: inline-block
+    
+    &:hover
+      background: #000
+
+  
+  .e-thumb
+    +size(100px 70px)
+    display: inline-block
+    background-color: #000
+    margin: 0px 10px 20px 0px
+    background-size: 150% auto
+    background-position: top center
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.3)
+    cursor: pointer
+    
+    &:hover
+      box-shadow: 0px 2px 3px rgba(0,0,0,0.3), 0px 0px 0px 3px black inset
+
+  
+.overlay
+  +position(fixed, 0px 0px 0px 0px)
+  background: rgba(0,0,0,0.8) center center no-repeat
+  background-size: 50% auto
+  cursor: url(../img/close.png), auto
+
+
+
+
+@import '0-media-queries'

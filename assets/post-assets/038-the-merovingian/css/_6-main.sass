@@ -1,0 +1,62 @@
+body
+  background-image: url(../img/tile-bg.gif)
+  
+  .the-merovingian
+    font-family: 'grad'
+    font-size: 80px
+    color: #333
+    line-height: 212px
+    position: relative
+    text-align: center
+    //padding: 0px  50px  50px  50px
+    
+    em
+      color: white
+      //font-size: 1.3em
+    
+    span
+      display: block
+      
+    .sentence-1
+      font-size: 0.6em
+      padding: 0 50px
+      
+    .sentence-2
+      font-size: 1.1em
+      padding: 0 50px
+      
+    .sentence-3
+      font-size: 1.4em
+      white-space: nowrap
+      +position(absolute, 470px null null 50%)
+      margin-left: 60px
+      padding-right: 50px
+      +transform(rotate(90deg))
+      +transform-origin(left top)
+      height: 120px
+      line-height: 120px
+      +transition()
+      
+    .sentence-4
+      +position(absolute, 3095px null null 50%)
+      padding-bottom: 90px
+      font-size: 18px
+      width: 150px
+      margin-left: -75px
+      text-align: center
+      color: white
+      line-height: 1
+
+
+@include max-screen(654px)
+  body .the-merovingian .sentence-3
+    top: 710px
+  body .the-merovingian .sentence-4
+    top: 3285px
+
+
+@include max-screen(420px)
+  body .the-merovingian .sentence-3
+    top: 1130px
+  body .the-merovingian .sentence-4
+    top: 3715px

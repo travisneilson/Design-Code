@@ -1,0 +1,776 @@
+@font-face {
+  font-family: 'poem-icons';
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype"), url(data:application/font-woff;charset=utf-8;base64,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) format("woff");
+  font-weight: normal;
+  font-style: normal; }
+[class^="poem-icn-"], [class*=" poem-icn-"] {
+  font-family: 'poem-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.poem-icn-question-circle:before {
+  content: "\f059"; }
+
+.poem-icn-comments:before {
+  content: "\f086"; }
+
+.poem-icn-twitter:before {
+  content: "\f099"; }
+
+.animation-target {
+  -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both; }
+
+/* Generated with Bounce.js. Edit at http://goo.gl/mtQ2Zp */
+@-webkit-keyframes animation {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.333333% {
+    -webkit-transform: matrix3d(0.10822, 0, 0, 0, 0, 0.10822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.10822, 0, 0, 0, 0, 0.10822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.666667% {
+    -webkit-transform: matrix3d(0.48573, 0, 0, 0, 0, 0.48573, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.48573, 0, 0, 0, 0, 0.48573, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10% {
+    -webkit-transform: matrix3d(0.97911, 0, 0, 0, 0, 0.97911, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.97911, 0, 0, 0, 0, 0.97911, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.333333% {
+    -webkit-transform: matrix3d(1.34277, 0, 0, 0, 0, 1.34277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.34277, 0, 0, 0, 0, 1.34277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.666667% {
+    -webkit-transform: matrix3d(1.46235, 0, 0, 0, 0, 1.46235, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.46235, 0, 0, 0, 0, 1.46235, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20% {
+    -webkit-transform: matrix3d(1.38519, 0, 0, 0, 0, 1.38519, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.38519, 0, 0, 0, 0, 1.38519, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.333333% {
+    -webkit-transform: matrix3d(1.22723, 0, 0, 0, 0, 1.22723, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.22723, 0, 0, 0, 0, 1.22723, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.666667% {
+    -webkit-transform: matrix3d(1.08293, 0, 0, 0, 0, 1.08293, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.08293, 0, 0, 0, 0, 1.08293, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30% {
+    -webkit-transform: matrix3d(0.99315, 0, 0, 0, 0, 0.99315, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99315, 0, 0, 0, 0, 0.99315, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.333333% {
+    -webkit-transform: matrix3d(0.95715, 0, 0, 0, 0, 0.95715, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.95715, 0, 0, 0, 0, 0.95715, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.666667% {
+    -webkit-transform: matrix3d(0.95626, 0, 0, 0, 0, 0.95626, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.95626, 0, 0, 0, 0, 0.95626, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40% {
+    -webkit-transform: matrix3d(0.97065, 0, 0, 0, 0, 0.97065, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.97065, 0, 0, 0, 0, 0.97065, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.333333% {
+    -webkit-transform: matrix3d(0.98634, 0, 0, 0, 0, 0.98634, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.98634, 0, 0, 0, 0, 0.98634, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.666667% {
+    -webkit-transform: matrix3d(0.99637, 0, 0, 0, 0, 0.99637, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99637, 0, 0, 0, 0, 0.99637, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50% {
+    -webkit-transform: matrix3d(0.9995, 0, 0, 0, 0, 0.9995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.9995, 0, 0, 0, 0, 0.9995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.333333% {
+    -webkit-transform: matrix3d(0.99796, 0, 0, 0, 0, 0.99796, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99796, 0, 0, 0, 0, 0.99796, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.666667% {
+    -webkit-transform: matrix3d(0.99511, 0, 0, 0, 0, 0.99511, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99511, 0, 0, 0, 0, 0.99511, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60% {
+    -webkit-transform: matrix3d(0.99354, 0, 0, 0, 0, 0.99354, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99354, 0, 0, 0, 0, 0.99354, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.333333% {
+    -webkit-transform: matrix3d(0.99427, 0, 0, 0, 0, 0.99427, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99427, 0, 0, 0, 0, 0.99427, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.666667% {
+    -webkit-transform: matrix3d(0.99683, 0, 0, 0, 0, 0.99683, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99683, 0, 0, 0, 0, 0.99683, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70% {
+    -webkit-transform: matrix3d(0.99998, 0, 0, 0, 0, 0.99998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99998, 0, 0, 0, 0, 0.99998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.333333% {
+    -webkit-transform: matrix3d(1.00254, 0, 0, 0, 0, 1.00254, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00254, 0, 0, 0, 0, 1.00254, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.666667% {
+    -webkit-transform: matrix3d(1.0038, 0, 0, 0, 0, 1.0038, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.0038, 0, 0, 0, 0, 1.0038, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80% {
+    -webkit-transform: matrix3d(1.00371, 0, 0, 0, 0, 1.00371, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00371, 0, 0, 0, 0, 1.00371, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.333333% {
+    -webkit-transform: matrix3d(1.00267, 0, 0, 0, 0, 1.00267, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00267, 0, 0, 0, 0, 1.00267, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.666667% {
+    -webkit-transform: matrix3d(1.00126, 0, 0, 0, 0, 1.00126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00126, 0, 0, 0, 0, 1.00126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.333333% {
+    -webkit-transform: matrix3d(0.99919, 0, 0, 0, 0, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99919, 0, 0, 0, 0, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.666667% {
+    -webkit-transform: matrix3d(0.99889, 0, 0, 0, 0, 0.99889, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99889, 0, 0, 0, 0, 0.99889, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+@keyframes animation {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  3.333333% {
+    -webkit-transform: matrix3d(0.10822, 0, 0, 0, 0, 0.10822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.10822, 0, 0, 0, 0, 0.10822, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  6.666667% {
+    -webkit-transform: matrix3d(0.48573, 0, 0, 0, 0, 0.48573, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.48573, 0, 0, 0, 0, 0.48573, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  10% {
+    -webkit-transform: matrix3d(0.97911, 0, 0, 0, 0, 0.97911, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.97911, 0, 0, 0, 0, 0.97911, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  13.333333% {
+    -webkit-transform: matrix3d(1.34277, 0, 0, 0, 0, 1.34277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.34277, 0, 0, 0, 0, 1.34277, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  16.666667% {
+    -webkit-transform: matrix3d(1.46235, 0, 0, 0, 0, 1.46235, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.46235, 0, 0, 0, 0, 1.46235, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  20% {
+    -webkit-transform: matrix3d(1.38519, 0, 0, 0, 0, 1.38519, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.38519, 0, 0, 0, 0, 1.38519, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  23.333333% {
+    -webkit-transform: matrix3d(1.22723, 0, 0, 0, 0, 1.22723, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.22723, 0, 0, 0, 0, 1.22723, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  26.666667% {
+    -webkit-transform: matrix3d(1.08293, 0, 0, 0, 0, 1.08293, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.08293, 0, 0, 0, 0, 1.08293, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  30% {
+    -webkit-transform: matrix3d(0.99315, 0, 0, 0, 0, 0.99315, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99315, 0, 0, 0, 0, 0.99315, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  33.333333% {
+    -webkit-transform: matrix3d(0.95715, 0, 0, 0, 0, 0.95715, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.95715, 0, 0, 0, 0, 0.95715, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  36.666667% {
+    -webkit-transform: matrix3d(0.95626, 0, 0, 0, 0, 0.95626, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.95626, 0, 0, 0, 0, 0.95626, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  40% {
+    -webkit-transform: matrix3d(0.97065, 0, 0, 0, 0, 0.97065, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.97065, 0, 0, 0, 0, 0.97065, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  43.333333% {
+    -webkit-transform: matrix3d(0.98634, 0, 0, 0, 0, 0.98634, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.98634, 0, 0, 0, 0, 0.98634, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  46.666667% {
+    -webkit-transform: matrix3d(0.99637, 0, 0, 0, 0, 0.99637, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99637, 0, 0, 0, 0, 0.99637, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  50% {
+    -webkit-transform: matrix3d(0.9995, 0, 0, 0, 0, 0.9995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.9995, 0, 0, 0, 0, 0.9995, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  53.333333% {
+    -webkit-transform: matrix3d(0.99796, 0, 0, 0, 0, 0.99796, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99796, 0, 0, 0, 0, 0.99796, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  56.666667% {
+    -webkit-transform: matrix3d(0.99511, 0, 0, 0, 0, 0.99511, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99511, 0, 0, 0, 0, 0.99511, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  60% {
+    -webkit-transform: matrix3d(0.99354, 0, 0, 0, 0, 0.99354, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99354, 0, 0, 0, 0, 0.99354, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  63.333333% {
+    -webkit-transform: matrix3d(0.99427, 0, 0, 0, 0, 0.99427, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99427, 0, 0, 0, 0, 0.99427, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  66.666667% {
+    -webkit-transform: matrix3d(0.99683, 0, 0, 0, 0, 0.99683, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99683, 0, 0, 0, 0, 0.99683, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  70% {
+    -webkit-transform: matrix3d(0.99998, 0, 0, 0, 0, 0.99998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99998, 0, 0, 0, 0, 0.99998, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  73.333333% {
+    -webkit-transform: matrix3d(1.00254, 0, 0, 0, 0, 1.00254, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00254, 0, 0, 0, 0, 1.00254, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  76.666667% {
+    -webkit-transform: matrix3d(1.0038, 0, 0, 0, 0, 1.0038, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.0038, 0, 0, 0, 0, 1.0038, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  80% {
+    -webkit-transform: matrix3d(1.00371, 0, 0, 0, 0, 1.00371, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00371, 0, 0, 0, 0, 1.00371, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  83.333333% {
+    -webkit-transform: matrix3d(1.00267, 0, 0, 0, 0, 1.00267, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00267, 0, 0, 0, 0, 1.00267, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  86.666667% {
+    -webkit-transform: matrix3d(1.00126, 0, 0, 0, 0, 1.00126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1.00126, 0, 0, 0, 0, 1.00126, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  90% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  93.333333% {
+    -webkit-transform: matrix3d(0.99919, 0, 0, 0, 0, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99919, 0, 0, 0, 0, 0.99919, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  96.666667% {
+    -webkit-transform: matrix3d(0.99889, 0, 0, 0, 0, 0.99889, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(0.99889, 0, 0, 0, 0, 0.99889, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.thirty-two-poems-article {
+  position: relative; }
+  .thirty-two-poems-article .poem-actions {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    z-index: 1; }
+    .thirty-two-poems-article .poem-actions > a {
+      display: inline-block;
+      padding-right: 20px;
+      color: #999; }
+      .thirty-two-poems-article .poem-actions > a:before {
+        vertical-align: sub; }
+      .thirty-two-poems-article .poem-actions > a:hover {
+        color: #00aeef; }
+        .thirty-two-poems-article .poem-actions > a:hover span {
+          font-size: 14px; }
+      .thirty-two-poems-article .poem-actions > a span {
+        display: inline-block;
+        margin-left: 7px;
+        font-size: 0px;
+        text-transform: uppercase;
+        font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+        -webkit-transition: all 0.15s ease-out 0s;
+        -moz-transition: all 0.15s ease-out 0s;
+        transition: all 0.15s ease-out 0s; }
+  .thirty-two-poems-article .grid-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; }
+  .thirty-two-poems-article .svg-grid {
+    background-image: url(../img/poetry.svg);
+    background-size: cover;
+    top: 50px;
+    height: 432px;
+    width: 1632px;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    transform-origin: top left;
+    position: relative;
+    font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+@media(min-height: 550px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@media(min-height: 650px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3); } }
+@media(min-height: 750px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5); } }
+@media(min-height: 850px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    transform: scale(1.7); } }
+@media(min-height: 1000px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2); } }
+@media(min-height: 1120px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(2.4);
+    -moz-transform: scale(2.4);
+    -ms-transform: scale(2.4);
+    -o-transform: scale(2.4);
+    transform: scale(2.4); } }
+@media(min-height: 1250px) {
+  .thirty-two-poems-article .svg-grid {
+    -webkit-transform: scale(2.7);
+    -moz-transform: scale(2.7);
+    -ms-transform: scale(2.7);
+    -o-transform: scale(2.7);
+    transform: scale(2.7); } }
+  .thirty-two-poems-article .poem-baloon {
+    background: #00aeef;
+    border-radius: 150px 150px 150px 0px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    padding: 30px;
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -o-transform-origin: bottom left;
+    transform-origin: bottom left; }
+  .thirty-two-poems-article .line {
+    white-space: nowrap;
+    color: white; }
+  .thirty-two-poems-article .poem-target {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    display: block;
+    -webkit-transform: translate(-8px, -8px);
+    -moz-transform: translate(-8px, -8px);
+    -ms-transform: translate(-8px, -8px);
+    -o-transform: translate(-8px, -8px);
+    transform: translate(-8px, -8px);
+    z-index: 1; }
+    .thirty-two-poems-article .poem-target:hover {
+      z-index: 2; }
+    .thirty-two-poems-article .poem-target:hover .poem-baloon {
+      opacity: 1;
+      -webkit-animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      -moz-animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+    .thirty-two-poems-article .poem-target.show .poem-baloon {
+      opacity: 1; }
+    .thirty-two-poems-article .poem-target.reversed .poem-baloon {
+      border-radius: 150px 0px 150px 150px;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      bottom: auto;
+      left: auto;
+      -webkit-transform-origin: top right;
+      -moz-transform-origin: top right;
+      -ms-transform-origin: top right;
+      -o-transform-origin: top right;
+      transform-origin: top right; }
+    .thirty-two-poems-article .poem-target.downed .poem-baloon {
+      border-radius: 0px 150px 150px 150px;
+      position: absolute;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      left: 50%;
+      -webkit-transform-origin: top left;
+      -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+      -o-transform-origin: top left;
+      transform-origin: top left; }
+    .thirty-two-poems-article .poem-target:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: solid 2px #00aeef;
+      margin-left: -17px;
+      margin-top: -17px;
+      opacity: 0;
+      -webkit-animation: affordances 10s linear infinite;
+      -moz-animation: affordances 10s linear infinite;
+      animation: affordances 10s linear infinite; }
+    .thirty-two-poems-article .poem-target.delay-1:before {
+      -webkit-animation-delay: 3s;
+      -moz-animation-delay: 3s;
+      animation-delay: 3s; }
+    .thirty-two-poems-article .poem-target.delay-2:before {
+      -webkit-animation-delay: 5s;
+      -moz-animation-delay: 5s;
+      animation-delay: 5s; }
+    .thirty-two-poems-article .poem-target.delay-3:before {
+      -webkit-animation-delay: 7s;
+      -moz-animation-delay: 7s;
+      animation-delay: 7s; }
+    .thirty-two-poems-article .poem-target .starter-arrow {
+      position: relative;
+      top: 5px;
+      left: -4px;
+      color: #999;
+      -webkit-animation: backforth 1.5s ease-in-out infinite;
+      -moz-animation: backforth 1.5s ease-in-out infinite;
+      animation: backforth 1.5s ease-in-out infinite; }
+  .thirty-two-poems-article .p-0 {
+    top: 155px;
+    left: 40px; }
+  .thirty-two-poems-article .p-1 {
+    top: 146px;
+    left: 88px; }
+  .thirty-two-poems-article .p-2 {
+    top: 175px;
+    left: 136px; }
+  .thirty-two-poems-article .p-3 {
+    top: 165px;
+    left: 184px; }
+  .thirty-two-poems-article .p-4 {
+    top: 127px;
+    left: 232px; }
+  .thirty-two-poems-article .p-5 {
+    top: 194px;
+    left: 280px; }
+  .thirty-two-poems-article .p-6 {
+    top: 213px;
+    left: 328px; }
+  .thirty-two-poems-article .p-7 {
+    top: 127px;
+    left: 376px; }
+  .thirty-two-poems-article .p-8 {
+    top: 79px;
+    left: 424px; }
+  .thirty-two-poems-article .p-9 {
+    top: 155px;
+    left: 472px; }
+  .thirty-two-poems-article .p-10 {
+    top: 261px;
+    left: 520px; }
+  .thirty-two-poems-article .p-11 {
+    top: 280px;
+    left: 568px; }
+  .thirty-two-poems-article .p-12 {
+    top: 251px;
+    left: 616px; }
+  .thirty-two-poems-article .p-13 {
+    top: 319px;
+    left: 664px; }
+  .thirty-two-poems-article .p-14 {
+    top: 366px;
+    left: 712px; }
+  .thirty-two-poems-article .p-15 {
+    top: 328px;
+    left: 760px; }
+  .thirty-two-poems-article .p-16 {
+    top: 357px;
+    left: 808px; }
+  .thirty-two-poems-article .p-17 {
+    top: 309px;
+    left: 856px; }
+  .thirty-two-poems-article .p-18 {
+    top: 232px;
+    left: 904px; }
+  .thirty-two-poems-article .p-19 {
+    top: 155px;
+    left: 952px; }
+  .thirty-two-poems-article .p-20 {
+    top: 11px;
+    left: 1000px; }
+  .thirty-two-poems-article .p-21 {
+    top: 165px;
+    left: 1048px; }
+  .thirty-two-poems-article .p-22 {
+    top: 136px;
+    left: 1096px; }
+  .thirty-two-poems-article .p-23 {
+    top: 50px;
+    left: 1144px; }
+  .thirty-two-poems-article .p-24 {
+    top: 309px;
+    left: 1192px; }
+  .thirty-two-poems-article .p-25 {
+    top: 261px;
+    left: 1240px; }
+  .thirty-two-poems-article .p-26 {
+    top: 203px;
+    left: 1288px; }
+  .thirty-two-poems-article .p-27 {
+    top: 194px;
+    left: 1336px; }
+  .thirty-two-poems-article .p-28 {
+    top: 79px;
+    left: 1384px; }
+  .thirty-two-poems-article .p-29 {
+    top: 136px;
+    left: 1432px; }
+  .thirty-two-poems-article .p-30 {
+    top: 69px;
+    left: 1480px; }
+  .thirty-two-poems-article .p-31 {
+    top: 50px;
+    left: 1528px; }
+  .thirty-two-poems-article .p-32 {
+    top: 11px;
+    left: 1576px; }
+
+@-webkit-keyframes bounce-open {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05); }
+  65% {
+    -webkit-transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.01); }
+  90% {
+    -webkit-transform: scale(0.97); }
+  100% {
+    -webkit-transform: scale(1); } }
+@-moz-keyframes bounce-open {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05); }
+  65% {
+    -moz-transform: scale(0.9); }
+  80% {
+    -moz-transform: scale(1.01); }
+  90% {
+    -moz-transform: scale(0.97); }
+  100% {
+    -moz-transform: scale(1); } }
+@keyframes bounce-open {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05); }
+  65% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transform: scale(1.01); }
+  90% {
+    -webkit-transform: scale(0.97);
+    -moz-transform: scale(0.97);
+    -ms-transform: scale(0.97);
+    -o-transform: scale(0.97);
+    transform: scale(0.97); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes affordances {
+  0% {
+    -webkit-transform: scale(0); }
+  8% {
+    opacity: 0.4; }
+  10% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+@-moz-keyframes affordances {
+  0% {
+    -moz-transform: scale(0); }
+  8% {
+    opacity: 0.4; }
+  10% {
+    -moz-transform: scale(1);
+    opacity: 0; } }
+@keyframes affordances {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0); }
+  8% {
+    opacity: 0.4; }
+  10% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
+.thirty-two-poems-article .action-container {
+  width: 600px;
+  height: calc(100% - 150px);
+  margin-top: 10px;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -330px;
+  border: 5px solid #00aeef;
+  background: white;
+  box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 10;
+  -webkit-animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -moz-animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation: bounce-open 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+@media(max-width: 660px) {
+  .thirty-two-poems-article .action-container {
+    width: calc(100% - 90px);
+    margin: 10px;
+    left: auto;
+    top: 0px; } }
+  .thirty-two-poems-article .action-container.hide {
+    display: none; }
+  .thirty-two-poems-article .action-container h4 {
+    font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+    font-weight: 400; }
+  .thirty-two-poems-article .action-container .close-comments {
+    color: #00aeef;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; }
+
+@-webkit-keyframes hello {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05); }
+  65% {
+    -webkit-transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.01); }
+  90% {
+    -webkit-transform: scale(0.97); }
+  100% {
+    -webkit-transform: scale(1); } }
+@-moz-keyframes hello {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05); }
+  65% {
+    -moz-transform: scale(0.9); }
+  80% {
+    -moz-transform: scale(1.01); }
+  90% {
+    -moz-transform: scale(0.97); }
+  100% {
+    -moz-transform: scale(1); } }
+@keyframes hello {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05); }
+  65% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9); }
+  80% {
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transform: scale(1.01); }
+  90% {
+    -webkit-transform: scale(0.97);
+    -moz-transform: scale(0.97);
+    -ms-transform: scale(0.97);
+    -o-transform: scale(0.97);
+    transform: scale(0.97); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes backforth {
+  0%, 100% {
+    left: -4px; }
+  50% {
+    left: -10px; } }
+@-moz-keyframes backforth {
+  0%, 100% {
+    left: -4px; }
+  50% {
+    left: -10px; } }
+@keyframes backforth {
+  0%, 100% {
+    left: -4px; }
+  50% {
+    left: -10px; } }
+
+/*# sourceMappingURL=style.css.map */

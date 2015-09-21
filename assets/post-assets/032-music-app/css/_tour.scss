@@ -1,0 +1,853 @@
+@mixin ani($speed:1000ms) {
+  transition: all $speed ease-in-out;
+  -webkit-transition: all $speed ease-in-out;
+  -moz-transition: all $speed ease-in-out;
+  -o-transition: all $speed ease-in-out;
+  -ms-transition: all $speed ease-in-out;
+}
+
+@mixin ani-flick($speed:1400ms) {
+  transition: all $speed cubic-bezier(0.055, 0.560, 0.000, 1.005);
+  -webkit-transition: all $speed cubic-bezier(0.055, 0.560, 0.000, 1.005);
+  -moz-transition: all $speed cubic-bezier(0.055, 0.560, 0.000, 1.005);
+  -o-transition: all $speed cubic-bezier(0.055, 0.560, 0.000, 1.005);
+  -ms-transition: all $speed cubic-bezier(0.055, 0.560, 0.000, 1.005);
+}
+
+@include keyframes(artist-flick) {
+  0%   {background-position: 0 0px;}
+  25%  {background-position: 0 -1550px;}
+  50%  {background-position: 0 -2888px;}
+  100%  {background-position: 0 -1686px;}
+}
+
+@include keyframes(playlist-flick) {
+0%     {background-position: 0 -450px;}
+16.6%  {background-position: 0 -1109px;}
+32.2%  {background-position: 0 -1109px;}
+49.8%  {background-position: 0 -1768px;}
+66.4%  {background-position: 0 -1768px;}
+83%    {background-position: 0 -2427px;}
+100%   {background-position: 0 -2427px;}
+}
+
+@include keyframes(playlist-track) {
+0%   {}
+50%  {background-color: white; box-shadow: none;}
+100% {}
+}
+
+@include keyframes(playlist-track2) {
+0%   {}
+50%  {background-color: white; box-shadow: none;}
+100% {background-color: white; box-shadow: none;}
+}
+
+@include keyframes(playlist-name) {
+0%   {}
+70% {}
+80%  {opacity: 1;}
+90% {}
+100% {}
+}
+@include keyframes(playlist-name2) {
+0%   {}
+70% {}
+80%  {opacity: 1;}
+100% {opacity: 1;}
+}
+
+@include keyframes(track-active-scrub) {
+0%   {width: 0;}
+30%  {width: 70%;}
+60%  {width: 40%;}
+100% {width: 85%;}
+}
+
+@include keyframes(finger) {
+0%     {top: 80px; left: 660px;}
+2%     {top: 650px; left: 510px;}      /* to bar */
+5%     {top: 1000px; left: 510px;}     /* drag down */
+5.5%   {top: 500px; left: 520px;}      /* flick up */
+8%     {top: 900px; left: 520px;}      /* thumb grabbing */
+9%     {top: 500px; left: 460px;}      /* flick up 2 */
+11%    {top: 400px; left: 380px;}      /* grab up */
+13%    {top: 600px; left: 380px;}      /* flick down */
+
+19%    {top: 300px; left: 480px;}      /* move to click */
+22.5%  {top: 300px; left: 480px;}      /* click */
+
+23%    {top: 530px; left: 160px;}      /* grab down */
+24%    {top: 300px; left: 180px;}      /* flick up */
+27%    {top: 530px; left: 160px;}      /* grab down */
+27.5%  {top: 280px; left: 160px;}      /* flick up */
+30.5%  {top: 300px; left: 160px;}      /* grab up */
+31%    {top: 560px; left: 200px;}      /* flick down */
+
+38%    {top: 500px; left: -10px;}      /* grab left */
+38.5%  {top: 500px; left: 200px;}      /* flick right */
+
+39.5%  {top: 500px; left: -10px;}      /* grab left */
+40%    {top: 500px; left: 200px;}      /* flick right */
+    
+41%    {top: 100px; left: 80px;}       /* move to scan */
+45%    {top: 500px; left: 120px;}      /* scanning */
+46%    {top: 500px; left: 120px;}      /* click */
+
+49%    {top: 400px; left: 330px;}      /* grab */
+49.5%  {top: 280px; left: 360px;}      /* flick up */
+
+53.5%  {top: 400px; left: 330px;}      /* grab */
+54%    {top: 280px; left: 360px;}      /* flick up */
+
+58.5%  {top: 400px; left: 330px;}      /* grab */
+59%    {top: 280px; left: 360px;}      /* flick up */
+
+62%    {top: 480px; left: 280px;}      /* move to click */
+64%    {top: 480px; left: 280px;}      /* clicking */
+
+68%    {top: 200px; left: 100px;}      /* show 1 */
+69%    {top: 300px; left: 550px;}      /* show 2 */
+70%    {top: 650px; left: 350px;}      /* Move to belt */
+72%    {top: 300px; left: 350px;}      /* drag up */
+
+75%    {top: 600px; left: 350px;}      /* move to next song */
+78%    {top: 600px; left: 20px;}       /* move to drag progress */
+81.5%    {top: 600px; left: 430px;}      /* drag progress right */
+86.5%    {top: 600px; left: 250px;}      /* progress left */
+92%    {top: 600px; left: 500px;}      /* progress right */
+
+100%   {top: 80px; left: 660px;}
+}
+
+.switches {
+  float: right;
+  padding: 10px;
+  
+  li {
+    text-align: right;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.overlay.tour {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsla(264, 14%, 93%, 0.99);
+  opacity: 0;
+  pointer-events: none;
+  @each $browser in webkit, moz, ie, o {-#{$browser}-transition: all 200ms ease-in-out 0s;}
+  
+  &.active {opacity:1; pointer-events: auto;}
+}
+
+.iphone-wrapper {
+  height: 901px;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -450px;
+  width: 800px;
+  
+  
+  .tour-text {
+    position: absolute;
+    right: 0;
+    top: 250px;
+    width: 300px;
+    
+    h2 {padding-bottom: 45px;}
+    
+    .close-tour {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: white;
+      border-radius: 5px;
+      text-transform: lowercase;
+      cursor: pointer;
+      margin-top: 25px;
+      
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+.iphone {
+  width: 509px;
+  height: 901px;
+  background: gray;
+  background: url(../img/tour/iphone.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.iphone-viewport {
+  display: block;
+  width: 640px;
+  height: 1136px;
+  overflow: hidden;
+  background: url(../img/tour/0-general/bg-grid.gif);
+  position: absolute;
+  left: 89px;
+  top: 119px;
+  
+  @each $browser in webkit, moz, ie, o {
+    -#{$browser}-transform: scale(0.5);
+    -#{$browser}-transform-origin: top left;
+  }
+  
+  * { position: absolute !important; }
+
+  .menubar {
+    z-index: 50;
+    width: 640px;
+    height: 46px;
+    background: url(../img/tour/0-general/menubar.png);
+  }
+  
+  .active & .finger {
+    height: 60px;
+    width: 60px;
+    background: hsla(0, 100%, 50%, 0.4);
+    border-radius: 50%;
+    z-index: 100;
+    box-shadow: 0px 3px 5px #444;
+    @include invoke-ani(finger, 36000ms, 0.8s);
+    animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    top: 80px;
+    left: 660px;
+  }
+  
+  .view {
+    width: 640px;
+    height: 1136px;
+    left: 0;
+    top: 0;
+  }
+  
+  .nowplaying {
+    
+    .bigcover {
+      left: 0;
+      top: 1136px;
+      width: 640px;
+      height: 640px;
+      background: url(../img/tour/1-nowplaying/bigcover1.jpg);
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+      @include ani;
+    }
+    
+    .band {
+      width: 640px;
+      height: 122px;
+      left: 0;
+      top: 1014px;
+      background: url(../img/tour/1-nowplaying/band.png);
+      @include ani;
+      
+      .band-cover {
+        width: 500px;
+        height: 74px;
+        top: 28px;
+        left: 11px;
+        background: url(../img/tour/1-nowplaying/band-cover1.jpg);
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        @include ani;
+        
+        &:after {
+          content:'';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0px;
+          bottom: 0px;
+          width: 30px;
+          background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+          background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+          background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+          background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+          background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+          
+        }
+      }
+      
+      .controls {
+        width: 309px;
+        height: 48px;
+        top: 50%;
+        margin-top: -24px;
+        left: 560px;
+        background: url(../img/tour/1-nowplaying/controls.png);
+        @include ani;
+      }
+    }
+    
+    .tracklist {
+      width: 640px;
+      height: 781px;
+      background: url(../img/tour/1-nowplaying/tracklist.gif);
+      top: 1136px;
+      @include ani;
+    }
+  } /* END .nowplaying */
+  
+  
+  .artists {
+    background-image: url(../img/tour/3-artists/artists-long.jpg);
+    background-position: top left;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    
+    .track {
+      height: 276px;
+      margin-top: -180px;
+      top: 50%;
+      right: 10px;
+      
+      span {
+        display: block;
+        position: relative;
+        background: #666;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 20px 10px;
+        box-shadow: 0px 1px 0px white;
+      }
+    }
+    
+    p {
+      width: 350px;
+      height: 80px;
+      top: 780px;
+      margin-left: -175px;
+      margin-bottom: 0;
+      left: 50%;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-shadow: 0px 1px 0px white;
+      font-weight: bold;
+      font-size: 30px;
+      color: #666;
+      line-height: 40px;
+      
+      i {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 20px;
+      }
+    }
+    
+    .artists-active {
+      width: 364px;
+      height: 319px;
+      left: 294px;
+      top: 162px;
+      background: url(../img/tour/3-artists/artists-active.png);
+    }
+    
+    .playlist-active {
+      width: 640px;
+      height: 644px;
+      top: 204px;
+      background: url(../img/tour/5-playlist/playlist-active.png);
+    }
+    
+    .track, 
+    p,
+    .artists-active,
+    .playlist-active
+   {opacity: 0;}
+  }
+  
+  .artist {
+    background-image: url(../img/tour/2-artist/artist-long.jpg);
+    background-position: left 155px;
+    left: 100%;
+    @include ani(400ms);
+    
+    .artist-title {
+      width: 640px;
+      height: 115px;
+      background-image: url(../img/tour/2-artist/artist-title.png);
+      background-position: top left;
+      top: 40px;
+    }
+  }
+  
+  .appmenu {
+    background-image: url(../img/tour/4-menu/appmenu.jpg);
+    
+    .appmenu-selected {
+      background-color: rgba(0,0,0,0.1);
+      width: 598px;
+      height: 76px;
+      border-radius: 5px;
+      border: 2px solid #bbbdc8;
+      left: 20px;
+      top: 503px;
+      opacity: 0;
+    }
+  }
+}
+
+
+// STEP0
+.iphone-viewport.step0 {
+  
+  .nowplaying {
+  
+    .bigcover { top: 40px; }
+    .band { top: 660px; }
+    .controls { left: 302px; }
+    .tracklist { top: 782px; }
+    
+    .bigcover,
+    .band,
+    .controls,
+    .tracklist {
+      transition-delay: 300ms;
+      -webkit-transition-delay: 300ms;
+      -moz-transition-delay: 300ms;
+      -o-transition-delay: 300ms;
+      -ms-transition-delay: 300ms;
+    }
+    
+    .band .band-cover {
+      background-position: -85px 0px;
+      left: 36px;
+      width: 230px;
+    }
+  }
+}
+
+
+// STEP1
+.iphone-viewport.step1 {
+
+  .nowplaying {
+    .bigcover { top: 1136px; }
+    .band { top: 1014px; }
+    .controls { left: 560px; }
+    .tracklist { top: 1136px; }
+  }
+  
+  .artists {
+    @include invoke-ani(artist-flick, 5s, 1s);
+  }
+  
+}
+
+// STEP2
+.iphone-viewport.step2 {
+
+  .nowplaying {
+    .bigcover { top: 1136px; }
+    .band { top: 1014px; }
+    .controls { left: 560px; }
+    .tracklist { top: 1136px; }
+  }
+  
+  .artists {
+    background-position: 0 -1686px;
+    
+    .artists-active {
+      opacity: 1;
+      @include ani(100ms)
+    }
+  }
+  
+  .artist {
+    left: 0%;
+    transition-delay: 300ms;
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    @include invoke-ani(artist-flick, 5s, 1.3s);
+  }
+
+
+}
+
+
+// STEP3
+.iphone-viewport.step3 {
+
+  .nowplaying {
+    .bigcover { top: 1136px; }
+    .band { top: 1014px; }
+    .controls { left: 560px; }
+    .tracklist { top: 1136px; }
+  }
+  
+.artists {
+  background-position: 0 -1686px;
+}
+
+.artist {
+  left: 100%;
+  @include invoke-ani(artist-flick, 5s, 1.5s);
+}
+
+}
+
+// STEP4
+.iphone-viewport.step4 {
+
+  .nowplaying {
+    .bigcover { top: 1136px; }
+    .band { top: 1014px; }
+    .controls { left: 560px; }
+    .tracklist { top: 1136px; }
+  }
+  
+  .artists {
+    top: 250px;
+    background-position: 0 -1686px;
+    transform: rotate(25deg);
+    transform-origin: bottom right;
+    -webkit-transform: rotate(25deg);
+    -webkit-transform-origin: bottom right;
+    -moz-transform-origin: bottom right;
+    -moz-transform: rotate(25deg);
+    -ms-transform-origin: bottom right;
+    -ms-transform: rotate(25deg);
+    -o-transform-origin: bottom right;
+    -o-transform: rotate(25deg);
+    
+    @include ani(400ms);
+  }
+
+}
+
+
+// STEP5
+.iphone-viewport.step5 {
+
+  .nowplaying {
+    .bigcover { top: 1136px; }
+    .band { top: 1014px; }
+    .controls { left: 560px; }
+    .tracklist { top: 1136px; }
+  }
+  
+  .artists {
+    top: 0px;
+    background: url(../img/tour/5-playlist/playlists-long.jpg);
+    background-position: 0 -450px;
+    @include ani(400ms);
+    transition-delay: 200ms;
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    
+    @include invoke-ani(playlist-flick, 5s, 1.5s);
+    
+    .track {opacity: 1;}
+    
+    .track span:nth-child(2) {
+      @include invoke-ani(playlist-track, 3s, 0s);
+    }
+    .track span:nth-child(3) {
+      @include invoke-ani(playlist-track, 3s, 1.5s);
+    }
+    .track span:nth-child(4) {
+      @include invoke-ani(playlist-track, 3s, 3s);
+    }
+    .track span:nth-child(5) {
+      @include invoke-ani(playlist-track2, 3s, 4.5s);
+    }
+    p.one {
+      @include invoke-ani(playlist-name, 1.5s, .3s);
+    }
+    p.two {
+      @include invoke-ani(playlist-name, 1.5s, 1.8s);
+    }
+    p.three {
+      @include invoke-ani(playlist-name, 1.5s, 3.6s);
+    }
+    p.four {
+      @include invoke-ani(playlist-name2, 1.5s, 5.4s);
+    }
+  }
+  
+  .appmenu-selected {
+    @include ani(50ms);
+    opacity: 1;
+  }
+}
+
+
+// STEP6
+.iphone-viewport.step6 {
+  
+  .nowplaying {
+  
+    .bigcover { top: 40px; }
+    .band { top: 660px; }
+    .controls { left: 302px; }
+    .tracklist {
+      top: 782px; 
+      background: url(../img/tour/1-nowplaying/tracklist-playlist.jpg);
+    }
+    
+    .bigcover,
+    .band,
+    .controls,
+    .tracklist {
+      transition-delay: 300ms;
+      -webkit-transition-delay: 300ms;
+      -moz-transition-delay: 300ms;
+      -o-transition-delay: 300ms;
+      -ms-transition-delay: 300ms;
+    }
+    .bigcover { background: url(../img/tour/1-nowplaying/bigcover2.jpg); }
+    
+    .band .band-cover {
+      background-position: -85px 0px;
+      left: 36px;
+      width: 230px;
+      background-image: url(../img/tour/1-nowplaying/band-cover2.jpg);
+      background-repeat: no-repeat;
+    }
+    
+    .tracklist .active-track {
+      left: 15px;
+      right: 15px;
+      top: 37px;
+      height: 70px;
+      background-color: #afc6bc;
+      border-radius: 3px;
+      background-image: url(../img/tour/1-nowplaying/track-active1.png);
+      background-position: 15px 10px;
+      background-repeat: no-repeat;
+      
+      span {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 123px;
+        background-color: #444537;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-image: url(../img/tour/1-nowplaying/track-active1.png);
+        background-position: 15px 10px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  
+  .artists {
+    top: 0px;
+    background: url(../img/tour/5-playlist/playlists-long.jpg);
+    background-position: 0 -2427px;
+    
+    .track, p.four {opacity: 1;}
+    
+    .track span:nth-child(5) {
+      background-color: white; box-shadow: none;
+    }
+    
+    .playlist-active {
+      @include ani(50ms);
+      opacity: 1;
+    }
+  }
+
+}
+
+
+// STEP7
+.iphone-viewport.step7 {
+  
+  .nowplaying {
+    .bigcover { top: -90px; }
+    .band { top: 100px; }
+    .controls { left: 302px; }
+    .tracklist {
+      top: 222px;
+      height: 1102px;
+      background: url(../img/tour/1-nowplaying/tracklist-playlist.jpg);
+    }
+    
+    .bigcover { background: url(../img/tour/1-nowplaying/bigcover2.jpg) no-repeat; }
+    
+    .band .band-cover {
+      background-position: -85px 0px;
+      left: 36px;
+      width: 230px;
+      background-image: url(../img/tour/1-nowplaying/band-cover2.jpg);
+      background-repeat: no-repeat;
+    }
+    
+    .tracklist .active-track {
+      left: 15px;
+      right: 15px;
+      top: 37px;
+      height: 70px;
+      background-color: #afc6bc;
+      border-radius: 3px;
+      background-image: url(../img/tour/1-nowplaying/track-active1.png);
+      background-position: 15px 10px;
+      background-repeat: no-repeat;
+      
+      span {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 123px;
+        background-color: #444537;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-image: url(../img/tour/1-nowplaying/track-active1.png);
+        background-position: 15px 10px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+
+// STEP8
+.iphone-viewport.step8 {
+  
+  .nowplaying {
+    .bigcover { top: -90px; }
+    .band { top: 100px; }
+    .controls { left: 302px; }
+    .tracklist {
+      top: 222px;
+      height: 1102px;
+      background: url(../img/tour/1-nowplaying/tracklist-playlist.jpg);
+    }
+    
+    .bigcover { background: url(../img/tour/1-nowplaying/bigcover3.jpg) no-repeat; }
+    
+    .band .band-cover {
+      background-position: -85px 0px;
+      left: 36px;
+      width: 230px;
+      background-image: url(../img/tour/1-nowplaying/band-cover2.jpg);
+      background-repeat: no-repeat;
+    }
+    
+    .tracklist .active-track {
+      left: 15px;
+      right: 15px;
+      top: 399px;
+      height: 70px;
+      background-color: #d7dfe2;
+      border-radius: 4px;
+      background-image: url(../img/tour/1-nowplaying/track-active2.png);
+      background-position: 15px 10px;
+      background-repeat: no-repeat;
+      
+      span {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0px;
+        background-color: #ffe700;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-image: url(../img/tour/1-nowplaying/track-active2.png);
+        background-position: 15px 10px;
+        background-repeat: no-repeat;
+        @include invoke-ani(track-active-scrub, 5s, 1s);
+      }
+    }
+  }
+}
+
+
+// STEP9
+.iphone-viewport.step9 {
+  
+  .nowplaying {
+    .bigcover { top: 40px; }
+    .band { top: 660px; }
+    .controls { left: 302px; }
+    .tracklist {
+      top: 782px;
+      height: 1102px;
+      background: url(../img/tour/1-nowplaying/tracklist-playlist.jpg);
+    }
+    
+    .bigcover { background: url(../img/tour/1-nowplaying/bigcover3.jpg) no-repeat; }
+    
+    .band .band-cover {
+      background-position: -85px 0px;
+      left: 36px;
+      width: 230px;
+      background-image: url(../img/tour/1-nowplaying/band-cover2.jpg);
+      background-repeat: no-repeat;
+    }
+    
+    .tracklist .active-track {
+      left: 15px;
+      right: 15px;
+      top: 399px;
+      height: 70px;
+      background-color: #d7dfe2;
+      border-radius: 4px;
+      background-image: url(../img/tour/1-nowplaying/track-active2.png);
+      background-position: 15px 10px;
+      background-repeat: no-repeat;
+      
+      span {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 0px;
+        background-color: #ffe700;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-image: url(../img/tour/1-nowplaying/track-active2.png);
+        background-position: 15px 10px;
+        background-repeat: no-repeat;
+        @include invoke-ani(track-active-scrub, 5s, 1s);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

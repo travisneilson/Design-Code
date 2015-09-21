@@ -1,0 +1,189 @@
+---
+layout: post
+type: post
+title: Art-Directed Theme Framework
+cover: /assets/post-assets/033-art-directed/img/art-directed-cover.png
+styles: ['<link rel="stylesheet" href="/assets/post-assets/033-art-directed/css/base.css">',
+         '<link rel="stylesheet" href="/assets/post-assets/033-art-directed/css/fonts.css">',
+         '<link rel="stylesheet" href="/assets/post-assets/033-art-directed/css/main.css">']
+height: 275px
+blurb: I mean, how can you not?
+---
+    
+<div class="scroll-wrap">
+        
+    <header>
+        <div class="positioner">
+            <h1>
+                I am hack <em>wordpress</em>
+                <span>(and you can too!)</span>
+            </h1>
+        </div>
+    </header>
+    
+    <article class="mover">
+        <div class="positioner">
+            
+            <section>
+                <h2>TL;DR</h2>
+                <p>I made a <a href="https://github.com/travisneilson/Art-Directed">Wordpress Framework</a> for making <a href="http://travisneilson.com/themesubmarine/art-direction/">"Art-Directed" blog posts</a>. You should Use it.</p>
+            </section>
+            
+            <section>
+                <h2>How I hack WordPress to make art directed posts</h2>
+                <p>Ok, I'm using the term 'hack' in a very liberal way. It's not so much hacking as it is manipulating its features to go against its intended use-case. But that wouldn't be a very good title would it?</p>
+                <p><strong>In order to get a just-what-I-want install of WordPress there are a few req
+                uisites:</strong></p>
+                <ol>
+                    <li>I want to use my own code editor to create and compose my posts. I don't want to use the WordPress post editor at all.</li>
+                    <li>Each post can have its own set of assets in including images, stylesheets, javascript files, fonts, downloads and more.</li>
+                    <li>Related to that, I need access to the <code>&lt;head&gt;</code> tag to link to css and such.</li>
+                    <li>There needs to be consistent navigational items from post to post.</li>
+                    <li>I need to be able to publish my posts secretly, without the post showing up on the homepage, when a user clicks the 'next post' arrows, and even without my RSS subscribers being notified. I may want show my friends previews to get feedback.</li>
+                </ol>
+            </section>
+            
+            <section>
+                <h2>1 - Using my own code editor</h2>
+                <p><strong>This is really the heart of the situation. The most important point in the list.</strong></p>
+                <p>The fist thing to do is create a place to store the files of the custom posts. Since I am not relying on the WP editor and database for this stuff I create a folder in my theme directory cleverly named 'custom-posts'. Inside of that I make a directory for each post. A post directory can have more directories inside for the CSS and JS files and whatnot. Sometimes I even place the source .psd and original notes in that folder also, so I have em. More on that in step 2.</p>
+                <p>Next we need a place to display the posts that you will create there. Remembering the WordPress hierarchical structure, we know that is you simply make a single.php in your theme folder. In that single.php document make a loop — like you do — and in that loop place this code:</p>
+                <p><code>&lt;?php $myCustomFile = get_post_meta($post->ID, 'custom-file', true); ?&gt;</code></p>
+                <p>This code sets up a custom field in your WP theme called "custom-file" so that when you create a post all you have to do is go into that posts edit page and fill in that field with the new posts post folder and file location.</p>
+                <p>After that line write:</p>
+                <p><code>&lt;?php include (TEMPLATEPATH . '/custom-posts/' . $myCustomFile); ?&gt;</code></p>
+                <p>This just includes the file that you are going to be writing into the field, the custom file that you get to use your editor to write. Easy, no?</p>
+                <p>For extra oomph I remove the text editor in the page and post edit screens using this code in my functions.php file:</p>
+                <p><pre><code>function remove_editors(){
+    remove_post_type_support( 'post', 'editor' );
+    remove_post_type_support( 'page', 'editor' );
+}   
+add_action( 'init', 'remove_editors' );</code></pre></p>
+            </section>
+            
+            
+            <section>
+              <h2>2 - Post directory</h2>
+              <p>Earlier we made a directory in out theme folder called 'custom-posts.' Inside this directory we are going to place the files that make up each individual art-directed post. Through trial and error I have found it best to make a new folder for each post and provide it with a sequential number, that way it's easy to see the list of your posts in the order in which they were made.</p>
+              
+              <p>Let's say your first post is titled "If I were a Ninja". You would make a new folder in "custom-posts" for it. In that new folder you need a new .php file to be the content of the post and any other supporting assets, like css and javascript files. Your new file path looks like this: <code>/custom-posts/001-if-i-were-a-ninja/if-i-were-a-ninja.php</code>.</p>
+              
+              <img src="/assets/post-assets/033-art-directed/img/new-post-folder.png">
+              
+              <p>Write whatever the heck you want in the if-i-were-a-ninja.php file. This is the contents of your post.</p>
+              
+              <p>Now, in the WordPress back end, go to "Posts > Add New", to create this post in your WordPress database. In the "Add New Post" screen enter the long form of the post title, in this case "If I were a Ninja" and click "Save Draft" right away. You want the small url to appear under the field where you just entered the title.</p>
+              
+              <p>Now find the Custom Fields area. (You may have to tick the box under the "Screen Options" drop down in the upper right corner to see the Custom Fields.) Click "Enter New" and name the first one "custom-file". (In the future, what you write right now will be available in the drop down.) Enter the path to the post's file (<code>001-if-i-were-a-ninja/if-i-were-a-ninja.php</code>) in the value field. Click "Add Custom Field". Done. Now you can click preview and see the contents of <code>if-i-were-a-ninja.php</code> as the content of the post. Ready for you to Art-Direct it.</p>
+              
+              <img src="/assets/post-assets/033-art-directed/img/add-post-screen.png">
+              
+              <p><strong>Tip!</strong> - When you are working in if-i-were-a-ninja.php you will want to get in the habit of referencing things in that posts folder using a special WordPress short code. <br>So instead of writing:</p>
+              
+              <p><code>&lt;img src="images/fishy.png" /&gt;</code></p>
+              
+              <p>or even</p>
+              
+              <p><code>&lt;img src="http://site.com/wp-content/themes/myTheme/custom-posts/001-clown-fish/images/fishy.png" /&gt;</code></p>
+              
+              <p>You need to write things like:</p>
+              
+              <p><code>&lt;img src="&lt;?php bloginfo('template_url'); ?&gt;/custom-posts/001-clown-fish/images/fishy.png" /&gt;</code></p>
+              
+              <p>This makes all the paths to assets relative to the theme folder. Which is a very good thing when you move things around for time to time as you are apt to do. (This is version seven of my art directed site. It's an evolving approach, and it definitely comes in handy to have these articles self contained.)</p>
+            </section>
+            
+            
+            <section>
+            
+              <h2>3 - Flexible access to the &lt;head&gt;</h2>
+              <p>This is really a soft requirement, but I found it handy to start the custom post code <em>inside</em> of the <code>&lt;head&gt;</code>. In other words, the top of my <code>if-i-were-a-ninja.php</code> file looks somewhat like this:</p>
+              
+              <p><pre><code>  &lt;link rel="stylesheet" href="&lt;?php bloginfo('template_url'); ?&gt;/custom-po
+  sts/001-if-i-were-a-ninja.css"&gt;
+&lt;/head&gt;
+&lt;body class="ninja-post"&gt;
+  &lt;article&gt;
+  ...
+  &lt;/article&gt;</code></pre></p>
+              
+              <p>This allows me to easily reach into the head and link to css and javascript files, also I can easily put a class on the body if I won't to make doubly sure there is no cross over (lets say you retain a common footer or something, but don't want to turn it yellow or whatever.)</p>
+              
+              <p>This practice could be overcome with Javascript if you feel iffy about making sure that you include the <code>&lt;/head&gt;</code> &amp; <code>&lt;body&gt;</code> in each post. Also, it's not super important that your link and script tags need to be in the header. To each his own, but this works for me. (Actually, now that I am writing, this, I am considering not doing this. See? It's an evolving process.)</body>
+              
+            </section>
+            
+            
+            <section>
+              <h2>4 - Post Navigation</h2>
+              <p>This is really up for grabs, but this is how I am thinking at the moment. At one point I made the homepage act as a "single" page, meaning that It would show the latest post in full view immediately, no archive or anything. You could move through the posts laterally only: "Previous Post" and the like.</p>
+              <p>I found that it made the site as a whole very hard to navigate and people would not know that there is a whole site, and not just this one lovely page. So I turned the homepage into a more Bloggy one, with a listing of posts and watched my bounce rate come down. Whew.</p>
+              <p>I recommend that there still be some consistent branding and navigation on the single page. In my site I made a consistent 45 pixel tall bar stuck to the bottom of the browser that has a logo which links to the homepage, and previous and next links. So there is still a bit of orientation to the whole site. I've tried to make it as out of the way as possible so that I could have a lot of room to stretch my legs in the posts. I've seen others do different things from consistent headers, to huge footers.</p>
+            </section>
+            
+            <section>
+              <h2>5 - Exclude posts plugin</h2>
+              <p>One of the things I like to do is show my progress, or a rough idea, to a friend to get feedback. Wordpresses built-in method of making someone a role and so forth is clunky for previewing, so i like to use a plugin that lets me publish, but restricts where the post shows up. I hide it from the loop, from RSS, and stuff like that. Jus sayin'.</p>
+              <p><a href="http://www.codehooligans.com/projects/wordpress/simply-exclude/">Simply Exclude Plugin</a></p>
+            </section>
+            
+            <section>
+              <h2>Conclusion</h2>
+              <p>A few years ago <a href="http://travisneilson.com/themesubmarine/art-direction/examples-of-art-directed-posts-around-the-web/">art-directed blogs</a> were a bit of a trend, well, at least there were a few around... now, not so much. It takes time and effort to write up a really good post. I guess this is why these types of blogs have become a bit of a dinosaur.</p>
+              <p>I'd like to see that change. You should download this <a href="https://github.com/travisneilson/Art-Directed">Wordpress Framework</a> and make your own. It's fun, and we can be friends.</p>
+            </section>
+    
+    
+            <style type="text/css">
+            /* Disqus Styles
+            ----------------------------------------------------------------------------*/
+            
+            #dsq-global-toolbar,
+            #dsq-new-post h3,
+            .dsq-item-trackback,
+            .dsq-options
+            	{ display: none !important; }
+            
+            </style>
+            
+            
+            <div class="comments-wrap">
+        
+            	<div id="disqus_thread"></div>
+            	<script type="text/javascript">
+            	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            	    var disqus_shortname = 'travisneilson'; // required: replace example with your forum shortname
+            	
+            	    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+            	     var disqus_identifier = 'hackWP';
+            	    // var disqus_url = 'http://example.com/permalink-to-page.html';
+            	
+            	    /* * * DON'T EDIT BELOW THIS LINE * * */
+            	    (function() {
+            	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            	    })();
+            	</script>
+            	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            	</noscript>		
+            	
+            </div>
+            
+            	
+            	
+            <div style=" clear:both; height:70px;position:relative;z-index:-4;"></div>
+    
+            
+        </div>    
+    </article>
+    
+  </div>
+
+<script type="text/javascript">
+
+  $(function() {
+    $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1">');
+  });
+
+</script>

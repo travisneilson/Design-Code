@@ -1,0 +1,531 @@
+html { height: 100%; }
+
+body {
+  height: 100%;
+  background-image: url(../img/bg-test3.jpg); /* Need a vert-repeating bg */
+  background-size: cover;
+  background-position: 0% 5%;
+  background-attachment: fixed;
+  overflow: hidden;
+  -webkit-transition: all 700ms ease-in-out;
+  -moz-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
+  -ms-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+}
+
+.song-wrap {
+  height: 100%;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  -webkit-transition: all 700ms ease-in-out;
+  -moz-transition: all 700ms ease-in-out;
+  -o-transition: all 700ms ease-in-out;
+  -ms-transition: all 700ms ease-in-out;
+  transition: all 700ms ease-in-out;
+  display: table;
+}
+
+section.seen {top: -100%;}
+section.current {top: 0%;}
+section.yet-to-see {top: 100%;}
+
+section > div {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.prev, .next {
+  display: block;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background-image: url(../img/arrow-up.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 11px;
+  letter-spacing: 1px;
+/*  text-shadow: 0px 1px 1px rgba(0,0,0,0.3);*/
+  line-height: 14px;
+  -webkit-transition: all 300ms ease-in-out 0s;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.prev:hover, .next:hover {
+  color: #fff;
+}
+
+.prev {
+  top: 10px;
+  padding-top: 30px;
+}
+
+.prev:hover {
+  background-position: 50% 0%;
+}
+
+.prev.hidden {
+  top: -50px;
+}
+
+.next {
+  bottom: 55px;
+  padding-bottom: 30px;
+  background-image: url(../img/arrow-down.png); 
+}
+
+.next.start {
+  bottom: 10px;
+}
+
+.next:hover {
+  background-position: 50% 100%;
+}
+
+.next.hidden {
+  bottom: -50px;
+}
+
+.start {
+/*  background-image: url(../img/arrow-down-start.png);*/
+  /*color: #333;*/
+}
+
+.song0 h1 {
+  overflow: hidden;
+  width: 379px;
+  height: 142px;
+  text-indent: -500px;
+  margin: auto;
+  background: url('../img/title2.png') no-repeat left top;
+}
+
+.song0 p {
+  width: 370px;
+  margin: auto;
+  text-align: justify;
+  font-size: 12px;
+  color: #fff;
+  margin-top: 15px;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.45);
+  
+}
+
+.song0 .next {
+  position: relative;
+  margin-top: 50px;
+}
+
+/*** Instructions ***/
+.instructions {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  width: 150px;
+  margin: 0;
+  z-index: 51;
+  text-align: right;
+  color: white;
+  font-size: 10px;
+  height: 200px;
+  margin-top: -100px;
+  
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.instructions.hidden {
+  right: -160px;
+}
+
+.instructions i {
+  display: inline-block;
+  margin-left: 10px;
+  border: 1px solid #fff;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.instructions i.pressed {
+  background-color: white;
+  color: #999;
+}
+
+/*** SIDE NOTE ***/
+
+.side-nav {
+  position: fixed;
+  top: 25px;
+  left: 0;
+  /*height: 100%;*/
+  bottom: 50px;
+  width: 30px;
+  margin: 0;
+  z-index: 51;
+}
+
+.side-nav li {
+  height: 3.125%;
+  cursor: pointer;
+}
+
+.side-nav .table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.side-nav .cell {
+  height: 100%;
+  width: 100%;
+  /*display: table-cell;*/
+  vertical-align: middle;
+  position: relative;
+}
+
+
+.side-nav strong {
+  display: block;
+  height: 2px;
+  width: 15px;
+  background-color: white;
+  opacity: 0.4;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.side-nav li:nth-child(odd) strong {
+  width: 20px;
+}
+
+.side-nav li:hover strong,
+.side-nav li.hovered strong {
+  height: 6px;
+  width: 30px;
+  opacity: 1;
+}
+
+.side-nav span {
+  display: block;
+  position: absolute;
+  height: 10px;
+  line-height: 10px;
+  left: 10px;
+  /*top: 50%;*/
+  margin-top: -8px;
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
+  white-space: nowrap;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  -ms-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+}
+
+.side-nav li:hover span,
+.side-nav li.hovered span {
+  opacity: 1;
+  left: 40px;
+  font-size: 20px;
+}
+
+
+
+
+/*** ALBUMS ***/
+
+.album-wrap {
+  width: 350px;
+  margin: auto;
+/*  background: rgba(3,200,100,0.3);*/
+  color: white;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.45);
+}
+
+.album-cover {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-image: url(../img/covers.jpg);
+  margin-right: 10px;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.45);
+  position: relative;
+  cursor: pointer;
+}
+
+.song1 .album-cover { background-position: 0px 0px; }
+.song2 .album-cover { background-position: -100px 0px; }
+.song3 .album-cover { background-position: -200px 0px; }
+.song4 .album-cover { background-position: -300px 0px; }
+.song5 .album-cover { background-position: -400px 0px; }
+
+.song7 .album-cover { background-position: 0px -100px; }
+.song6 .album-cover { background-position: -100px -100px; }
+
+.song8 .album-cover { background-position: -200px -100px; }
+.song9 .album-cover { background-position: -300px -100px; }
+.song10 .album-cover { background-position: -400px -100px; }
+
+.song11 .album-cover { background-position: 0px -200px; }
+.song12 .album-cover { background-position: -100px -200px; }
+.song13 .album-cover { background-position: -200px -200px; }
+.song14 .album-cover { background-position: -300px -200px; }
+.song15 .album-cover { background-position: -400px -200px; }
+.song16 .album-cover { background-position: 0px -300px; }
+.song17 .album-cover { background-position: -100px -300px; }
+.song18 .album-cover { background-position: -200px -300px; }
+
+.song20 .album-cover { background-position: -300px -300px; }
+.song19 .album-cover { background-position: -400px -300px; }
+
+.song21 .album-cover { background-position: 0px -400px; }
+.song22 .album-cover { background-position: -100px -400px; }
+.song23 .album-cover { background-position: -200px -400px; }
+.song24 .album-cover { background-position: -300px -400px; }
+.song25 .album-cover { background-position: -400px -400px; }
+.song26 .album-cover { background-position: 0px -500px; }
+.song27 .album-cover { background-position: -100px -500px; }
+.song28 .album-cover { background-position: -200px -500px; }
+.song29 .album-cover { background-position: -300px -500px; }
+.song30 .album-cover { background-position: -400px -500px; }
+
+
+.album-cover:before {
+  content: '';
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  background-image: url(../img/music-controls.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  margin: -36.5px;
+  top: 50%;
+  left: 50%;
+}
+
+.album-cover.not-playing:before {
+  background-position: 0px 73px;
+}
+
+.album-cover.not-playing:hover:before {
+  background-position: 0px 0px;
+}
+
+.album-cover.playing:before {
+  background-position: 0px -73px;
+  opacity: 0.7;
+}
+
+.album-cover.playing:hover:before {
+  background-position: 0px -73px;
+  opacity: 1;
+}
+
+.album-cover:active:before {
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.album-meta {
+  margin-bottom: 45px;
+}
+
+.album-meta > * {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-track {
+  height: 5px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.45);
+  margin: 10px 0;
+}
+
+.progress {
+  height: 5px;
+  width: 0%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.album-meta-song,
+.album-meta-album,
+.album-meta-artist {
+  width: 200px;
+}
+
+.album-meta-duration {
+  float: right;
+  font-weight: bold;
+}
+
+.album-meta-note-link {
+  float: right;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.album-meta-note-link:hover,
+.album-meta-note-link.active {
+  opacity: 1;
+}
+
+.album-note {
+  background: #222;
+  padding: 15px;
+/*  margin: 45px 0 0 0;*/
+  font-size: 12px;
+  text-align: justify;
+  border-radius: 3px;
+  border: 1px solid #999;
+  display: none;
+  position: relative;
+  width: 320px;
+}
+
+.album-note a {
+  color: white;
+}
+
+.album-note:after, .album-note:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.album-note:after {
+	border-color: rgba(34, 34, 34, 0);
+	border-bottom-color: #222;
+	border-width: 10px;
+	left: 100%;
+	margin-left: -35px;
+}
+
+.album-note:before {
+	border-color: rgba(153, 153, 153, 0);
+	border-bottom-color: #999;
+	border-width: 11px;
+	left: 100%;
+	margin-left: -36px;
+}
+
+.album-note-year,
+.album-note-age {
+  height: 40px;
+  width: 50%;
+  font-size: 40px;
+  line-height: 0.7;
+  font-weight: bold;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 45px;
+}
+
+.album-note-year {
+  float: left;
+  clear: left;
+  border-right: 1px solid #333;
+}
+
+.album-note-age {
+  float: right;
+  clear: right;
+  padding-left: 15px;
+}
+
+.album-note-year span,
+.album-note-age span {
+  /*display: block;*/
+  font-size: 14px;
+  color: #ccc;
+}
+
+.song31 {
+  display: block;
+  overflow: scroll;
+}
+
+.song31 > div {
+  display: block;
+  padding-top: 90px;
+}
+
+.song31 .album-wrap {
+  padding: 15px 0px 0px 0px;
+  color: #fff;
+  font-size: 12px;
+  text-shadow: none;
+}
+
+.song31 .album-wrap hr {
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: none;  
+}
+
+.song31 h3 {
+  text-align: center;
+  color: white;
+}
+
+.song31 a {
+  color: white;
+}
+
+.comments-wrap {
+  margin-top: 30px;
+	background: rgba(0,0,0,0.7);
+	border: 1px solid rgba(255,255,255,0.4);
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+
+

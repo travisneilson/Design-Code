@@ -1,0 +1,284 @@
+---
+layout: post
+type: post
+title: Digital Dystopia
+cover: /assets/post-assets/015-digital-dystopia/img/digital-dystopia-cover.jpg
+styles: ['<link href="/assets/post-assets/015-digital-dystopia/css/florin-sans.css" media="screen" rel="stylesheet" type="text/css" />',
+         '<link rel="stylesheet" href="/assets/post-assets/015-digital-dystopia/css/zen.css">']
+height: 230px
+blurb: I make the rap musics
+---
+
+
+<script type="text/javascript">
+
+		$(function() {
+	
+			$('.lyrics-tab, .notes-tab').click(function() {
+				$('.tabs li').removeClass('active');
+				$(this).addClass('active');
+			});
+	
+			$('.lyrics-tab').click(function() {
+				$('.notes, .lyrics').hide('fast');
+				$('.lyrics').show('fast');
+			});
+	
+			$('.notes-tab').click(function() {
+				$('.notes, .lyrics').hide('fast');
+				$('.notes').show('fast');
+			});
+	    
+	    player();
+	    
+		}); //end.ready
+
+
+function player() {
+  
+  audios = []
+  
+    $('audio').each(function(){
+       audios.push(this);
+    });
+    
+    $('.album-art').click(function() {
+        var i, 
+            $this = $(this),
+            audio = $this.find('audio')[0],
+            btn = $this.find('.play-btn');
+                         
+        for (i = 0; i < audios.length; i++){
+        
+            if (audios[i].paused === false){
+                audios[i].pause();
+                audios[i].currentTime = 0;
+                btn.removeClass('pause');
+                
+            } else {
+                if (audios[i] === audio){
+                    audio.play();
+                    btn.addClass('pause');
+                }
+            }
+        }
+    });
+
+}
+
+
+</script>
+
+
+
+<div class="container_12 clearfix">
+
+<div class="grid_6">
+
+	<ul class="tabs">
+		<li class="lyrics-tab active">Lyrics</li>
+		<li class="notes-tab">Notes</li>
+	</ul>
+	
+	<hr />
+
+	<div class="copy">
+				
+		<div class="lyrics">
+			<p>
+			Iv'e become electronic,<br />
+			less man than machine.<br />
+			My thoughts are ionic<br />
+			radioactive lazer beams.</p>
+			
+			<p>
+			I'm a whisper in your ear,<br />
+			a buzzing in the night,<br />
+			the bionic voice you hear<br />
+			beamed down from satellites.</p>
+			
+			<p>
+			Arteries are power lines,<br />
+			finger prints are schematics.<br />
+			Binary enzymes act like<br />
+			crack to digital addicts.</p>
+			
+			<p>
+			All my names are atomic<br />
+			numbered to the nth power.<br />
+			Decibels are metronomic,<br />
+			increasing with every hour.</p>
+			
+			<p>
+			My synapse spark new life<br />
+			in bacta tanks.<br />
+			Embryos are fertilized<br />
+			by memory banks.</p>
+			
+			<p>
+			My heart beat causes<br />
+			atoms to collide<br />
+			while deducing probabilities<br />
+			of techno genocide.</p>
+			
+			<p>
+			I spawned entire races of<br />
+			galactic sentient beings<br />
+			by increasing the volumetric space<br />
+			of my lyrical proceedings.</p>
+			
+			<p>
+			Muscle fibers have become<br />
+			the fabric of space and time,<br />
+			a universal cerebellum<br />
+			to preach the lyrics of this rhyme.</p>
+			
+			<p>
+			//////////////////</p>
+			
+			<p>
+			We're all trapped in this disconnected world.<br />
+			It wasn't meant to be this way.<br />
+			I'm here now, you can take my hand.<br />
+			Lets create a brand new day.</p>
+			
+			<p>
+			//////////////////</p>
+			
+			<p>
+			Mind quickens. Body stiffens.<br />
+			Downloading your new religions.<br />
+			Needles stinging. Choirs singing.<br />
+			Bow before your new convictions.</p>
+			
+			<p>
+			Microscopic nano bots<br />
+			are now inside into your blood stream,<br />
+			one hundred thousand megawatts of<br />
+			power bursting at the seams.</p>
+			
+			<p>
+			Understand that this is not<br />
+			a normal operation,<br />
+			your body is undergoing<br />
+			techno transubstantiation.</p>
+			
+			<p>
+			And all you think about<br />
+			is the infinite, the innumerable!<br />
+			you mind is now collapsed without,<br />
+			modified and overhauled!</p>
+			
+			<p>
+			Fire searing, memory burning,<br />
+			pistons pumping, nerves discerning.<br />
+			All of this is just a moment!<br />
+			All of this is just Arrrrhhhhhh!</p>
+			
+			<p>
+			Your adams are broken apart<br />
+			into a million tiny pieces.<br />
+			Scattered across the galaxy<br />
+			to become a perfect living species</p>
+			
+			<p>
+			All with one divine and single<br />
+			manufactured purpose,<br />
+			to reproduce and recreate<br />
+			to ultimately dominate.</p>
+			
+			<p>
+			And I ... I will carry on!!</p>
+			
+			<p>
+			//////////////////</p>
+			
+			<p>
+			We're all trapped in this disconnected world.<br />
+			It wasn't meant to be this way.<br />
+			I'm here now, you can take my hand.<br />
+			Lets create a brand new day.</p>
+			
+			<p>
+			It seems like we've all left something out,<br />
+			the human part of ourselves decayed.<br />
+			Come with me, we can start again.<br />
+			We are organic renegades.</p>
+			
+			<p>
+			//////////////////</p>
+			
+			<p>
+			And it seems like we've all left something out.<br />
+			The human part of ourselves...<br />
+			We can start it all again...</p>
+			
+		</div>
+		
+		<div class="notes">
+			<p>
+			This song's content/theme was inspired by Jamiroquai's 'Virtual Insanity', a song about how we as a people are getting more lost as our technology advances. Musically by Kanye West when he pushes what is normally expected from pop and rap music, blending them and distorting them to create something new. And Finally the rapid vocal stylings are a nod to the east coast rap I grew up with. MC's like the Rza and Busta Rhymes, how they would double and triple the tempo of the music with the lyrics and find new rhythms inside the beat.</p>
+
+			<p>
+			On it's highest level it's about a struggle to maintain personal relationships in this digital world.  To pit interactivity versus inter-personality. Digital identities versus organic realities.</p>
+			
+<!--
+			<p>
+			Also, I didn't leave my bedroom for three days to make it.</p> 
+-->
+			
+			<p>
+			On a lower level, it's about one character who amasses almost god-like powers through technological means. And the response of other people who are caught in the wake of that power.</p>
+			
+			<p>
+			At it's most basic level it's an awesome jam and some pretty wild lyrics that I hope people can get into.</p>
+		</div>
+		
+		
+		
+			<div class="comments-wrap">
+	
+	
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	    var disqus_shortname = 'travisneilson'; // required: replace example with your forum shortname
+	
+	    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+	     var disqus_identifier = 'digital-dystopia';
+	    // var disqus_url = 'http://example.com/permalink-to-page.html';
+	
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>		
+
+	
+	</div>
+
+		<div style=" clear:both; height:70px;position:relative;z-index:-4;"></div>
+	
+	
+	</div>
+
+</div><!-- /grid_6 -->
+
+<div class="grid_6">
+	<div class="album-art">
+	  
+	  <audio>
+	    <source src="/assets/post-assets/015-digital-dystopia/audio/digital-dystopia.mp3" type="audio/mp3" />
+	    <source src="/assets/post-assets/015-digital-dystopia/audio/digital-dystopia.ogg" type="audio/ogg" />
+	  </audio>
+	  
+		<div class="play-btn"></div>
+		
+	</div> <!-- /album-art-->
+</div><!-- /grid_6 -->
+
+</div><!-- /gird_12 -->

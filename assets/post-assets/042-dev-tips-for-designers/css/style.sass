@@ -1,0 +1,194 @@
+@import '../../../css/plugins/plugin-dir'
+
+// post styles here...
+
+$yellow: #f8eb48
+
+
+html, body
+  height: auto
+  
+body
+  +radial-gradient(#fff, #ddd)
+
+[class^="stripe"]
+  position: absolute
+  position: fixed
+  background: white
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.3)
+  +size(300px 50px)
+  z-index: 0
+  
+  &.stripe1
+    top: 50px
+    right: 0
+    background: $yellow
+    box-shadow: -2px 5px 6px rgba(0,0,0,0.1)
+    height: 40px
+    width: 130px
+  
+  &.stripe2
+    top: 0px
+    right: 5%
+    background: white
+    height: 10px
+    box-shadow: none
+  
+  &.stripe3
+    top: 80px
+    left: 0px
+    background: black
+    height: 120px
+    width: 60px
+  
+  &.stripe4
+    top: 100px
+    left: 0px
+    background: white
+    height: 30px
+    width: 120px
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.1)
+  
+  &.stripe5
+    top: 500px
+    left: 0px
+    background: $yellow
+    height: 180px
+    width: 70px
+  
+  &.stripe6
+    top: 600px
+    left: 0px
+    background: black
+    height: 120px
+    width: 60px
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.1)
+  
+  &.stripe7
+    top: 320px
+    right: 0px
+    background: $yellow
+    height: 50px
+    width: 120px
+    
+  &.stripe8
+    top: 300px
+    right: 0px
+    background: white
+    height: 30px
+    width: 80px
+    box-shadow: 2px 3px 4px rgba(0,0,0,0.1)
+  
+  &.stripe9
+    top: 460px
+    right: 0px
+    background: black
+    height: 60px
+    width: 140px
+  
+  &.stripe10
+    top: 530px
+    right: 0px
+    background: white
+    height: 20px
+    width: 100px
+  
+  &.stripe11
+    bottom: 40px
+    right: 0px
+    background: $yellow
+    height: 20px
+    width: 300px
+    position: fixed
+  
+  
+  
+  
+  
+
+article.devtips
+  padding-bottom: 50px
+  
+  a
+    color: #444
+    background: $yellow
+    padding: 0 2px
+    
+    &:hover
+      color: #777
+  
+  header
+    text-align: center
+    
+    h2
+      +hide-text
+      background-image: url(../img/DT-logo.svg)
+      background-position: top center
+      background-repeat: no-repeat
+      background-size: contain
+      max-width: 500px
+      height: 136px
+      display: block
+      margin: 0 auto 30px
+    
+    h3
+      font-weight: 300
+      margin: 40px 0 0 0
+      font-size: 18px
+      letter-spacing: 1px
+  
+  h4
+    margin-top: 0px
+  
+  .content
+    background: white
+    max-width: 440px
+    margin: 0 auto 30px
+    padding: 30px
+    padding-bottom: 10px
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1)
+    position: relative
+    z-index: 1
+    
+    &.vid
+      padding-bottom: 30px
+    
+  
+  .go-btn
+    display: block
+    max-width: 500px
+    padding: 20px 0
+    margin: 0 auto 30px
+    background: $yellow
+    color: black
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+    font-size: 20px
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.1), -5px 5px 0px rgba(0,0,0,0.6)
+    position: relative
+    +transition
+    
+    &:hover
+      box-shadow: 0px 0px 3px rgba(0,0,0,0.1), -10px 10px 0px rgba(0,0,0,0.6)
+      background: saturate($yellow, 50%)
+      top: -5px
+      right: -5px
+      color: black
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import '0-media-queries'

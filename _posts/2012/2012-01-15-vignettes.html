@@ -1,0 +1,392 @@
+---
+layout: post
+type: post
+title: Vignettes
+cover: /assets/post-assets/021-vignettes/img/vignettes-cover.jpg
+height: 362px
+blurb: Small episodes of narritive — out of context and hopefully entertaining.
+---
+
+<style type="text/css">
+
+/* @group Generals
+----------------------------------------------- */
+body {
+	background: url(/assets/post-assets/021-vignettes/img/bgnoise.gif) fixed;
+	}
+	
+	.vig-article-wrap, .vig-article-wrap strong {
+		font-family: Helvetica, Arial, sans-serif;
+		}
+	
+		.vig-article-wrap a {
+			color: #d74342;
+			}
+		
+		.art-title {
+			margin-left: -186px;
+			top: 50px;
+			left: 50%;
+			position: fixed;
+			width: 372px;
+			/*display: none;*/
+			color: rgba(0, 0, 0, 0.6);
+			text-shadow: 0xp 1px 0px rgba(255, 255, 255, 1);
+			}
+			
+			.art-title h1 {
+				width: 372px;
+				height: 78px;
+				background: url(/assets/post-assets/021-vignettes/img/vig-title.jpg);
+				text-indent: -9999px;
+				margin-bottom: 40px;
+				}
+			
+			.art-title p {
+				padding: 0px 30px;
+				text-align: left;
+				margin-bottom: 20px;
+				font-size: 12px;
+				text-align: center;
+				}
+				
+			.art-title .info {
+				font-family: "new times roman", times, serif;
+				font-style: italic;
+				font-weight: bold;
+				text-align: center;
+				font-size: 18px;
+				}
+				
+				.art-title .info span {
+					background: #aaa;
+					padding: 5px;
+					line-height: 20px;
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					box-shadow: 0px 0px 10px #444;
+					color: white;
+					cursor: pointer;
+					text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+					opacity: 0.4;
+					-moz-transition: all 0.2s ease-in-out;
+					-webkit-transition: all 0.2s ease-in-out;
+					}
+				
+						.art-title .info span:hover {
+							opacity: 0.7;
+							}
+				
+				
+/* @end */
+	
+/* @group Vigs
+----------------------------------------------- */
+
+.vig-wrap {
+	width: 400px;
+	padding: 43px 40px 40px 40px;
+	margin: 40px 0px 0px -240px;
+	background: url(/assets/post-assets/021-vignettes/img/paper.gif);
+	border: 1px solid rgba(219, 220, 222, 0.9);
+	line-height: 21px;
+	position: absolute;
+	left: 50%;
+	top: -1500px;
+	box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
+	opacity: 0.95;
+	margin-bottom: 50px;
+	}
+	
+	.vig-wrap:after {
+		display: block;
+		content: '';
+		height: 26px;
+		width: 99px;
+		background: url(/assets/post-assets/021-vignettes/img/tape.png) center center no-repeat;
+		position: absolute;
+		top: -13px;
+		left: 50%;
+		margin-left: -50px;
+		}
+	
+	.vig-wrap:before {
+		display: block;
+		content: '';
+		position: absolute;
+		background: transparent;
+		width: 1px;
+		height: 1px;
+		left: 0px;
+		bottom: -130px;
+		}
+	
+	.vig-wrap p, .vig-wrap strong {
+		margin-bottom: 21px;
+		display: block;
+		}
+	
+/* @end */
+
+
+	
+/* @group Pagination
+----------------------------------------------- */
+
+	.pag {
+		list-style: none;
+		margin-top: 30px;
+		width: 877px;
+		position: fixed;
+		margin-left: -438px;
+		left: 50%;
+		bottom: 60px;
+		}
+		
+		.pag li {
+			margin: 0 5px;
+			float: left;
+			}
+			
+			.pag li a {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: lightblue;
+				line-height: 22px;
+				text-align: center;
+				border: 1px solid #dedede;
+				border-radius: 3px;
+				color: #797979;
+				text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+				}
+				
+				.pag li.about a { width: 45px; }
+				.pag li.comm a { width: 65px; }
+				
+				.pag li.available a { 
+					background: #fafafa;
+					background: -moz-linear-gradient(top, hsla(0,0%,98%,1) 0%, hsla(0,0%,87%,1) 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,98%,1)), color-stop(100%,hsla(0,0%,87%,1)));
+					background: -webkit-linear-gradient(top, hsla(0,0%,98%,1) 0%,hsla(0,0%,87%,1) 100%);
+					background: -o-linear-gradient(top, hsla(0,0%,98%,1) 0%,hsla(0,0%,87%,1) 100%);
+					background: -ms-linear-gradient(top, hsla(0,0%,98%,1) 0%,hsla(0,0%,87%,1) 100%);
+					background: linear-gradient(top, hsla(0,0%,98%,1) 0%,hsla(0,0%,87%,1) 100%);
+					
+					box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1),
+								0px 1px 0px rgba(0, 0, 0, 0.15),
+								0px 1px 0px rgba(255, 255, 255, 0.9) inset;
+					}
+					
+					.pag li.available a:hover {
+						background: #fcfcfc;
+						background: -moz-linear-gradient(top, hsla(0,0%,99%,1) 0%, hsla(0,0%,93%,1) 100%);
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,99%,1)), color-stop(100%,hsla(0,0%,93%,1)));
+						background: -webkit-linear-gradient(top, hsla(0,0%,99%,1) 0%,hsla(0,0%,93%,1) 100%);
+						background: -o-linear-gradient(top, hsla(0,0%,99%,1) 0%,hsla(0,0%,93%,1) 100%);
+						background: -ms-linear-gradient(top, hsla(0,0%,99%,1) 0%,hsla(0,0%,93%,1) 100%);
+						background: linear-gradient(top, hsla(0,0%,99%,1) 0%,hsla(0,0%,93%,1) 100%);
+						}
+					
+					.pag li.available a:after {
+						display: block;
+						content: '';
+						height: 20px;
+						width: 100%;
+						background: -moz-linear-gradient(top, hsla(0,0%,0%,0.1) 0%, hsla(0,0%,0%,0) 100%);
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,0%,0.1)), color-stop(100%,hsla(0,0%,0%,0)));
+						background: -webkit-linear-gradient(top, hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0) 100%);
+						background: -o-linear-gradient(top, hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0) 100%);
+						background: -ms-linear-gradient(top, hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0) 100%);
+						background: linear-gradient(top, hsla(0,0%,0%,0.1) 0%,hsla(0,0%,0%,0) 100%);
+						}
+					
+				.pag li.unavailable a { 
+					background: #d6d6d6;
+					background: -moz-linear-gradient(top, hsla(0,0%,84%,1) 0%, hsla(0,0%,82%,1) 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,84%,1)), color-stop(100%,hsla(0,0%,82%,1)));
+					background: -webkit-linear-gradient(top, hsla(0,0%,84%,1) 0%,hsla(0,0%,82%,1) 100%);
+					background: -o-linear-gradient(top, hsla(0,0%,84%,1) 0%,hsla(0,0%,82%,1) 100%);
+					background: -ms-linear-gradient(top, hsla(0,0%,84%,1) 0%,hsla(0,0%,82%,1) 100%);
+					background: linear-gradient(top, hsla(0,0%,84%,1) 0%,hsla(0,0%,82%,1) 100%);
+					
+					box-shadow: 0px 1px 0px #9e9e9e,
+								0px -1px 0px #ebebeb;
+					opacity: 0.4;
+					cursor: default;
+					}
+				
+					.pag li a.active,
+					.pag li a:active,
+					.pag li a.active:hover { 
+						background: #bbbbbb !important;
+						background: -moz-linear-gradient(top, hsla(0,0%,73%,1) 0%, hsla(0,0%,79%,1) 100%) !important;
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsla(0,0%,73%,1)), color-stop(100%,hsla(0,0%,79%,1))) !important;
+						background: -webkit-linear-gradient(top, hsla(0,0%,73%,1) 0%,hsla(0,0%,79%,1) 100%) !important;
+						background: -o-linear-gradient(top, hsla(0,0%,73%,1) 0%,hsla(0,0%,79%,1) 100%) !important;
+						background: -ms-linear-gradient(top, hsla(0,0%,73%,1) 0%,hsla(0,0%,79%,1) 100%) !important;
+						background: linear-gradient(top, hsla(0,0%,73%,1) 0%,hsla(0,0%,79%,1) 100%) !important;
+						
+						border: 1px solid #999 !important;
+						
+						box-shadow: 0px 1px 0px rgba(255, 255, 255, 1),
+									0px 3px 2px rgba(0, 0, 0, 0.1),
+									0px 3px 4px rgba(0, 0, 0, 0.3) inset !important;
+						color: white !important;
+						text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5) !important;
+						font-weight: bold !important;
+						cursor: default;
+						}
+						
+						.pag li.available a.active:after,
+						.pag li.available a:active:after { display: none; }
+
+/* @end */
+
+/* @group Disqus */
+
+
+
+
+#dsq-pagination,
+.dsq-brlink,
+#dsq-new-post h3,
+.dsq-item-trackback,
+.dsq-options,
+#dsq-global-toolbar,
+.dsq-trackback-url
+    { display: none !important; }
+
+#dsq-comments {
+    margin: 0px;
+    /*max-height: 240px;*/
+    overflow-y: auto;
+    padding-right: 7px !important;
+    }
+
+/* @end */
+			
+				
+				
+				
+				
+				
+				
+				
+				
+
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('.available a').click(function() {
+		var $this = $(this)
+		var vig = $this.attr('href').slice(1);
+		
+		$('.available a').addClass('active').not($this).removeClass('active');
+		
+		if ($('.' + vig).hasClass('visible')) {  } else {
+			$('.vig-wrap').removeClass('visible').animate({top: '-1500px'}, 200);
+			$('.' + vig).addClass('visible').animate({top: '0px'}, 200);
+		}
+	});
+	
+	$('.pag a').click(function() {
+		return false;
+	});
+	
+	$('html').not('.pag a').click(function() {
+		$('.vig-wrap').not('.vig-0').removeClass('visible').animate({top: '-1500px'}, 200);
+		$('.available a').not('.comm a').removeClass('active');
+	});
+	
+	$(".stories").load("/assets/post-assets/021-vignettes/stories.html");
+	
+});
+
+</script>
+
+
+
+<div class="vig-article-wrap">
+
+<div class="art-title">	
+	<h1>Vignettes</h1>
+</div>
+
+<div class="stories">
+<!-- To add more vigs: use stories.html in the post-assets/021-vignettes folder... -->
+</div>
+
+
+<div class="comments-wrap vig-wrap vig-0">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+	    var disqus_shortname = 'travisneilson'; // required: replace example with your forum shortname
+	
+	    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+	     var disqus_identifier = 'vig';
+	    // var disqus_url = 'http://example.com/permalink-to-page.html';
+	
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+	</noscript>		
+</div><!--/comments-wrap-->
+
+<ul class="pag">
+	<!--<li class="available about"><a href="#vig-0">About</a></li>-->
+	
+	<li class="available"><a href="#vig-1">1</a></li>
+	<li class="available"><a href="#vig-2">2</a></li>
+	<li class="available"><a href="#vig-3">3</a></li>
+	<li class="available"><a href="#vig-4">4</a></li>
+	<li class="available"><a href="#vig-5">5</a></li>
+	
+	<li class="available"><a href="#vig-6">6</a></li>
+	<li class="available"><a href="#vig-7">7</a></li>
+	<li class="available"><a href="#vig-8">8</a></li>
+	<li class="available"><a href="#vig-9">9</a></li>
+	<li class="unavailable"><a href="#vig-10">10</a></li>
+	
+	<li class="unavailable"><a href="#vig-11">11</a></li>
+	<li class="unavailable"><a href="#vig-12">12</a></li>
+	<li class="unavailable"><a href="#vig-13">13</a></li>
+	<li class="unavailable"><a href="#vig-14">14</a></li>
+	<li class="unavailable"><a href="#vig-15">15</a></li>
+	
+	<li class="unavailable"><a href="#vig-16">16</a></li>
+	<li class="unavailable"><a href="#vig-17">17</a></li>
+	<li class="unavailable"><a href="#vig-18">18</a></li>
+	<li class="unavailable"><a href="#vig-19">19</a></li>
+	<li class="unavailable"><a href="#vig-20">20</a></li>
+	
+	<li class="unavailable"><a href="#vig-21">21</a></li>
+	<li class="unavailable"><a href="#vig-22">22</a></li>
+	<li class="unavailable"><a href="#vig-23">23</a></li>
+	<li class="unavailable"><a href="#vig-24">24</a></li>
+	<li class="unavailable"><a href="#vig-25">25</a></li>
+	
+	<li class="available comm"><a href="#vig-0">Comment</a></li>
+</ul>
+
+</div><!-- END .vig-article-wrap -->
+
+
+
+
+
+
+
+
+

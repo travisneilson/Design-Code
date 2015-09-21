@@ -1,0 +1,65 @@
+@import '../../../css/plugins/plugin-dir';
+@import 'font';
+
+html, body {
+  @include size(100%);
+}
+
+body {
+  background-color: #F4F5ED;
+}
+
+article {
+  text-align: center;
+  font-family: 'velino', serif;
+  @include size(100%);
+  position: relative;
+}
+
+.title-wrap {
+  display: table;
+  @include size(100%);
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 300px;
+  line-height: 0.9;
+  color: #89CEDE;
+  display: table-cell;
+  vertical-align: middle;
+  @include transition(all 0.3s);
+  
+  @media screen and (max-width: 2700px) { font-size: 350px; line-height: 0.9; }
+  @media screen and (max-width: 2500px) { font-size: 300px; line-height: 0.9; }
+  @media screen and (max-width: 2000px) { font-size: 260px; line-height: 0.9; }
+  @media screen and (max-width: 1600px) { font-size: 230px; line-height: 0.9; }
+  @media screen and (max-width: 1200px) { font-size: 180px; line-height: 1.1; }
+  @media screen and (max-width: 960px) { font-size: 150px; line-height: 1.1; }
+  @media screen and (max-width: 800px) { font-size: 115px; line-height: 1.1; }
+  @media screen and (max-width: 600px) { font-size: 75px; line-height: 1.1; }
+  
+  span {
+    color: #DC4E00;
+    font-style: italic;
+  }
+}
+
+.cover {
+  @include position(absolute, 0px 0px 0px 0px);
+  cursor: crosshair;
+  
+  .tile {
+    @include size(12.5%);
+    float: left;
+    background-color: rgba(244, 245, 237, 1);
+    @include transition (all 3s 4s ease-in-out);
+  
+    &:hover {
+      @include transition (all 0.4s ease-in-out);
+      background-color: rgba(244, 245, 237, 0);
+      box-shadow: 0px 3px 5px rgba(0,0,0,0.2) inset;
+      border-radius: 6px;
+    }
+  }
+}

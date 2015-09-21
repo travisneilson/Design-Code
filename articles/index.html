@@ -1,0 +1,20 @@
+---
+layout: default
+title: Articles | TRAVIS NEILSON .COM
+---
+
+<a class="article-index-back-to-home-link" href="/"><span>home</span></a>
+
+<div class="article-index-wrap">
+  <h2>Article Index</h2>
+  {% for post in site.posts %}
+  <article>
+    <a href="{{post.url}}">
+      <div class="article-meta">
+        <div class="name"> {{post.title}}</div>
+        <div class="date"> {{post.date | date: "%b %d, %Y"}}</div>
+      </div>
+    </a>
+  </article>
+  {% endfor %}
+</div>

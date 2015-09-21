@@ -1,0 +1,259 @@
+body {
+  background: url(../img/cubes.gif) top center repeat;
+}
+
+.bubble-wrap {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 95px;
+  background-color: white;
+  overflow: auto;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  color: #444;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 1060px) {
+   .bubble-wrap {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.positioner {
+  width: 960px;
+  margin: 50px auto;
+}
+
+.bubble-wrap h1 {
+  font-family: Paris;
+  font-size: 68px;
+  font-size: 66px;
+  font-size: 0;
+  margin: 80px 0px 50px 200px;
+  color: #444;
+  position: relative;
+  z-index: 1;
+  font-weight: normal;
+  width: 760px;
+  height: 288px;
+  text-indent: -100%;
+  line-height: 0;
+  /*overflow: hidden;*/
+  white-space: nowrap;
+}
+
+.bubble-wrap h1:before {
+  content: '"';
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
+.bubble-wrap h1:after {
+  content: '';
+  display: block;
+  width: 860px;
+  height: 386px;
+  position: absolute;
+  top: -60px;
+  left: -65px;
+  background: url('../img/title.gif') no-repeat left top;
+  z-index: -1;
+}
+
+h2 {
+  font-family: Paris;
+  /*font-size: 35px;*/
+  margin-bottom: 20px;
+  margin-top: 70px;
+  font-weight: normal;
+}
+
+p, blockquote {
+  font-family: Clarendon;
+  margin-left: 200px;
+  font-size: 16px;
+}
+
+hr {
+  border: 0;
+  height: 10px;
+  background: url('../img/hr.png')repeat left top;
+  margin: 70px 0;
+}
+
+blockquote {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+  
+blockquote:after {
+  content: '';
+  display: block;
+  height: 153px;
+  width: 23px;
+  position: absolute;
+  top: -6px;
+  left: 0px;
+  background: url('../img/block.png')repeat left top;
+}
+
+
+.rage {
+  width: 100%;
+  height: 185px;
+  background-image: url('../img/rage4.png');
+  background-position: 0px 0px;
+  background-position: center center;
+  background-repeat: repeat;
+  margin-bottom: 40px;
+  
+  animation: marquee 35s linear infinite;
+  -moz-animation: marquee 35s linear infinite;
+  -webkit-animation: marq uee 35s linear infinite;
+  -o-animation: marquee 35s linear infinite;
+}
+
+keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+@-moz-keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+@-webkit-keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+@-o-keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+
+.bg-cycle {
+  background: hsl(0, 0%, 96%);
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  left: 11px;
+  top: 11px;
+  cursor: pointer;
+  background: url('../img/reload2.png') no-repeat center center;
+  -webkit-transition: all 0.02s ease-in-out 0s;
+  opacity: 0.6;
+}
+
+.bg-cycle:hover {
+  opacity: 1;
+}
+
+.bg-cycle.spin {
+  animation: marquee 35s linear infinite;
+  -moz-animation: marquee 35s linear infinite;
+  -webkit-animation: spin 0.2s linear 1;
+  -o-animation: marquee 35s linear infinite;
+}
+
+keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+@-moz-keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+@-webkit-keyframes spin { 
+  from { -webkit-transform: rotate(15deg); } 
+  to { -webkit-transform: rotate(360deg); } }
+@-o-keyframes marquee { 
+  from { background-position: 0px 0px; } 
+  to { background-position: 1538px 0px; } }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+@media screen and (max-width: 960px) {
+  
+  .bubble-wrap {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    position: relative;
+    
+  }
+  
+  .positioner {
+    width: auto;
+    margin: 50px auto;
+  }
+  
+   .comments-wrap {
+     margin: 0px 20px !important;
+   }
+  
+  h2, p, blockquote, .comments-wrap {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .bubble-wrap h1 {
+    width: auto;
+    margin: 20px;
+    height: 158px;
+  }
+  
+  .bubble-wrap h1:after {
+    background-size: contain;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: 170px;
+  }
+  
+  .rage {
+    background-size: auto 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 100px;
+    margin-bottom: 0;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

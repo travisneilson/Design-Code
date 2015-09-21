@@ -1,0 +1,100 @@
+@import '../../../css/plugins/plugin-dir'
+@import 'font'
+
+
+body.tools-article
+  background-color: white
+  padding-bottom: 100px
+
+  .bunny
+    position: relative
+    height: 70vh
+    width: 100%
+    min-height: 200px
+    overflow: hidden
+
+    > div
+      background:
+        image: url(../img/bunny2.png)
+        size: cover
+        position: center center
+        repeat: no-repeat
+      +position(absolute, 0px 0px 0px 0px)
+      +transition
+
+  article
+    position: relative
+    max-width: 950px
+    margin: 0 auto
+    padding: 0 30px 100px
+    +box-sizing(border-box)
+    +clearfix
+
+    li
+      font-size: 21px
+      padding-right: 20px
+      list-style: square
+      color: #ccc
+
+      a
+        font-weight: bold
+
+      p
+        font-size: 14px
+        color: #555
+
+  h2
+    font:
+      family: marker, sans-serif
+      size: 120px
+      weight: normal
+    margin: -55px 0px 50px
+    color: hsl(240, 36%, 28%)
+    line-height: 0.8em
+
+  h3
+    font:
+      family: marker, sans-serif
+      size: 80px
+      weight: normal
+    color: hsl(240, 36%, 28%)
+    margin: 50px 0 20px
+    line-height: 0.8em
+
+
+  .intro, .close
+    font-size: 24px
+
+  .close
+    padding-top: 50px
+    clear: both
+
+  section:not(.intro)
+    width: 50%
+    float: left
+  section:nth-child(2n+3)
+    clear: left
+
+
+
+
++max-screen(939px)
+  body.tools-article article
+    max-width: 680px
+
+    section:not(.intro)
+      width: auto
+      float: none
+
+
++max-screen(599px)
+
+  body.tools-article h2
+    font-size: 85px
+    margin-top: -40px
+
+  body.tools-article h3
+    font-size: 65px
+
+  body.tools-article .intro
+    font-size: 20px

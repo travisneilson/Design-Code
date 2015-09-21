@@ -1,0 +1,109 @@
+body {
+  background: whitesmoke; }
+
+.days {
+  padding: 20px;
+  position: relative; }
+  .days .stamp {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-right: 150px;
+    text-align: center; }
+    .days .stamp h1 {
+      color: #999999;
+      margin: 80px 0 0 0;
+      font-size: 130px;
+      -webkit-text-fill-color: transparent;
+      background: -webkit-linear-gradient(transparent, transparent), url(/assets/post-assets/040-up/img/stripe.gif) repeat;
+      background: -o-linear-gradient(transparent, transparent);
+      -webkit-background-clip: text; }
+    .days .stamp span {
+      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 18px;
+      color: #999999;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      background: #eeeeee;
+      line-height: 30px;
+      border-radius: 50%;
+      margin-top: 40px;
+      cursor: pointer; }
+      .days .stamp span:hover {
+        color: #666666; }
+  .days .circle {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; }
+    .days .circle .stroke {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      -webkit-transition: all 0.15s ease-out 0s;
+      -moz-transition: all 0.15s ease-out 0s;
+      transition: all 0.15s ease-out 0s; }
+    .days .circle [class^="side-"] {
+      background: white;
+      overflow: hidden; }
+    .days .circle .side-left {
+      position: absolute;
+      top: 0px;
+      right: 50%;
+      bottom: 0px;
+      left: 0px; }
+      .days .circle .side-left .stroke {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-transform-origin: 100% 50%;
+        -moz-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+        -o-transform-origin: 100% 50%;
+        transform-origin: 100% 50%; }
+    .days .circle .side-right {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 50%; }
+      .days .circle .side-right .stroke {
+        -webkit-transform: rotate(306deg);
+        -moz-transform: rotate(306deg);
+        -ms-transform: rotate(306deg);
+        -o-transform: rotate(306deg);
+        transform: rotate(306deg);
+        -webkit-transform-origin: 0 50%;
+        -moz-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+        -o-transform-origin: 0 50%;
+        transform-origin: 0 50%; }
+    .days .circle .fill {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      background-color: whitesmoke; }
+    .days .circle .label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 30px;
+      width: 60px;
+      margin: -15px 0 0 -30px;
+      text-align: center;
+      line-height: 30px; }

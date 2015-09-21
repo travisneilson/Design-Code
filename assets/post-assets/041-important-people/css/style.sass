@@ -1,0 +1,115 @@
+@import '../../../css/plugins/plugin-dir'
+
+// post styles here...
+
+$bg: whitesmoke
+
+body
+  background: $bg
+
+.days
+  padding: 20px
+  position: relative
+  
+  .stamp
+    +size(300px)
+    border-radius: 50%
+    background: white
+    +position(absolute, 20px 50% null 50%)
+    margin-left: -150px
+    margin-right: 150px
+    text-align: center
+    
+    h1
+      color: #999
+      margin: 80px 0 0 0
+      font-size: 130px
+      -webkit-text-fill-color: transparent
+      background: -webkit-linear-gradient(transparent, transparent), url(/assets/post-assets/040-up/img/stripe.gif) repeat
+      background: -o-linear-gradient(transparent, transparent)
+      -webkit-background-clip: text
+    
+    span
+      font-family: $georgia
+      font-style: italic
+      font-weight: bold
+      font-size: 18px
+      color: #999
+      display: inline-block
+      +size(30px)
+      background: #eee
+      line-height: 30px
+      border-radius: 50%
+      margin-top: 40px
+      cursor: pointer
+
+      
+      &:hover
+        color: #666
+      
+    
+  .circle
+    +size(100px)
+    position: relative
+    overflow: hidden
+    border-radius: 50%
+    
+    .stroke
+      +position(absolute, 0px 0px 0px 0px)
+      +transition()
+      
+    [class^="side-"]
+      background: #fff
+      overflow: hidden
+      
+    .side-left
+      +position(absolute, 0px 50% 0px 0px)
+      
+      .stroke
+        +transform(rotate(180deg))
+        +transform-origin(100% 50%)
+        
+    .side-right
+      +position(absolute, 0px 0px 0px 50%)
+      
+      .stroke
+        $deg: (35*3.6)+180
+        +transform(rotate(#{$deg}deg))
+        +transform-origin(0 50%)
+        
+
+    .fill
+      +position(absolute, 50% null null 50%)
+      //+size(80%)
+      border-radius: 50%
+      background-color: $bg
+      //margin: -40% 0 0 -40%
+    
+    .label
+      +position(absolute, 50% null null 50%)
+      +size(60px 30px)
+      margin: -15px 0 0 -30px
+      text-align: center
+      line-height: 30px
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import '0-media-queries'

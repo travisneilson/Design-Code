@@ -1,0 +1,220 @@
+---
+layout: post
+type: post
+title: Function Boards
+cover: /assets/post-assets/007-function-boards/boards-cover.jpg
+styles: <link rel="stylesheet" href="/assets/css/960_12_col.css" type="text/css" />
+height: 424px
+blurb: Web-creators can teach clients to think in terms of interactions &amp; functions.
+---
+
+<style type="text/css">
+	
+
+body {
+	background: repeat top center url(/assets/post-assets/007-function-boards/boards-bg-texture.jpg) #656669;
+	}
+
+.article-title-boards {
+	padding: 0px;
+	margin: 0px;
+	text-indent: -9999px;
+	display: block;
+	width: 940px;
+	height: 500px;
+	background: top center no-repeat url(/assets/post-assets/007-function-boards/boards-title.jpg);
+	}
+
+.article-wrap-boards h3 {
+	font-style: italic;
+	font-size: 32px;
+	font-family:  Georgia, "Times New Roman", serif;
+	margin: 0px 171px;
+	color: #fff;
+	text-transform: inherit;
+	font-weight: normal;
+	text-shadow: #000 1px 1px 1px;
+	}
+	
+
+.article-wrap-boards p {
+	font-family: Tahoma, Helvetica, sans-serif;
+	color: #fff;
+	margin-top: 20px;
+	width: 291px;
+	float: left;
+	line-height: 1.6;
+	text-align: justify;
+	height: 202px;
+	}
+.article-wrap-boards .left-p {
+	margin-left: 171px;
+	padding-right: 20px;
+	border-right: solid 1px rgba(0, 0, 0, .5);
+	}
+.article-wrap-boards .right-p {
+	margin-right: 160px;
+	padding-left: 20px;
+	border-left: solid 1px rgba(255, 255, 255, .3);
+	}
+
+
+.article-wrap-boards .new-h {
+	margin: 60px 0px 30px 171px;
+	}
+
+
+.article-wrap-boards .thumb-1, .article-wrap-boards .thumb-3 {
+	margin-left: 171px;
+	}
+
+
+.article-wrap-boards .thumb-2, .article-wrap-boards .thumb-4 {
+	margin-left: 43px;
+	margin-right: 140px;
+	}
+
+
+.article-wrap-boards .thumbs div{
+   	margin-bottom: 40px;
+	float: left;
+	}
+	
+.article-wrap-boards .thumbs img {
+	border: solid 2px #fff;
+	-moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+	-moz-box-shadow: 2px 2px 5px #000;
+	-webkit-box-shadow: 2px 2px 5px #000;
+	box-shadow: 2px 2px 5px #000;
+	}
+	
+.article-wrap-boards .thumb-1 img {
+	-webkit-transform:rotate(2deg);
+	}
+.article-wrap-boards .thumb-2 img {
+	-webkit-transform:rotate(-2deg);
+	}
+.article-wrap-boards .thumb-3 img {
+	-webkit-transform:rotate(-2deg);
+	}
+.article-wrap-boards .thumb-4 img {
+	-webkit-transform:rotate(2deg);
+	margin-bottom: 100px;
+	}
+
+.article-wrap-boards .thumb-1 img:hover,
+.article-wrap-boards .thumb-2 img:hover, 
+.article-wrap-boards .thumb-3 img:hover, 
+.article-wrap-boards .thumb-4 img:hover {
+	-webkit-transform:rotate(0deg);
+	-moz-box-shadow: 2px 2px 10px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, .8);
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, .8);
+	}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: hsla(20, 70%, 50%, .8);
+  text-align: center;
+}
+
+.overlay img {
+  margin: 15% 0;
+  border:  10px solid white;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.4)
+}
+
+.overlay-open {
+  overflow: hidden;
+}
+
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+
+$(function() {
+
+
+  $('.thumbs a').click(function() {
+    var $this = $(this),
+        href = $this.attr('href');
+    
+    var html = "<div class='overlay'>"+
+                 "<img src='" + href + "'>"+
+               "</div>";
+               
+    $('body').addClass('overlay-open').append(html);
+    
+    return false;
+  });
+  
+  $('body').on('click', '.overlay', function() {
+    $('body').removeClass('overlay-open');
+    $('.overlay').remove();
+  });
+  
+  
+});
+
+</script>
+	
+	
+	
+ 
+  
+
+
+		
+		          
+<div class="article-wrap-boards">
+
+	<div class="container_12">
+	
+		<h2 class="article-title-boards">Function Boards</h2>
+
+		<h3>So I was thinking the other day&#8230;</h3>
+		
+		<p class="left-p">as I was sitting down to create a mood-board for an upcoming website: it&rsquo;s funny that I am spending all this energy trying to help the client share (and approve) the vision of the design I have in mind. When what really makes a website successful or not is not so much how it looks, but how it functions. A web experience is all about interaction.</p>
+
+		<p class="right-p">Instead of interesting the client about how their new website looks, isn&rsquo;t it more effective to get them on board with how it acts? So instead of filling a mood-board with colors, fonts and textures &mdash; how about creating a &ldquo;function-board&rdquo; that will engage your client on the best navigation system for their needs, or examples of good ways to present their product on the homepage?</p>
+
+		<div class="clear"></div>
+
+		<h3 class="new-h">So I tried something new&#8230;</h3>
+
+		<div class="thumbs">
+		
+			<div class="thumb-1">
+			  <a href="/assets/post-assets/007-function-boards/boards-1.jpg">
+			    <img rel="boards" src="/assets/post-assets/007-function-boards/boards-1-thumb.jpg" />
+			  </a>
+			</div>
+			
+			<div class="thumb-2"><a href="/assets/post-assets/007-function-boards/boards-2.jpg"><img rel="boards" src="/assets/post-assets/007-function-boards/boards-2-thumb.jpg" /></a></div>
+			
+			<div class="thumb-3"><a href="/assets/post-assets/007-function-boards/boards-3.jpg"><img rel="boards" src="/assets/post-assets/007-function-boards/boards-3-thumb.jpg" /></a></div>
+			
+			<div class="thumb-4"><a href="/assets/post-assets/007-function-boards/boards-4.jpg"><img rel="boards" src="/assets/post-assets/007-function-boards/boards-4-thumb.jpg" /></a></div>
+			<div class="clear"></div>
+		</div>
+				
+		
+	</div><!--/container_12-->
+	
+</div><!--/article-wrap-boards-->		
+        		
+
+
+

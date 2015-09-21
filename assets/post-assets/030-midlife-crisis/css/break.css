@@ -1,0 +1,363 @@
+@import "fonts.css";
+
+.include *{
+	position: relative;
+}
+
+html, body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+}
+
+.include {
+	font-family: "bree";
+	font-size: 21px;
+	font-weight: 300;
+	width: 100%;
+	height: 100%;
+	}
+	
+	.include > div {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: absolute;
+		-webkit-transition: all 200ms ease-in-out;
+		left: 0%;
+		}
+		
+		
+		.trigger {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  width: 30px;
+		  cursor: pointer;
+		  z-index: 5;
+		}
+		
+		
+		/* @group Slide1 */
+		
+		.slide1 {
+			background: url(../img/light_wool.jpg);
+			}
+			
+			.slide1 > div  {
+			  position: absolute;
+			  overflow: hidden;
+			  top: 0px;
+			  left: 0px;
+			  right: 0px;
+			  bottom: 0px;
+			}
+			
+			.slide1 .container {
+				width: 960px;
+				margin: 0 auto;
+				height: 100%;
+				max-height: 991px;
+			}
+			
+			.slide1 h1 {
+				font-family: SullivanFill;
+				font-weight: normal;
+				font-style: normal;
+				text-transform: uppercase;
+				font-size: 172px;
+				color: rgba(251, 236, 123, 0.7);
+				line-height: 152px;
+				top: 0px;
+				left: 0px;
+				width: 400px;
+				margin: 50px 0px 0px 558px;
+				}
+				
+				.slide1 h1 span {
+					font-family: Sullivan;
+					color: #799639;
+					position: absolute;
+					top: -2px;
+					left: -4px;
+				}
+			
+			.slide1 p {
+				margin: 0px 0px 20px 558px;
+			}
+			
+			.slide1 .board {
+				position: absolute;
+				width: 640px;
+				height: 100%;
+				background: url(../img/board.png);
+				top: 0px;
+				left: -130px;
+			}
+			
+		/* @end */
+		
+		
+		
+	
+		  
+		  .slide2 > div  {
+		    position: absolute;
+		    overflow: hidden;
+		    top: 0px;
+		    left: 30px;
+		    right: 0px;
+		    bottom: 0px;
+		    background: url(../img/slide2.jpg);
+		    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+		    background: url(../img/arm-bg-tile.jpg);
+		  }
+		  
+		  .slide2 .arm {
+		    background: url(../img/arm-bg.jpg) top left no-repeat;
+		    position: absolute;
+		    top: 0;
+		    left: 340px;
+		    right: 0;
+		    bottom: 0;
+		  }
+		  
+		  @media all and (min-width: 1256px) {
+		    .slide2 .arm {
+		      background: url(../img/arm-bg.jpg) top right no-repeat;
+		    }
+		  }
+		  
+		  .slide2 h1 {
+		    font-family: "homestead_one";
+		    font-size: 172px;
+		    font-weight: normal;
+		    position: relative;
+		    color: #fffc98;
+		    width: 880px;
+		    line-height: 150px;
+		    margin: 50px auto auto 50px;
+		  }
+		  
+		  .slide2 h1:before,
+		  .slide2 h1:after {
+  		  content: "Breaking Point";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		  }
+		  
+		  .slide2 h1:before { 
+		    font-family: "homestead_two"; 
+		    top: -11px;
+		    color: #ff632d;
+		  }
+		  
+		  .slide2 h1:after { 
+		    font-family: "homestead_three";
+		    color: #bce89c;
+		  }
+		  
+		  .slide2 p {
+		    color: #bce89c;
+		    width: 400px;
+		    margin-left: 50px;
+		  }
+		  
+
+		  /*.slide3 {
+		    display: none;
+		  }*/
+		  .slide3 > div  {
+		    background: url(../img/pills-bg-tile.jpg);
+		    position: absolute;
+		    overflow: hidden;
+		    top: 0px;
+		    left: 60px;
+		    right: 0px;
+		    bottom: 0px;
+		    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+		  }
+		  
+		  .slide3 .ribbon-frame {
+		    width: 913px;
+		    height: 667px;
+		    background: url(../img/pills-bg.jpg);
+		    position: absolute;
+		    left: 50%;
+		    top: 50%;
+		    margin-left: -456.3px;
+		    margin-top: -270px;
+		  }
+		  
+		  .slide3 h1 {
+		    font-weight: normal;
+		    color: white;
+		    font-family: "ribbon";
+		    text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+		    font-size: 122px;
+		    text-align: center;
+		    line-height: 80px;
+		    margin-top: -100px;
+		    margin-bottom: 80px;
+		    letter-spacing: -6px;
+		  }
+		  
+		  .slide3 h1 span {
+		    font-family: "deming";
+		    text-transform: lowercase;
+		    display: block;
+		    font-size: 41px;
+		    letter-spacing: 0;
+		  }
+			
+			.slide3 p {
+			  color: white;
+			  text-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+			  text-align: right;
+			  margin-right: 500px;
+			  margin-left: 60px;
+			}
+			
+		.slide4 {
+			  /*display: none;*/
+			}
+		
+		.slide4 > div  {
+		  background: url(../img/hand-bg-tile.jpg);
+		  overflow: hidden;
+		  position: absolute;
+		  top: 0px;
+		  left: 90px;
+		  right: 0px;
+		  bottom: 0px;
+		  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+		}
+		
+		  .slide4 > div:before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    width: 840px;
+		    height: 640px;
+		    background: url('../img/hand-bg-dirt.jpg') no-repeat left top;
+		    bottom: 0;
+		    right: 0;
+		  }
+		
+		.slide4 .hand {
+		  width: 100%;
+		  max-width: 620px;
+		  height: 100%;
+		  background: url(../img/hand.png) top left no-repeat;
+		  float: left;
+		  pointer-events: none;
+		}
+		
+		.slide4 .text-wrap {
+		  position: absolute;
+		  top: 0;
+		  left: 620px;
+		}
+		
+		@media all and (max-width: 1109px) {
+		  .slide4 .text-wrap {
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    left: auto;
+		    width: 378px;
+		    
+		  }
+		  
+		  .slide4 .hand {
+		    background: url(../img/hand.png) top left no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 378px;
+        bottom: 0;
+        background-size: contain;
+        width: auto;
+        max-width: auto;
+        height: auto;
+        float: none;
+        
+		  }
+		}
+		
+		.slide4 h1 {
+		  color: #c0d8c5;
+		  font-family: "duke_fill";
+		  font-weight: normal;
+		  text-transform: uppercase;
+		  font-size: 208px;
+		  line-height: 152px;
+		  position: relative;
+		  margin-bottom: 40px;
+		  margin-top: 40px;
+		}
+		
+		.slide4 h1:after {
+		  content: "Hand Out";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  font-family: "duke_shadow";
+		  color: #97361b;
+		}
+		
+		.slide4 p {
+		  color: #c0d8c5;
+		  width: 375px;
+		}
+		
+		
+		.slide5 > div  {
+		  background: url(../img/slide4-bg.jpg);
+		  overflow: auto;
+		  position: absolute;
+		  top: 0px;
+		  left: 120px;
+		  right: 0px;
+		  bottom: 0px;
+		  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+		}
+		
+		.slide5 .text-wrap {
+		  width: 650px;
+		  margin: 50px auto;
+		  color: white;
+		}
+		
+		.slide5 h1 {
+      color: #c4c442;
+      font: 130px 'dude';
+      text-shadow: 2px 2px 0px white,
+                   2px 2px 10px rgba(0,0,0,0.6);
+    }
+		
+		.slide2.closed,
+		.slide3.closed,
+		.slide4.closed,
+		.slide5.closed {
+		  left: 100%;
+		  margin-left: -150px;
+		}
+		
+		.slide2.closed:hover,
+		.slide3.closed:hover,
+		.slide4.closed:hover,
+		.slide5.closed:hover {
+		  left: 100%;
+		  margin-left: -155px;
+		}
+		
+		
+		.comments-wrap {
+      background: hsla(194,50%, 33%,0.8);
+      padding: 30px;
+      border: 2px solid white;
+      margin-top: 40px;
+		}

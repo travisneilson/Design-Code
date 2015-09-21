@@ -1,0 +1,14 @@
+// https://github.com/paranoida/sass-mediaqueries
+
+
+// Bigger than 1200
+@include min-screen(1200px) {}
+
+// Smaller than 940
+@include max-screen(939px) {}
+
+// Tablets portrait (landscape is one level up)
+@include max-screen(768px) {}
+
+// Phones portrait (landscape is one level up)
+@include max-screen(480px) {}

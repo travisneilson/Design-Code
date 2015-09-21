@@ -1,0 +1,359 @@
+@import "fonts.css";
+
+/* @group Intro */
+
+html, body {
+	height: 100%;
+	/*-webkit-font-smoothing: antialiased;*/
+}
+
+.wrap {
+	font-family: "ProximaNova";
+	font-size: 14px;
+	color: #523209;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	
+	background: url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	background: -moz-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0.25) 100%), url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	background: -webkit-linear-gradient(top, hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,0.25) 100%), url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	background: -o-linear-gradient(top, hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,0.25) 100%), url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	background: -ms-linear-gradient(top, hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,0.25) 100%), url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%,hsla(0,0%,0%,0.25) 100%), url(../img/wall-brite.jpg) center top no-repeat, url(../img/wall.jpg) center top;
+	}
+
+  .wrap * {
+  	position: relative;
+    }
+  
+  .intro {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /*top: -100%;*/
+    top: -0%;
+    -moz-transition: 0.4s all ease-in-out;
+    -webkit-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
+  }
+  
+    .intro-container {
+      width: 960px;
+      margin: 0 auto;
+      height: 100%;
+    }
+  
+    .intro h1 {
+      text-indent: -9999px;
+      width: 945px;
+      height: 125px;
+      margin: 0 auto;
+      padding: 40px 0 20px;
+      background: url(../img/rootbeer-tasting.png) center 40px no-repeat;
+      overflow: hidden;
+    }
+    
+    .intro .dive-in {
+      width: 232px;
+      height: 81px;
+      overflow: hidden;
+      text-indent: -9999px;
+      background-image: url(../img/dive-in.png);
+      background-repeat: no-repeat;
+      background-position: 0px -81px;
+      margin-left: -116px;
+      position: absolute;
+      left: 50%;
+      top: 190px;
+      cursor: pointer;
+    }
+      .intro .dive-in:hover {
+        background-position: 0px 0px;
+      }
+    
+    .intro .left-blurb {
+      width: 330px;
+      text-align: right;
+      float: left;
+    }
+    
+    .intro .right-blurb {
+      width: 330px;
+      text-align: left;
+      float: right;
+    }
+    
+    .intro .many-beers {
+      height: 1500px;
+      width: 100%;
+      background-image: url(../img/many-beers.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: contain;
+      margin-top: 300px;
+      position: absolute;
+      top: 0px;
+    }
+    
+    
+  @media all and (max-width: 1260px) {
+    .intro .many-beers span {
+      position: absolute;
+      top: 800px;
+      left: 50%;
+      display: block;
+      height: 80px;
+      width: 80px;
+      margin-left: -40px;
+      background: url(../img/hidey-logo.png);
+    }
+  }
+/* @end */
+
+
+
+/* @group Belt */
+
+  .article-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*top: -100%;*/
+    top: -0%;
+    -moz-transition: 0.4s all ease-in-out;
+    -webkit-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
+  }
+
+  #port {
+    overflow: hidden;
+    position: relative;
+    height: 45px;
+    background: url(../img/beerbar.png);
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.8);
+    z-index: 2;
+  }
+  
+  #port a {
+    color: hsla(34, 80%, 18%, 0.6);
+    line-height: 45px;
+    font-size: 16px;
+    display: inline-block;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
+    -moz-transition: 0.2s all ease-in-out;
+    -webkit-transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+	letter-spacing: 1px;
+  }
+  
+  #port a:hover {
+    color: hsla(34, 80%, 18%, 1);
+  }
+  
+  #port a.active {
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+  }
+  .parallax-layer {
+    position: absolute;
+    top: 0px;
+  }
+  .thumbs_index {
+    /* initial position */
+    left: 50%;
+    margin-left: -891px;
+    /* Put all he thumbs on one line. */
+    white-space: nowrap;
+  }
+  
+  .thumbs_index > li {
+    display: inline;
+    margin: 0 40px;
+  }
+  
+  .parallax-viewport {
+    position: relative;     /* relative, absolute, fixed */
+    overflow: hidden;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0px;
+    margin-top: 0;
+  }
+  
+  .conveyor {
+  	height: 100%;
+  	width: 960px;
+  	margin: 0 auto;
+  	/*box-shadow: 0px 0px 0px 1px red;*/ /* so i can see the area */
+  	position: relative;
+  	z-index: 1;
+  }
+  
+  .belt {
+  	width: 9600px; /* 960 * 10 */
+  	left: -4800px; /* this is the belt */
+  	height: 100%;
+  	-moz-transition: 0.2s all ease-in-out;
+  	-webkit-transition: 0.3s all ease-in-out;
+  	transition: 0.2s all ease-in-out;
+  	
+  }
+/* @end */
+
+
+/* @group Slides */
+
+.slide {
+	width: 100%;
+	height: 100%;
+	width: 960px;
+	float: left;
+	-moz-transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.2s all ease-in-out;
+	transition: 0.2s all ease-in-out;
+	opacity: 0;
+}
+	.showing {
+		opacity: 1;
+	}
+	
+	.drink {
+		background-image: url(../img/drinkit.png);
+		background-repeat: no-repeat;
+		background-position: 235px 540px;
+	}
+	.pour {
+		background-image: url(../img/pourit.png);
+		background-repeat: no-repeat;
+		background-position: 225px 540px;
+	}
+	
+	.slide .copy-container {
+		width: 675px;
+	}
+	
+	.slide h2 {
+		width: 335px;
+		height: 175px;
+		display: block;
+		overflow: hidden;
+		text-indent: -900px;
+	}
+		.logo-abita { background-image: url(../img/logo-abita.png); }
+		.logo-bulldog { background-image: url(../img/logo-bulldog.png); }
+		.logo-death-valley { background-image: url(../img/logo-death-valley.png); }
+		.logo-firemans-brew { background-image: url(../img/logo-firemans-brew.png); }
+		.logo-frostie { background-image: url(../img/logo-frostie.png); }
+		.logo-goose-island { background-image: url(../img/logo-goose-island.png); }
+		.logo-hanks { background-image: url(../img/logo-hanks.png); }
+		.logo-margos { background-image: url(../img/logo-margos.png); }
+		.logo-red-arrow { background-image: url(../img/logo-red-arrow.png); }
+		.logo-rocket-fizz { background-image: url(../img/logo-rocket-fizz.png); }
+		
+	
+	.slide .fact {
+		width: 200px;
+		height: 85px;
+		padding-right: 25px;
+		float: left;
+		font-size: 13px;
+		line-height: 1.3;
+	}
+	
+	.slide .fact.bigger {
+		height: 200px;
+	}
+	
+	.slide h3 {
+		font-size: 18px;
+		color: #714107;
+		margin-bottom: 5px;
+	}
+	
+	.slide h3 em {
+		font-size: 13px;
+		line-height: 1.3;
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	.slide:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 11px;
+		right: 25px;
+		bottom: -20px;
+		width: 250px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	
+	.slide1:after {	background-image: url(../img/beer-abita.png); }
+	.slide2:after {	background-image: url(../img/beer-bulldog.png); }
+	.slide3:after {	background-image: url(../img/beer-death-valley.png); }
+	.slide4:after {	background-image: url(../img/beer-firemans-brew.png); }
+	.slide5:after {	background-image: url(../img/beer-frostie.png); }
+	
+	.slide6:after {	background-image: url(../img/beer-goose-island.png); }
+	.slide7:after {	background-image: url(../img/beer-hanks.png); }
+	.slide8:after {	background-image: url(../img/beer-margos.png); }
+	.slide9:after {	background-image: url(../img/beer-red-arrow.png); }
+	.slide10:after { background-image: url(../img/beer-rocket-fizz.png); }
+	
+	.rating:after {
+		content: '';
+		display: inline-block;
+		position: relative;
+		top: 6px;
+		left: 6px;
+		width: 94px;
+		height: 19px;
+		background-image: url(../img/rating.png);
+		background-position: 0px 0px;
+		background-repeat: no-repeat;
+	}
+	
+	.rating.stars-1:after { background-position: 0px 0px; }
+	.rating.stars-2:after { background-position: 0px -19px; }
+	.rating.stars-3:after { background-position: 0px -38px; }
+	.rating.stars-4:after { background-position: 0px -57px; }
+	.rating.stars-5:after { background-position: 0px -76px; }
+	
+	.beer-color {
+		display: inline-block;
+		height: 16px;
+		width: 16px;
+		margin-right: 1px;
+		margin-left: 5px;
+		border-radius: 5px;
+		box-shadow: 0px 1px 1px rgba(255,255,255,0.4),
+					inset 0px 1px 1px rgba(0,0,0,.4);
+		margin-top: -5px;
+		position: relative;
+		top: 3px;
+	}
+	
+	
+/* @end */
+
+
+.next-prev-btn {
+  position: absolute !important;
+}
+
+.tn-nav-wrap {
+  z-index: 100;
+}
+
+.title-string {
+position: absolute;
+}

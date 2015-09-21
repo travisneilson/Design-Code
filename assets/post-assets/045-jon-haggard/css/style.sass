@@ -1,0 +1,137 @@
+@import '../../../css/plugins/plugin-dir'
+@import 'font'
+
+
+body.jon-article
+  background: #eee
+  overflow: hidden
+
+.tilt
+  +transform(rotate(-2deg))
+  +position(fixed, -20px -20px -20px -20px)
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+
+.jon-haggard
+  background: white
+  max-width: 800px
+  +box-sizing(border-box)
+  font-size: 24px
+  font-family: $georgia
+  margin: 0 auto
+  padding-bottom: 100px
+  
+  .hero
+    background:
+      image: url(/assets/post-assets/045-jon-haggard/img/jons-mug.jpg)
+      size: cover
+      position: center
+      repeat: no-repeat
+    position: relative
+    margin: 0px 0px 50px
+    padding-top: 70%
+    
+    h1
+      margin: 0
+      +position(absolute, null null 40% 30px)
+      color: white
+      font-size: 128px
+      font-family: "franklin", $helvetica
+      
+      aside
+        font-family: $helvetica
+        text-transform: uppercase
+        letter-spacing: 3px
+        font-size: 12px
+  
+  p
+    margin: 0 100px 20px 220px
+    
+    &.tn
+      color: #333
+      font-size: 16px
+      font-weight: 600
+      line-height: 1.4
+      font-family: $helvetica
+      
+    &.sep:before
+      content: ''
+      display: block
+      +size(100px 1px)
+      background: #ccc
+      margin: 50px 0
+      
+    &.em
+      font-size: 24px
+      margin-left: 150px
+    
+    &.pull-quote
+      margin: 50px 30px 50px
+      font-family: "franklin", $helvetica
+      font-size: 80px
+      line-height: 1
+      text-align: center
+      
+      &:before,
+      &:after
+        content: ''
+        display: block
+        +size(100px 1px)
+        background: #ccc
+        margin: 50px auto
+        
+      
+  .gallery-title
+    font-size: 12px
+    font-family: $helvetica
+    letter-spacing: 1px
+    
+    &:before
+      content: '—'
+  
+  .gallery
+    position: relative
+    margin-left: 220px
+    height: 200px
+    margin-bottom: 20px
+    +transition()
+    
+    
+    .gallery-item
+      position: absolute
+      left: -20px
+      max-width: 100%
+      height: auto
+      +transform(scale(0.3) translate(-100%, 0px))
+      +transform-origin(top left)
+      opacity: 0
+      pointer-events: none
+      +transition()
+      
+      &.current
+        left: 0px
+        +animation(galleryMove 300ms ease-in forwards)
+        opacity: 1
+        pointer-events: auto
+          
+      &.next
+        opacity: 0.5
+        cursor: pointer
+        pointer-events: auto
+        
+        
+
+
+
+
+
+
+
+
++keyframes(galleryMove)
+  from
+    +transform(scale(0.3) translate(-100%, 0px))
+  to
+    +transform(scale(1) translate(0px, 0px))
+
+@import '0-media-queries'

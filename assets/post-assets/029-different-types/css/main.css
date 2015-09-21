@@ -1,0 +1,153 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  min-width: 800px;
+  background-color: #f5f5f5;
+}
+
+.article-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  float: left;
+  width: 33.3%;
+  position: absolute;
+  bottom: 0;
+}
+
+.box-left {
+  left: 0;
+}
+
+.box-right {
+  right: 0;
+}
+
+.box-center {
+  left: 50%;
+  margin-left: -16.5%;
+}
+
+.trigger {
+  width: 200px;
+  height: 130px;
+  margin-left: -100px;
+  margin-bottom: 60px;
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.thumb {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  -webkit-transition: all 200ms ease-in-out;
+  pointer-events: none;
+}
+
+.grower {
+  width: 200px;
+  margin: 0;
+  margin-left: -100px;
+  bottom: 2%;
+  top: auto;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 200ms ease-in-out;
+}
+
+.grower.type-design {
+  left: 16.5%;
+}
+
+.grower.typography {
+  left: 50%;
+}
+
+.grower.lettering {
+  left: 83.5%;
+  
+}
+
+.grower.grown, .headline {
+  position: absolute;
+  width: 800px;
+  left: 50%;
+  bottom: 65%;
+  margin: 0px 0px -240px -400px;
+  opacity: 1;
+}
+@media screen and (max-height: 700px) {
+   .grower.grown, .headline {
+    margin: 0px 0px -207px -350px;
+    width: 700px;
+  }
+}
+@media screen and (max-height: 640px) {
+   .grower.grown, .headline {
+    margin: 0px 0px -178px -300px;
+    width: 600px;
+  }
+}
+@media screen and (max-height: 600px) {
+   .grower.grown, .headline {
+    margin: 0px 0px -149px -250px;
+    width: 500px;
+  }
+}
+
+
+
+
+
+.trigger:hover .thumb {
+  opacity: 0.2;
+}
+
+.comments-link {
+  position: absolute;
+  display: block;
+  width: 150px;
+  bottom: 65%;
+  left: 0px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transform-origin: bottom left;
+  -webkit-transform: rotate(90deg);
+  background-color: #87cefa;
+  padding: 3px;
+  text-decoration: none;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.comments-link.open {
+  background-color: #e02424;
+}
+
+.comments-wrap {
+	padding: 30px;
+	border: 5px solid black;
+	width: 600px;
+	z-index: 5;
+	background: #f5f5f5;
+	height: 400px;
+	overflow: auto;
+	box-shadow: 0px 3px 20px rgba(0,0,0,0.3);
+	position: absolute;
+	left: 50%;
+	margin-left: -305px;
+	margin-top: -255px;
+	top: 50%;
+	display: none;
+	}

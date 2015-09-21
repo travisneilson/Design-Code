@@ -1,0 +1,136 @@
+.include *{
+	position: relative;
+	z-index: 2;
+}
+
+html, body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: url(../img/bg.gif);
+  position: relative;
+  z-index: 1;
+}
+  body:after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0px 0px 200px rgba(0,0,0,0.8) inset;
+  }
+		
+/* @group Hero */
+
+.hero {
+  position: relative;
+  width: 960px;
+  height: 540px;
+  margin: 0 auto;
+}
+  .hero .tv-img {
+    position: absolute;
+    bottom: 0;
+    margin-left: -339px;
+    left: 50%;
+  }
+  
+  .hero .static {
+    position: absolute;
+    bottom: 120px;
+    left: 210px;
+  }
+	
+/* @end */
+
+.tv {
+  position: relative;
+  color: white;
+  font-family: georgia, serif;
+  font-weight: normal;
+}
+
+.tv h2 {
+  font-weight: normal;
+  font-size: 42px;
+  text-transform: lowercase;
+  text-align: center;
+  color: white;
+}
+
+.tv-tabs {
+  text-align: center;
+  color: #888; 
+  font-size: 18px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+  .tv-tabs em {
+    display: block;
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: url(../img/point.png);
+    margin-left: 42px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+    .tv-tabs em.pos2 {
+      margin-left: 100px;
+    }
+
+  .tv-tabs span {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tv-tabs span:hover {
+    color: white;
+  }
+  
+  .tv-tabs span.active {
+    color: white;
+    cursor: default;
+  }
+
+.copy {
+  width: 700px;
+  margin: 50px auto;
+  font-size: 18px;
+}
+
+
+@media all and (max-width: 740px) {
+
+  .copy {
+    width: auto;
+    padding: 0 20px;
+  }
+  
+  .hero {
+    width: auto;
+    height: 320px;
+  }
+  
+  .hero .static {
+    left: 50%;
+    height: auto;
+    width: 240px;
+    margin-left: -136px;
+    top: 103px;
+  }
+  
+  .hero .tv-img {
+    height: auto;
+    width: 320px;
+    margin-left: -160px;
+  }
+  
+}

@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
+@import url(http://fonts.googleapis.com/css?family=Molengo&subset=latin);
+
+/*************************
+
+	QUICK CHANGE COLOR STYLES OF HEADER
+
+*************************/
+
+#header .site_nav a { /*nav icon color*/
+	top: 0px; /* 0=wht, -25=blk, -50=red, -75=gry(#afafaf) */
+	}
+#header .site_nav a:hover { /*nav icon:hover color*/
+	top: -25px; /* 0=wht, -25=blk, -50=red, -75=gry(#afafaf) */
+	}	
+#header {
+	background-color: #2e2b22; /* changes both the header band and the footer band */
+	border-bottom: 1px solid #fff;
+	}
+#header .site_title a, .site_nav a, #header .site_title { 
+	color: #fff; /* all text color in header */
+	}
+#header .site_title a:hover, .site_nav a:hover { 
+	color: #000; /* text links:hover in header */
+	}
+	
+.instagram-container {
+	background: repeat center top url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-noise.png);
+	position: relative;
+	}
+	
+.title-container {
+	background: repeat-x top url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-top-bg.png);
+	height: 328px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	}
+	.title-container h1 {
+		background: no-repeat center center url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-title.png);
+		text-indent: -9999px;
+		height: 190px;
+		padding-top: 110px;
+		}
+		
+.section1 {
+	background: repeat-y top 130px url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-colors-1.png);
+	position: relative;
+	top: -12px;
+	z-index: 1;
+	}
+	.section1 .insta-icon {
+		position: absolute;
+		top: 40px;
+		left: 173px;
+		}
+		.section1-copy {
+			margin-bottom: 30px;
+			}
+		
+.ledge {
+	background: center top repeat-x url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-photos.jpg);
+	height:699px;
+	position: relative;
+	top:-12px;
+	}	
+		
+		
+.section2 {
+	background: repeat-y top 11px url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-colors-2.png);
+	position: relative;
+	top:-12px;
+	}
+	.section2-copy {
+		position: relative;
+		top: -200px;
+		}
+		
+.instagram-container h3 {
+	font-family: 'Yanone Kaffeesatz', arial, serif;
+	font-size: 28px;
+	/*margin: 10px 0px 10px 0px;*/
+	}
+
+.instagram-container h6 {
+	font-family: 'Molengo', arial, serif;
+	font-size: 14px;
+	color: #666;
+	text-transform: uppercase;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 8px 0px 8px;
+
+	}
+
+.instagram-container p {
+	font-family: 'Molengo', arial, serif;
+	line-height: 1.6;
+	font-size: 16px;
+	}
+		
+
+		
+.feature-container p {
+	margin: 0px;
+	padding: 0px 8px 5px 8px;
+	font-size: 14px;
+	}
+
+
+
+a.tabSelect {
+	display: block;
+	}
+.selected {
+	background: repeat top center url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-feature-highlight-bg2.gif);
+	}
+.feature:hover {
+	background: repeat top center url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-feature-highlight-bg.gif);
+	}
+.phone {
+	background: center center no-repeat url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-iPhone-4.png);
+	height: 871px;
+	}
+	.phone .phone-glare {
+		position: absolute;
+		top:132px;
+		left:269px;
+		}
+
+.rotate-slides {
+	position: absolute;
+	top: 132px;
+	left:81px;
+	height:481px;
+	width:321px;
+	overflow: hidden;
+	}
+	
+
+.white-spacer {
+	height: 14px;
+	position: absolute;
+	bottom: 0;
+	background: repeat top center url(http://travisneilson.com/legacy/v5/wp-content/upLoads/instagram-feature-highlight-bg.gif);
+	width: 100%;
+	}
+
+		
+		

@@ -1,0 +1,409 @@
+@import '../../../css/plugins/plugin-dir'
+@import 'font'
+@import 'animation'
+
+html, body
+  //height: auto !important
+  +size(100%)
+
+.thirty-two-poems-article
+  position: relative
+  
+  .poem-actions
+    +position(fixed, 0px 0px null null)
+    font-size: 25px
+    z-index: 1
+    
+    > a
+      display: inline-block
+      padding-right: 20px
+      color: #999
+      
+      &:before
+        vertical-align: sub
+      
+      &:hover
+        color: #00aeef
+        
+        span
+          font-size: 14px
+        
+      span
+        display: inline-block
+        margin-left: 7px
+        font-size: 0px
+        text-transform: uppercase
+        font-family: $monospace
+        +transition()
+        
+      
+  .grid-container
+    +size(100%)
+    position: relative
+    overflow-x: scroll
+    overflow-y: hidden
+    -webkit-overflow-scrolling: touch
+  
+  
+  .svg-grid
+    background:
+      image: url(../img/poetry.svg)
+      size: cover
+    top: 50px 
+    +size(1632px 432px)
+    +transform-origin(top left)
+    position: relative
+    font-family: $monospace
+    +transform(scale(0.8))
+    
+    @media(min-height: 550px)
+      +transform(scale(1))
+    
+    @media(min-height: 650px)
+      +transform(scale(1.3))
+      
+    @media(min-height: 750px)
+      +transform(scale(1.5))
+    
+    @media(min-height: 850px)
+      +transform(scale(1.7))
+    
+    @media(min-height: 1000px)
+      +transform(scale(2))
+      
+    @media(min-height: 1120px)
+      +transform(scale(2.4))
+    
+    @media(min-height: 1250px)
+      +transform(scale(2.7))
+  
+    
+    
+  .poem-baloon
+    background: #00aeef
+    border-radius: 150px 150px 150px 0px
+    +position(absolute, null null 50% 50%)
+    +box-sizing(border-box)
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(center)
+    padding: 30px
+    pointer-events: none
+    opacity: 0
+    +transform-origin(bottom left)
+    
+    
+    
+  .line
+    white-space: nowrap
+    color: white
+
+  .poem-target
+    +size(32px)
+    position: absolute
+    display: block
+    //background: rgba(255, 0,0,0.3)
+    +transform(translate(-8px, -8px))
+    z-index: 1
+    
+    &:hover
+      z-index: 2
+    
+    &:hover .poem-baloon
+      opacity: 1
+      +animation(bounce-open 0.5s $ease-in-back)
+      +animation-fill-mode(forwards)
+    
+    &.show .poem-baloon
+      opacity: 1
+    
+    &.reversed .poem-baloon
+      border-radius: 150px 0px 150px 150px
+      +position(absolute, 50% 50% auto auto)
+      +transform-origin(top right)
+    
+    &.downed .poem-baloon
+      border-radius: 0px 150px 150px 150px
+      +position(absolute, 50% auto auto 50%)
+      +transform-origin(top left)
+    
+    &:before
+      content: ''
+      display: block
+      +position(absolute, 50% null null 50%)
+      +size(30px)
+      border-radius: 50%
+      border: solid 2px #00aeef
+      margin-left: -17px
+      margin-top: -17px
+      opacity: 0
+      +animation(affordances 10s linear infinite)
+    
+    &.delay-1:before
+      +animation-delay(3s)
+      
+    &.delay-2:before
+      +animation-delay(5s)
+    
+    &.delay-3:before
+      +animation-delay(7s)
+      
+    .starter-arrow
+      position: relative
+      top: 5px
+      left: -4px
+      color: #999
+      +animation(backforth 1.5s ease-in-out infinite)
+      
+      
+  .p-0
+    top: 155px
+    left: 40px
+    
+  .p-1
+    top: 146px
+    left: 88px
+  
+  .p-2
+    top: 175px
+    left: 136px
+    
+  .p-3
+    top: 165px
+    left: 184px
+    
+  .p-4
+    top: 127px
+    left: 232px
+    
+  .p-5
+    top: 194px
+    left: 280px
+  
+  
+  
+  .p-6
+    top: 213px
+    left: 328px
+  
+  .p-7
+    top: 127px
+    left: 376px
+  
+  .p-8
+    top: 79px
+    left: 424px
+  
+  .p-9
+    top: 155px
+    left: 472px 
+  
+  .p-10
+    top: 261px
+    left: 520px
+  
+  
+  
+  
+  .p-11
+    top: 280px
+    left: 568px
+  
+  .p-12
+    top: 251px
+    left: 616px
+  
+  .p-13
+    top: 319px
+    left: 664px
+  
+  .p-14
+    top: 366px
+    left: 712px
+  
+  .p-15
+    top: 328px
+    left: 760px 
+  
+  
+  
+  
+  .p-16
+    top: 357px
+    left: 808px 
+  
+  .p-17
+    top: 309px
+    left: 856px 
+  
+  .p-18
+    top: 232px
+    left: 904px
+  
+  .p-19
+    top: 155px
+    left: 952px 
+  
+  .p-20
+    top: 11px
+    left: 1000px 
+  
+  
+  
+  
+  .p-21
+    top: 165px
+    left: 1048px
+  
+  .p-22
+    top: 136px
+    left: 1096px
+  
+  .p-23
+    top: 50px
+    left: 1144px
+  
+  .p-24
+    top: 309px
+    left: 1192px
+  
+  .p-25
+    top: 261px
+    left: 1240px
+  
+  
+  
+  
+  .p-26
+    top: 203px
+    left: 1288px
+      
+  .p-27
+    top: 194px
+    left: 1336px
+  
+  .p-28
+    top: 79px
+    left: 1384px
+      
+  .p-29
+    top: 136px
+    left: 1432px
+  
+  .p-30
+    top: 69px
+    left: 1480px
+  
+  
+  
+  
+  .p-31
+    top: 50px
+    left: 1528px
+  
+  .p-32
+    top: 11px
+    left: 1576px
+
+
++keyframes(bounce-open)
+  0%
+    opacity: 0
+    +transform(scale(.3))
+  
+  50%
+    opacity: 1
+    +transform(scale(1.05))
+  
+  65% 
+    +transform(scale(.9))
+  
+  
+  80% 
+    +transform(scale(1.01))
+  
+  90% 
+    +transform(scale(0.97))
+  
+  100%
+    +transform(scale(1))
+
+
++keyframes(affordances)
+  0%
+    +transform(scale(0))
+  8%
+    opacity: 0.4
+  10%
+    +transform(scale(1))
+    opacity: 0
+    
+.thirty-two-poems-article
+
+  .action-container
+    width: 600px
+    height: calc(100% - 150px)
+    margin-top: 10px
+    padding: 30px
+    +position(absolute, 0 null null 50%)
+    margin-left: -330px
+    border: 5px solid #00aeef
+    background: white
+    box-shadow: 0px 3px 40px rgba(0, 0, 0, 0.5)
+    overflow: scroll
+    -webkit-overflow-scrolling: touch
+    z-index: 10
+    
+    +animation(bounce-open 0.5s $ease-in-back)
+    +animation-fill-mode(forwards)
+    
+    @media(max-width: 660px)
+      width: calc(100% - 90px)
+      margin: 10px
+      left: auto
+      top: 0px
+    
+    &.hide
+      display: none
+    
+    h4
+      font-family: $monospace
+      font-weight: 400
+    
+    .close-comments
+      color: #00aeef
+      +position(absolute, 10px 10px null null)
+      cursor: pointer
+    
+    
+    
+
++keyframes(hello)
+  0%
+    opacity: 0
+    +transform(scale(.3))
+  
+  50%
+    opacity: 1
+    +transform(scale(1.05))
+  
+  65% 
+    +transform(scale(.9))
+  
+  
+  80% 
+    +transform(scale(1.01))
+  
+  90% 
+    +transform(scale(0.97))
+  
+  100%
+    +transform(scale(1))
+    
+    
+    
++keyframes(backforth)
+  0%, 100%
+    left: -4px
+  50%
+    left: -10px

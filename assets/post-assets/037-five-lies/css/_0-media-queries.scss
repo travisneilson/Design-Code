@@ -1,0 +1,87 @@
+// https://github.com/paranoida/sass-mediaqueries
+
+
+// Bigger than 1200
+@include min-screen(1200px) {}
+
+// Smaller than 940
+@include max-screen(939px) {}
+
+// Tablets portrait (landscape is one level up)
+@include max-screen(768px) {
+
+  .five-lies-i-was-told {
+    
+    header {
+      h2 {padding: 160px 50px 0px;}
+      .kicker {
+        padding: 20px 60px 160px;
+        line-height: 1.2;
+      }
+    }
+    
+    section {
+
+    }
+    
+    .text-container {
+      padding: 15px 0;
+      
+      h4 {
+        padding: 0 20px;
+        margin: 20px 0;
+        font-size: 20px;
+      }
+      
+      p {
+        padding: 0 20px;
+        font-size: 12px;
+        text-align: left;
+      }
+      
+      hr {
+        padding: 0;
+        margin: 0 20px 20px;
+        width: 40px;
+      }
+    }
+    
+    [class^="fill-img-"] {
+      height: 400px;
+      width: 100%;
+    }
+    
+    .fill-img-1-1,
+    .fill-img-2-2,
+    .fill-row-1 .fill-img-2,
+    .fill-row-1 .fill-img-3,
+    .fill-row-2 .fill-img-2,
+    .fill-row-3 .fill-img-1,
+    .fill-img-3-1,
+    .fill-img-4-2,
+    .fill-img-5-1,
+    .fill-img-5-2
+      {display: none;}
+    
+    .lie-5 .fill-img-5-3 {display:table-cell;}
+    
+    .fill-img-1-1,
+    .fill-img-1-2,
+    .fill-img-2-1,
+    .fill-img-2-2,
+    .fill-img-3-1,
+    .fill-img-3-2,
+    .fill-img-4-1,
+    .fill-img-4-2,
+    .fill-img-5-1,
+    .fill-img-5-2,
+    .fill-img-5-3
+      {width: 20% !important;}
+    
+    .lie-3 .fill-img-3-2 {background-image: url(../img/11.jpg);}
+  }
+}
+
+
+// Phones portrait (landscape is one level up)
+@include max-screen(480px) {}

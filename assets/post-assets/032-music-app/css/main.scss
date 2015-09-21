@@ -1,0 +1,295 @@
+@import '../../../css/plugins/plugin-dir';
+@import 'fonts.scss';
+@import 'base.scss';
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {@content; }
+  @-moz-keyframes #{$name} { @content;}
+  @-ms-keyframes #{$name} {@content;}
+  @-o-keyframes #{$name} {@content;}
+  @keyframes #{$name} {@content;} 
+}
+ 
+@include keyframes(hello) {
+  0% {margin-left: -200px; opacity: 0;}
+  100% {margin-left: 0px; opacity: 1;}
+}
+
+@include keyframes(hello-vid) {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@mixin invoke-ani($name, $dur, $del) {
+  @each $browser in webkit, moz, ie, o {
+    -#{$browser}-animation: $name $dur ease-in-out $del 1;
+    -#{$browser}-animation-fill-mode: forwards;
+  }
+}
+
+@mixin button($color1, $color2) {
+  background: $color1;
+  background: -moz-linear-gradient(top,  $color1 0%, $color2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+  background: -webkit-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: -o-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: -ms-linear-gradient(top,  $color1 0%,$color2 100%);
+  background: linear-gradient(to bottom,  $color1 0%,$color2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+  
+    &:hover {
+      background: lighten($color1, 10%);
+      background: -moz-linear-gradient(top,  lighten($color1, 10%) 0%, $color2 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten($color1, 10%)), color-stop(100%,$color2));
+      background: -webkit-linear-gradient(top,  lighten($color1, 10%) 0%,$color2 100%);
+      background: -o-linear-gradient(top,  lighten($color1, 10%) 0%,$color2 100%);
+      background: -ms-linear-gradient(top,  lighten($color1, 10%) 0%,$color2 100%);
+      background: linear-gradient(to bottom,  lighten($color1, 10%) 0%,$color2 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($color1, 10%)', endColorstr='$color2',GradientType=0 );
+    }
+    
+    &:active{
+      background: $color2;
+      background: -moz-linear-gradient(top,  $color2 0%, $color1 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color2), color-stop(100%,$color1));
+      background: -webkit-linear-gradient(top,  $color2 0%,$color1 100%);
+      background: -o-linear-gradient(top,  $color2 0%,$color1 100%);
+      background: -ms-linear-gradient(top,  $color2 0%,$color1 100%);
+      background: linear-gradient(to bottom,  $color2 0%,$color1 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color2', endColorstr='$color1',GradientType=0 );
+    }
+}
+
+
+/*** TOOLBOX ***/
+
+.positioner {
+  display: block;
+  width: 950px;
+  padding: 0px 10px;
+  margin: 0 auto;
+}
+
+/*** TYPE ***/
+
+body {
+  background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+article.music-app {
+  font-family: myriadPro;
+  color: #999;
+  font-size: 18px;
+  line-height: 24px;
+
+  
+  * { position: relative; }
+
+  h1 {
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 72px;
+    color: #9093a0;
+    margin-bottom: 35px;
+    
+    span {
+      color: black;
+      display: block;
+    }
+  }
+  
+  header h2 {
+    color: #999;
+    font-size: 30px;
+    margin-bottom: 125px;
+  }
+  
+  h2 {
+    font-weight: 300;
+    font-size: 36px;
+    color: #4e4e4e;
+  }
+}
+
+
+
+/*** STRUCTURE ***/
+
+header {
+  height: 1120px;
+  
+  .app-store {
+    display: block;
+    width: 191px;
+    height: 60px;
+    background: url(../img/app-store.gif);
+    position: absolute;
+    right: 25px;
+    cursor: default;
+  }
+  
+  .hero-img {
+    display: block;
+    position: absolute;
+    width: 540px;
+    height: 1095px;
+    background: url(../img/hero.png);
+    left: -70px;
+    top: 65px;
+    margin-left: -200px;
+    opacity: 0;
+    @include invoke-ani(hello, 600ms, 50ms);
+  }
+  
+  hgroup {
+    position: absolute;
+    top: 360px;
+    left: 470px;
+    display: block;
+    width: 485px;
+    margin-left: -200px;
+    opacity: 0;
+    @include invoke-ani(hello, 600ms, 600ms);
+  }
+  
+  figure {
+    display: block;
+    position: absolute !important;
+    width: 227px;
+    left: 566px;
+    top: 717px;
+    opacity: 0;
+    @include invoke-ani(hello-vid, 600ms, 1300ms);
+    
+    .thumbnail {
+      display: block;
+      width: 227px;
+      height: 130px;
+      background: url(../img/video.jpg);
+      border-radius: 5px;
+      border: 1px solid #959595;
+      box-shadow: 0px 1px 0px white, 0px 0px 20px rgba(0,0,0,0.4) inset;
+      @each $browser in webkit, moz, ie, o {-#{$browser}-transition: opacity 200ms ease-in-out 0s;}
+      
+      span {
+        display: block;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        background: url(../img/video-play.png);
+        top: 38px;
+        left: 86px;
+        opacity: 0;        
+        @each $browser in webkit, moz, ie, o {-#{$browser}-transition: opacity 200ms ease-in-out 0s;}
+        
+      }
+      
+      &:hover {
+        box-shadow: 0px 1px 0px white, 0px 0px 28px rgba(0,0,0,0.5) inset;
+          
+        span { opacity: 1; }
+      }
+    }
+    
+    figcaption {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.looks {
+  padding-top: 100px;
+  height: 531px;
+  background: url(../img/looks-bg.jpg) center bottom no-repeat;
+  
+  h2 {
+    padding-top: 130px;
+    width: 365px;
+    margin-bottom: 40px;
+  }
+  
+  p {
+    width: 365px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.go {
+  padding-top: 195px;
+  
+  &:before {
+    content:'';
+    display: block;
+    width: 795px;
+    height: 544px;
+    background: url(../img/go-phone.jpg);
+    position: absolute;
+    top: 144px;
+    left: -215px;
+  }
+  
+  h2 {
+    margin-left: 546px;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-left: 546px;
+    width: 365px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.music-app .signup {
+  margin: 208px auto 0;
+  padding-bottom: 200px;
+  background: url(../img/signup-bg.jpg) center top no-repeat;
+  
+  h2 {
+    padding: 113px 0px 40px;
+  }
+  
+  p {
+    width: 413px;
+  }
+  
+  #mc_embed_signup {
+    position: absolute;
+    right: 0;
+    top: 200px;
+    
+    input {
+      padding: 0 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+      height: 45px;
+      border-radius: 4px;
+      
+      &[type="email"] {
+        width: 357px;
+        border: 1px solid #bebebe;
+        margin-right: 5px;
+        outline: none;
+        
+        &:focus {
+          border: 1px solid #2b9ae1;
+        }
+      }
+      
+      &[type="submit"] {
+        border: 1px solid #3174b0;
+        color: white;
+        background-color: #2b9ae1;
+        cursor: pointer;
+        @include button(#2B9AE1, #2380BA);
+      }
+    }
+  }
+}
+
+@import 'tour.scss';

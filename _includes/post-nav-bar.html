@@ -1,0 +1,20 @@
+<nav class="tn-nav-wrap">
+
+		<h1 class="icon-tn-logo logo-small"></h1>
+
+		<a class="title-string" href="/articles">
+		  <p class="blurb">{{ page.blurb }}</p>
+		  <p class="back-message"><i class="icon-reply"></i>Go back to the Index</p>
+		</a>
+
+		<ul class="next-prev-btn">
+			{% if page.next %}
+			  <li class="next-post-link"><a href="{{ page.next.url }}" rel="next"></a></li>
+			{% endif %}
+
+			{% if page.previous %}
+  			<li class="prev-post-link"><a href="{{ page.previous.url }}" rel="prev"></a></li>
+		  {% endif %}
+		</ul>
+
+</nav>

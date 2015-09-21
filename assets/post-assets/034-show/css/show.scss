@@ -1,0 +1,234 @@
+@import '../../../css/plugins/plugin-dir';
+@import 'fonts';
+@import 'base';
+
+$showRed: #ce2828;
+$showCream: #f8eec8;
+
+
+
+/* ---------------------------------------- */
+
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $showRed;
+  overflow: hidden;
+
+
+  article.jquery-show {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+  
+  .bar {
+    width: 4000px;
+    background-color: $showCream;
+    height: 1000px;
+    @include position(absolute, -570px 0 0 50%);
+    margin-left: -2000px;
+    @include transform(rotate(-12deg));
+    @include transform-origin(center top);
+    z-index: 0;
+  }
+  
+  .eye {
+    width: 399px;
+    height: 331px;
+    @include position(absolute, 260px 0 0 50%);
+    margin-left: -200px;
+    background: url(../img/eye.png);
+    
+  }
+  
+  h1 {
+    font-family: clarendon, sans-serif;
+    font-size: 52px;
+    font-weight: normal;
+    color: rgba(0,0,0,0.7);
+    letter-spacing: 0.3em;
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    
+    em {
+      font-style: normal;
+      font-size: 72px;
+      letter-spacing: 0.1em;
+    }
+    
+    span {
+      display: inline-block;
+      border-top: 6px solid $showRed;
+      padding-top: 30px;
+    }
+  }
+  
+  h2 {
+    font-family: clarendon, sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: rgba(0,0,0,0.4);
+    margin-top: 80px;
+  }
+  
+  h3 {
+    color: rgba(0,0,0,0.4);
+    font-size: 21px;
+  }
+  
+  code {
+    font-family: monospace;
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+  blockquote {
+    font-style: italic;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+    &:before {
+      content: '“';
+      display: inline-block;
+      margin-right: 8px;
+      font-size: 70px;
+      line-height: 0px;
+      color: rgba(0,0,0,0.4);
+    }
+  }
+  
+  .text-container {
+    font-size: 18px;
+    color: $showCream;
+    width: 520px;
+    margin: 440px auto 0;
+    
+    img {
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+      max-width: 525px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .second-base {
+    background: darkorange;
+    height: 400px;
+    width: 600px;
+    border-radius: 3px;
+    position: relative;
+  }
+}
+
+
+
+
+.main-demo {
+	width: 617px;
+	margin: 50px auto 0px;
+	}
+
+.loupe-base {
+	background: url('../img/loupe-base.jpg') no-repeat left top;
+	width: 600px;
+	height: 388px;
+	position: relative;
+	}
+
+.loupe1 {
+	position: absolute;
+	top: 144px;
+	left: 379px;
+	margin-top: -115px;
+	margin-left: -115px;
+	width: 231px;
+	height: 231px;
+	display: none;
+	box-shadow: none !important;
+	}
+
+.loupe2 {
+	position: absolute;
+	top: 148px;
+	left: 98px;
+	margin-top: -115px;
+	margin-left: -115px;
+	width: 231px;
+	height: 231px;
+	display: none;
+	box-shadow: none !important;
+	}
+
+.triggers {
+	margin-bottom: 20px;
+	margin-left: -150px;
+	background: rgba(0,0,0,0.1);
+	width: 134px;
+	border-radius: 3px;
+	position: absolute;
+	}
+	
+	.triggers li {
+		display: block;
+		text-align: right;
+		width: 120px;
+		
+		padding: 7px 7px;
+		float: left;
+		float: none;
+		margin-right: 10px;
+		border-radius: 3px;
+		color: #333;
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+		}
+		
+		.triggers li:hover {
+			background: #fff;
+			cursor: pointer;
+			color: #333;
+			}
+	
+	.second-demo, .third-demo {
+		width: 600px;
+		margin: 50px auto 0px;
+		}
+	
+	.second-base {
+		background: darkorange;
+		height: 400px;
+		width: 600px;
+		border-radius: 3px;
+		position: relative;
+		margin-bottom: 30px;
+		}
+		
+	.third-demo .second-base {
+		background: darksalmon;
+		}
+		
+	.second-loupe, .third-loupe, .fourth-loupe {
+		position: absolute;
+		left: 300px;
+		top: 200px;
+		width: 96px;
+		height: 96px;
+		background: #f5f5f5;
+		border-radius: 50%;
+		border: 2px solid #CC7000;
+		display: none;
+		}
+	
+	.third-loupe, .fourth-loupe {
+		margin-left: -50px;
+		margin-top: -50px;
+		}

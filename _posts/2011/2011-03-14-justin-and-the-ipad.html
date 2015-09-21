@@ -1,0 +1,153 @@
+---
+layout: post
+type: post
+title: Justin and the iPad
+cover: /assets/post-assets/010-justin-and-the-ipad/justin-cover.jpg
+height: 376px
+blurb: Look how clean my desktop is, I mean, honestly.
+---
+
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script type="text/javascript">	
+	$(function() {
+
+		$( ".drag" ).draggable({ stack: ".products" });
+		
+		var stack = $( ".drag" ).draggable( "option", "stack" );
+		$( ".drag" ).draggable( "option", "stack", ".drag" );
+				
+	}); //end.ready
+</script>
+
+<style type="text/css">
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Anonymous Pro'), local('AnonymousPro'), url('http://themes.googleusercontent.com/font?kit=Zhfjj_gat3waL4JSju74EyeYhKXOfe-y5H0hkLWWvkc') format('truetype');
+}
+
+
+body {
+  overflow: hidden;
+  background-image: url(/assets/post-assets/010-justin-and-the-ipad/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.menu-bar {	
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 22px;
+	background: top center repeat-x url(/assets/post-assets/010-justin-and-the-ipad/menu-bar-bg.gif);
+	}
+	
+	.menu-bar-time {float: right;}
+	.menu-bar-menu {float: left;}
+
+.dock {
+	position: absolute;
+	bottom: 45px;
+	left: 50%;
+	margin-left: -400px;
+	width: 800px;
+	height: auto;
+	z-index: 11;
+	}
+
+.itunes {
+	position: absolute;
+	top: 4%;
+	left: 2%;
+	}
+	
+.web {
+	width: 700px;
+	height: auto;
+	position: absolute;
+	top: 9%;
+	right: -25%;
+	padding-right: 200px;
+	z-index: 8;
+	}
+.chat {
+	position: absolute;
+	top: 20%;
+	right: 45%;
+	height: 466px;
+	width: 480px;
+	background: top center no-repeat url(/assets/post-assets/010-justin-and-the-ipad/chat-bg.png);
+	z-index: 10;
+	}
+	.chat-belt {
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		height: 327px;
+		width: 400px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		}
+	
+.story {
+	position: absolute;
+	top: 3%;
+	right: 7%;
+	height: 500px;
+	width: 465px;
+	background: top center no-repeat url(/assets/post-assets/010-justin-and-the-ipad/story.png);
+	z-index: 6;
+	}
+	.story-belt {
+		position: absolute;
+		top: 47px;
+		left: 40px;
+		height: 398px;
+		width: 385px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		}
+		.story-belt p {
+			font-family: 'Anonymous Pro', helvetica, arial, serif;
+			font-size: 14px;
+			line-height: 1.6;
+			padding: 10px;
+			margin: 0px;
+			}
+	
+</style>
+
+
+	<div class="menu-bar">
+		<img class="menu-bar-menu" src="/assets/post-assets/010-justin-and-the-ipad/menu-bar-menu.gif" />
+		<img class="menu-bar-time" src="/assets/post-assets/010-justin-and-the-ipad/menu-bar-time.gif" />		
+	</div>
+
+	<img class="drag itunes" src="/assets/post-assets/010-justin-and-the-ipad/itunes.png" alt="Muzak" />
+	
+	<img class="drag web" src="/assets/post-assets/010-justin-and-the-ipad/web.png" alt="Webs" />
+	
+	
+	<div class="drag chat">
+		<div class="chat-belt">
+			<img class="convo" src="/assets/post-assets/010-justin-and-the-ipad/convo.gif" />
+		</div>
+	</div>
+	
+	<div class="drag story">
+		<div class="story-belt">
+			<p>I will admit that on the day of the launch of the iPad2 I had quite an iFever. I was so anxious to get an iPad that I got the Apple Expert on a chat line and tried to charm him into giving me one. He was such a nice guy, and it was so fun to mess with him (on a day like this?).</p>
+			<p>It's pretty funny (to me) that his name went from Justin to Jason in my re-telling. Look! even Jason Batemen came into the picture somehow?!?</p>
+			<p>I still haven't gotten my hands on one, despite 3 separate trips to the Apple Store, once to Target and even once to BestBuy. It's funny because I know I totally don't need one. Well, it's not funny. I need one.</p>
+			<p>I need bigger angry birds, and more reasons to take longer poops.</p>
+		</div>
+	</div>
+	
+	<img class="dock" src="/assets/post-assets/010-justin-and-the-ipad/dock.png" alt="Apps sucka!" />
+
+
+
+</body>
+</html>

@@ -5,12 +5,28 @@ section.podcast
     position: center
   color: white
 
+  .home-lead
+    text-align: center
+
   .podcast-content
     display: flex
     margin-bottom: 20px
 
+    @media (max-width: 400px)
+      display: block
+      text-align: center
+
+      .podcast-thumb
+        margin: 0
+
+
   .podcast-thumb
     margin-right: 30px
+
+    @media (max-width: 640px)
+      img
+        width: 100px
+        height: 100px
 
   .podcast-text
     flex: 1
@@ -26,6 +42,10 @@ section.podcast
   .web
     color: white
     background: #8d16de
+
+    @media (max-width: 640px)
+      margin-bottom: 20px
+      display: block
 
   .itunes
     color: white

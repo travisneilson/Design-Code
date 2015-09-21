@@ -1,0 +1,93 @@
+@import "fonts.css";
+
+/* @group Intro */
+
+html, body {
+	height: 100%;
+	/*-webkit-font-smoothing: antialiased;*/
+}
+
+body {
+	background: url(../img/yellow.gif) center top repeat;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'function', sans-serif;
+	font-weight: 800;
+	font-size: 100px;
+	text-transform: uppercase;
+	margin: 40px 0;
+}
+
+.piss {
+	width: 564px;
+	height: 386px;
+	margin: 0 auto;
+	background: url(../img/pissin.png);
+	overflow: hidden;
+}
+
+.you {
+	width: 155px;
+	height: 386px;
+	opacity: 0;
+	margin: 0 auto;
+	background: url(../img/pissin.png);
+	-webkit-transition: all .5s ease-in-out;
+	cursor: pointer;
+	position: relative;
+	top: -0%;
+}
+	.you:hover {
+		opacity: .15;
+	}
+
+.copy {
+	margin: 0 auto;
+	height: 386px;
+	width: 155px;
+	text-align: center;
+	font-family: 'function', sans-serif;
+	font-weight: 400;
+	position: relative;
+	top: -0%;
+	font-size: 16px;
+	line-height: 1.3;
+	-webkit-transition: all .5s ease-in-out;
+	
+}
+.copy:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../img/yellow.gif) center top repeat;
+}
+
+.copy p {
+	position: relative;
+	margin: 0 0 10px 0;
+}
+
+
+
+/* Disqus Styles
+----------------------------------------------------------------------------*/
+
+.comments-wrap {
+	width: 560px;
+	padding: 30px;
+	margin: 100px auto 80px;	
+	border: 5px solid black;
+	background: white;
+	display: none;
+	}
+
+#dsq-global-toolbar,
+#dsq-new-post h3,
+.dsq-item-trackback,
+.dsq-options
+	{ display: none !important; }

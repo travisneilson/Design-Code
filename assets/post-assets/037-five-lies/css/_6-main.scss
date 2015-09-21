@@ -1,0 +1,276 @@
+.five-lies-i-was-told {  
+  header {
+    width: 100%;
+    text-align: center;
+    
+    h2 {
+      margin: 0;
+      padding-top: 160px;
+    }
+    
+    .kicker {
+      font: italic 18px/1 $georgia;
+      color: #999;
+      padding-bottom: 160px;
+    }
+  }
+
+
+
+  section {
+    display: table;
+  }
+  
+  [class^="fill-img-"] {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table-cell;
+  }
+  
+  .text-container {
+    display: table-cell;
+    padding: 30px 0;
+    background-color: #222;
+    color: white;
+    
+    
+    h4 {
+      padding: 0 50px;
+      margin: 20px 0;
+      color: white;
+    }
+    
+    p {
+      padding: 0 50px;
+      font-size: 13px;
+      text-align: justify;
+    }
+    
+    hr {
+      padding: 0;
+      margin: 0 50px 20px;
+      width: 40px;
+      border-color: #fff;
+    }
+  }
+  
+  .lie-1,
+  .lie-2,
+  .lie-3,
+  .lie-4,
+  .lie-5,
+  .fill-row-1,
+  .fill-row-2,
+  .fill-row-3,
+  .fill-row-4,
+  .fill-row-5
+    {background-color: #333;}
+  
+  
+  // LIE 1
+  
+  .lie-1 {
+    
+    .text-container {
+    }
+    
+    .fill-img-1-1 {
+      width: 20%;
+      background-image: url(../img/1.jpg);
+    }
+    
+    .fill-img-1-2 {
+      width: 33.3%;
+      background-image: url(../img/2.jpg);
+    }
+  }
+  
+  
+  // FILL ROW
+  
+  .fill-row-1 {
+    width: 100%;
+    height: 400px;
+    
+    .fill-img-1 {
+      width: 30%;
+      background-image: url(../img/5.jpg);
+    }
+    .fill-img-2 {
+      width: 45%;
+      background-image: url(../img/6.jpg);
+    }
+    .fill-img-3 {
+      width: 25%;
+      background-image: url(../img/7.jpg);
+    } 
+  }
+  
+  // LIE 2
+  
+  .lie-2 {
+    
+    .text-container {
+    }
+    
+    .fill-img-2-1 {
+      width: 40%;
+      background-image: url(../img/3.jpg);
+    }
+    
+    .fill-img-2-2 {
+      width: 40%;
+      background-image: url(../img/4.jpg);
+    }
+  }
+  
+  
+  
+  // FILL ROW
+  
+  .fill-row-2 {
+    width: 100%;
+    height: 400px;
+    
+    .fill-img-1 {
+      width: 70%;
+      background-image: url(../img/13.jpg);
+    }
+    .fill-img-2 {
+      width: 30%;
+      background-image: url(../img/14.jpg);
+    }
+  }
+
+
+  // LIE 3
+
+  .lie-3 {
+    
+    .text-container {
+    }
+    
+    .fill-img-3-1 {
+      width: 10%;
+      background-image: url(../img/11.jpg);
+    }
+    
+    .fill-img-3-2 {
+      width: 47%;
+      background-image: url(../img/12.jpg);
+    }
+  }
+
+// FILL ROW
+
+.fill-row-3 {
+  width: 100%;
+  height: 400px;
+  
+  .fill-img-1 {
+    width: 30%;
+    background-image: url(../img/16.jpg);
+  }
+  .fill-img-2 {
+    width: 70%;
+    background-image: url(../img/17.jpg);
+  }
+}
+
+
+  // LIE 4
+
+  .lie-4 {
+    
+    .text-container {
+    }
+    
+    .fill-img-4-1 {
+      width: 50%;
+      background-image: url(../img/18.jpg);
+    }
+    
+    .fill-img-4-2 {
+      width: 5%;
+      background-image: url(../img/19.jpg);
+    }
+  }
+
+// FILL ROW
+
+.fill-row-4 {
+  width: 100%;
+  height: 400px;
+  
+  .fill-img-1 {
+    width: 60%;
+    background-image: url(../img/20.jpg);
+  }
+  .fill-img-2 {
+    width: 40%;
+    background-image: url(../img/21.jpg);
+  }
+}
+
+
+  // LIE 5
+
+  .lie-5 {
+    
+    .text-container {
+    }
+    
+    .fill-img-5-1 {
+      width: 20%;
+      background-image: url(../img/22.jpg);
+    }
+    
+    .fill-img-5-2 {
+      width: 30%;
+      background-image: url(../img/23.jpg);
+    }
+    
+    .fill-img-5-3 {
+      width: 20%;
+      background-image: url(../img/23.jpg);
+      display: none;
+    }
+  }
+
+// FILL ROW
+
+.fill-row-5 {
+  width: 100%;
+  height: 400px;
+  
+  .fill-img-1 {
+    width: 60%;
+    background-image: url(../img/9.jpg);
+  }
+  .fill-img-2 {
+    width: 40%;
+    background-image: url(../img/10.jpg);
+  }
+}
+
+.conclusion {
+  display: block;
+  
+  .text-container {
+    background-color: white;
+    color: #333;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+  }
+  h4 {color: #444;}
+  hr {border-color: #444;}
+}
+
+}// END ARTICLE
+
+
+
+
+
