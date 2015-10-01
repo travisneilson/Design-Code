@@ -49,6 +49,22 @@
         &:last-child
           margin-bottom: 0
 
+        .scrollspy
+          display: inline-block
+          position: absolute
+          width: 10px
+          height: 0.6rem
+          opacity: 0
+          margin-left: 5px
+          margin-top: 5.5px
+          background:
+            image: url(/assets/img/back-icon.svg)
+            repeat: no-repeat
+          transition: opacity 150ms ease-in-out
+
+        &.curpos .scrollspy
+          opacity: 1
+
     .email-link
       display: block
       text-align: right
@@ -150,7 +166,8 @@
         align-items: center
 
       .site-nav,
-      .email-link
+      .email-link,
+      .scroll-spy
         display: none
 
       .logo
@@ -162,3 +179,5 @@
     .mobile-nav.is-open
       display: block
       transform: translateY(0%)
+
+
