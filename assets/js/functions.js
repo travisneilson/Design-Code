@@ -21,12 +21,11 @@ function smoothScroll (duration) {
 
 	    var target = $( $(this).attr('href') );
 
-      if( target.length ) {
-        event.preventDefault();
-
-        $('html, body').animate({
-         scrollTop: target.offset().top
-        }, duration);
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
 	    }
 	});
 }
@@ -78,42 +77,7 @@ $(window).scroll(function() {
   youtubeVidScroll();
   //startMentoring();
   startArticles();
-  scrollSpy();
 });
-
-function scrollSpy() {
-  var scrollTop = $(window).scrollTop(),
-      wheight = $(window).height(),
-      anchor = $('.scrollspy').parent(),
-      buffer = 50, //defines the bufferarea for the first and last element
-      bottom = $(document).height() - buffer,
-      showPoint = 0.6; //element is 40% in the window
-
-  if (scrollTop > buffer && (scrollTop + wheight) < bottom) {
-
-    anchor.each(function() {
-    var href = $(this).attr('href'),
-        scrollSpyElm = $(href),
-        elmHeight = scrollSpyElm.height(),
-        offSet = scrollSpyElm.offset().top,
-        startPoint = (offSet - (scrollTop + wheight * showPoint)),
-        endPoint = ((offSet + elmHeight) + (scrollTop + wheight * (1 - showPoint))),
-        parent = $(this).parent();
-        
-        if(startPoint <= 0 && endPoint >= 0) {
-          parent.addClass('curpos').siblings().removeClass('curpos');
-        }
-    })
-
-  } else if (scrollTop <= buffer) {
-
-    $('a[href="#about"]').parent().addClass('curpos').siblings().removeClass('curpos');
-
-  } else if ((scrollTop + wheight) >= bottom) {
-
-    $('a[href="#contact"]').parent().addClass('curpos').siblings().removeClass('curpos');
-  }
-}
 
 
 function youtubeVidScroll() {
