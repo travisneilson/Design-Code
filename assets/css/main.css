@@ -892,6 +892,7 @@ section.youtube {
     @media (max-width: 640px) {
       section.youtube .col-1 {
         height: auto;
+        display: block;
         padding: 50px 20px; }
         section.youtube .col-1:last-child {
           padding: 0px 20px 50px; } }
@@ -975,6 +976,11 @@ section.mentoring {
 section.articles {
   background-image: url(../img/article-bg.jpg);
   background-repeat: repeat; }
+  .home-sections section.articles {
+    padding: 0; }
+    @media (max-width: 640px) {
+      .home-sections section.articles {
+        padding-bottom: 50px; } }
   section.articles .col-1 {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -982,15 +988,16 @@ section.articles {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media (max-width: 640px) {
+      section.articles .col-1 {
+        display: block; } }
   section.articles .home-cta {
     color: white;
     background: #3d96cb; }
-  section.articles .article-wrap {
-    margin: -50px 0; }
-    section.articles .article-wrap::after {
-      clear: both;
-      content: "";
-      display: table; }
+  section.articles .article-wrap::after {
+    clear: both;
+    content: "";
+    display: table; }
   section.articles .article-thumb {
     display: block;
     background-size: cover;

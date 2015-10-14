@@ -3,16 +3,25 @@ section.articles
     image: url(../img/article-bg.jpg)
     repeat: repeat
 
+  .home-sections &
+    padding: 0
+
+    @media (max-width: 640px)
+      padding-bottom: 50px
+
   .col-1
     display: flex
     align-items: center
+
+    @media (max-width: 640px)
+      display: block
 
   .home-cta
     color: white
     background: #3d96cb
 
   .article-wrap
-    margin: -50px 0
+    //margin: -50px 0
     +clearfix
 
   .article-thumb
