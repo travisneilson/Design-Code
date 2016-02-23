@@ -9,12 +9,12 @@
   "author": "Shane Osbourne",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.8.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-jade": "^1.0.1",
-    "gulp-sass": "^2.0.4"
-  },
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-jade": "^1.0.1",
+    "gulp-sass": "^2.0.4"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
