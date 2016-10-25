@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> {% if page.title %} {{ page.title }} @ {% endif %} TN</title>
+    <title>{% if page.title == 'TRAVIS NEILSON . COM' %}{{ page.title }}{% else %}{% if page.title %} {{ page.title }} @ {% endif %} TN{% endif %}</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/assets/css/main.css">
     {% if page.type =="post" %}{{ page.styles }}{% endif %}
