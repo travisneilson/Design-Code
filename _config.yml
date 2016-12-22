@@ -1,7 +1,13 @@
 name: Travis Neilson
 markdown: redcarpet
-exclude: ["node_modules",
+
+# Excludes and Includes
+exclude: [
+  "node_modules",
   "gulpfile.js",
   "package.json",
   "preview.jpg",
-  "README.md"]
+  "README.md",
+  "assets/css"
+]
+keep_files: ["assets/css/main.css"]
