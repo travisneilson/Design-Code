@@ -42,7 +42,7 @@ function designBGStuff() {
 }
 
 function articleTada(){
-  var randNum = Math.floor(Math.random() * $('.article-thumb').length) +1
+  var randNum = Math.floor(Math.random() * $('.article-thumb').length);
   $('.article-thumb').eq(randNum).addClass('is-emph')
     .siblings().removeClass('is-emph');
 }
