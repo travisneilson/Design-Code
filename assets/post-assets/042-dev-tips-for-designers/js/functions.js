@@ -1,4 +1,0 @@
-$(function() {
-  $(".content.vid").fitVids();  
-});
-
