@@ -1,13 +1,22 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#skills") Skills
+    li: a(href="#projects") Projects
+    li: a(href="#contact") Contact
+
+.mobile-nav
+  
+
 header
   .header-position
     h1.logo James Stone
     
     nav.site-nav
-      ul
-        li: a(href="#about") About
-        li: a(href="#skills") Skills
-        li: a(href="#projects") Projects
-        li: a(href="#contact") Contact
+      +nav-content()
+
     
     a(href="mailto:jamesdanstone@gmail.com").email-link +email me
+    
+    .mobile-nav-toggle: span
   

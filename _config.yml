@@ -1,4 +1,4 @@
-name: Travis Neilson
+name: James Stone
 markdown: redcarpet
 exclude: ["node_modules",
   "gulpfile.js",

@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+serif:400,400italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -371,7 +372,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .large, h2 {
   font-size: 42px;
-  line-height: 1.14; }
+  line-height: 2.14; }
+
+.dark, h2 {
+  color: black; }
+
+.light, h2 {
+  color: white; }
 
 .bigger, h3 {
   font-size: 26px;
@@ -443,6 +450,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+h2 {
+  font-family: 'Merriweather', serif; }
+
 .home-wrap header {
   width: 135px;
   background: white;
@@ -459,15 +469,20 @@ body {
         flex-direction: column;
     -ms-flex-pack: justify;
         justify-content: space-between; }
+  .home-wrap header a {
+    color: #999; }
+    .home-wrap header a:hover, .home-wrap header a:active {
+      color: #666; }
   .home-wrap header .logo {
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap;
+    max-width: 135px;
     background-image: url(/assets/img/logo-js.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 71px;
+    height: 80px;
     padding: 0;
     margin: 0; }
   .home-wrap header .site-nav ul {
@@ -475,16 +490,142 @@ body {
     margin: 20px 0;
     padding: 0 20px 0 0;
     text-align: right; }
-    .home-wrap header .site-nav ul li {
-      margin-bottom: 10px; }
-      .home-wrap header .site-nav ul li:last-child {
-        margin-bottom: 0; }
+  .home-wrap header .site-nav li {
+    margin-bottom: 10px; }
+    .home-wrap header .site-nav li:last-child {
+      margin-bottom: 0; }
   .home-wrap header .email-link {
     display: block;
     text-align: right;
-    padding: 0 20px 0 0; }
+    padding-right: 20px; }
+  .home-wrap header .mobile-nav-toggle {
+    display: none;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer; }
+    .home-wrap header .mobile-nav-toggle:selection {
+      background: transparent; }
+    .home-wrap header .mobile-nav-toggle:-moz-selection {
+      background: transparent; }
+    .home-wrap header .mobile-nav-toggle span,
+    .home-wrap header .mobile-nav-toggle span:before,
+    .home-wrap header .mobile-nav-toggle span:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #333;
+      position: relative;
+      transition: all 0.3s ease-in-out; }
+    .home-wrap header .mobile-nav-toggle span:before {
+      top: 15px; }
+    .home-wrap header .mobile-nav-toggle span:after {
+      top: -17px; }
+    .home-wrap header .mobile-nav-toggle.is-open span {
+      background: transparent; }
+    .home-wrap header .mobile-nav-toggle.is-open span:before,
+    .home-wrap header .mobile-nav-toggle.is-open span:after {
+      transform-origin: center;
+      transform: rotate(45deg);
+      top: 0; }
+    .home-wrap header .mobile-nav-toggle.is-open span:before {
+      transform: rotate(-45deg); }
+
+.home-wrap .mobile-nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  padding: 30px 0 20px;
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out; }
+  .home-wrap .mobile-nav a {
+    color: #999; }
+    .home-wrap .mobile-nav a:hover, .home-wrap .mobile-nav a:active {
+      color: #666; }
+  .home-wrap .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .home-wrap .mobile-nav li {
+    text-align: center;
+    margin-bottom: 10px; }
+
+@media (max-width: 775px) {
+  .home-wrap header {
+    width: auto;
+    padding: 20px 0; }
+    .home-wrap header .header-position {
+      width: auto;
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      -ms-flex-direction: row;
+          flex-direction: row;
+      -ms-flex-align: center;
+          align-items: center; }
+    .home-wrap header .site-nav,
+    .home-wrap header .email-link {
+      display: none; }
+    .home-wrap header .logo {
+      height: 45px; }
+    .home-wrap header .mobile-nav-toggle {
+      display: -ms-flexbox;
+      display: flex; }
+  .home-wrap .mobile-nav.is-open {
+    display: block;
+    transform: translateY(0%); } }
+
+section.skills {
+  background-color: #111c4e; }
 
 .home-wrap {
   display: -ms-flexbox;
   display: flex;
   min-height: 100vh; }
+  @media (max-width: 775px) {
+    .home-wrap {
+      display: block; } }
+
+.home-sections {
+  -ms-flex: 1;
+      flex: 1;
+  /* Flex Classes*/ }
+  .home-sections section {
+    padding: 50px 0; }
+  .home-sections .flex {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row; }
+  .home-sections .flex--center {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .home-sections .flex--space-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .home-sections .order-last {
+    -ms-flex-order: -1;
+        order: -1; }
+
+.col-1 {
+  max-width: 300px;
+  margin: 0 10px; }
+
+.col-2 {
+  max-width: 400px;
+  margin: 0 10px; }
+
+.col-3 {
+  width: 620px;
+  margin: 0 10px; }
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block; }
+  .col-1 .col-2 {
+    max-width: 100%; } }
