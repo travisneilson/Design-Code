@@ -1,0 +1,68 @@
+section.projects
+  padding: 0
+
+  background:
+    color: #ffdbc4
+
+  .home-lead
+    color: black
+    text-align: right
+    margin-left: -100px
+
+  .header-arrow
+    position: absolute
+    background-image: url(/assets/img/Header-arrow.svg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    height: 65px
+    width: 641px
+    padding: 0
+    margin: 0
+    top: 95px
+    right: 0px
+    transform: rotate(180deg)
+
+    @media (max-width:680px)
+      width: 430px
+
+    @media (max-width:430px)
+      width: 300px
+      top: 65px
+
+
+  .quote
+    font-family: Merriweather
+    font-size: 20px
+    color: white
+    padding-top: 40px
+
+    span,
+    span:before,
+    span:after
+      display: inline
+      background: #111c4e
+      padding: 0.25em
+      position: relative
+      left: 0.25em
+      padding-left: 0
+      box-shadow: 0.25em 0 0 #111c4e, 0.25em*-1 0 0 #111c4e
+
+  .flex-video
+    top: 20px
+    position: relative
+    transform: scale(1.3)
+    padding: 0 50px 0
+
+    @media (max-width: 980px)
+      transform: scale(1)
+
+    @media (max-width: 400px)
+      padding: 0 20px 0
+
+  .col-2
+    position: relative
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    justify-content: center
