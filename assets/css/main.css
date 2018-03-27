@@ -593,9 +593,19 @@ h2 {
 
 section.skills {
   background-color: #111c4e; }
-  section.skills .home-lead {
-    color: white;
-    padding-bottom: 200px; }
+  section.skills .animation-wrap {
+    margin: 0px;
+    height: 100%;
+    overflow: hidden; }
+  section.skills #lottie {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    text-align: center;
+    opacity: 1; }
 
 section.cta {
   background-color: #EEE; }
@@ -670,6 +680,8 @@ section.projects {
         height: auto;
         display: block;
         padding: 5px 5px; } }
+  section.projects .col-2.order-last {
+    width: 400px; }
 
 .home-wrap {
   display: -ms-flexbox;
