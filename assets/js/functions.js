@@ -5,7 +5,7 @@ var params = {
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'data.json'
+  path: 'assets/js/data.json'
 };
 
 var anim;

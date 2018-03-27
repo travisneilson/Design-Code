@@ -592,13 +592,13 @@ h2 {
     transform: translateY(0%); } }
 
 section.skills {
+  padding: 0;
   background-color: #111c4e; }
   section.skills .animation-wrap {
     margin: 0px;
     height: 100%;
     overflow: hidden; }
   section.skills #lottie {
-    background-color: #fff;
     width: 100%;
     height: 100%;
     display: block;
