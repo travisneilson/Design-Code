@@ -554,7 +554,7 @@ h2 {
     text-align: center;
     margin-bottom: 10px; }
 
-@media (max-width: 775px) {
+@media (max-width: 820px) {
   .home-wrap header {
     width: auto;
     padding: 20px 0; }
