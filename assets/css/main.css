@@ -489,7 +489,7 @@ h2 {
     text-indent: 101%;
     white-space: nowrap;
     max-width: 135px;
-    background-image: url(/assets/img/logo-js.svg);
+    background-image: url("/assets/img/logo-js.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -625,7 +625,7 @@ section.projects {
     margin-left: -100px; }
   section.projects .header-arrow {
     position: absolute;
-    background-image: url(/assets/img/Header-arrow.svg);
+    background-image: url("/assets/img/Header-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
