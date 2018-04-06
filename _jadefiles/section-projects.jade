@@ -1,10 +1,3 @@
-mixin thumb
-  a(href="" style="background-image: url('assets/img/test-image400x400.jpg')").project-thumb
-    .project-meta
-      .title project title
-      .description A bit about each project
-      .tools Photoshop, Illustrator, XD
-
 
 section.projects
   .flex.flex--center
@@ -30,11 +23,10 @@ section.projects
   .flex.flex--center.portfolio
     
     .col-4.portfolio-wrap
-      +thumb
-      +thumb
-      +thumb
-      +thumb
-      +thumb
-      +thumb
-      +thumb
-      +thumb
+      | {% for project in site.projects %}
+      a(href="" style="background-image: url({{project.image}})").project-thumb
+        .project-meta
+          .title {{project.title}}
+          .description {{project.description}}
+          .tools {{project.tools}}s
+      | {% endfor %}
