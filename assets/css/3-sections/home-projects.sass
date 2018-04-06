@@ -1,0 +1,158 @@
+section.projects
+  padding: 0
+
+  background:
+    color: #ffdbc4
+
+  .col-4.flex-end
+    display: flex
+    justify-content: flex-end
+    position: relative
+    text-align: right
+    margin-left: 480px
+
+    @media (max-width: 980px)
+      margin-left: 310px
+
+    @media (max-width: 980px)
+      margin-left: 310px
+
+  .home-lead
+    color: black
+    text-align: right
+    white-space: nowrap
+
+  .header-arrow
+    position: absolute
+    background-image: url('../img/Header-arrow.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    height: 65px
+    width: 641px
+    padding: 0
+    margin: 0
+    top: 95px
+    right: 0px
+    transform: rotate(180deg)
+
+    @media (max-width:680px)
+      width: 400px
+
+    @media (max-width:420px)
+      width: 350px
+      top: 68px
+
+
+  .quote
+    font-family: Merriweather
+    font-size: 20px
+    color: white
+    padding-top: 40px
+
+    span,
+    span:before,
+    span:after
+      display: inline
+      background: #111c4e
+      padding: 0.25em
+      position: relative
+      left: 0.25em
+      padding-left: 0
+      box-shadow: 0.25em 0 0 #111c4e, 0.25em*-1 0 0 #111c4e
+
+  .flex-video
+    transform: scale(1)
+
+    @media (max-width:680px)
+      transform: scale(0.9)
+      right: 15px
+      top: 0
+
+  .col-2
+    position: relative
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    justify-content: center
+
+    @media (max-width: 680px)
+      height: auto
+      display: block
+
+  .col-2.order-last
+    width: 400px
+    justify-content: start
+
+    @media (max-width: 680px)
+      width: 100%
+
+  .project-thumb
+    display: block
+    background-size: cover
+    width: 47.5%
+    min-width: 0%
+    float: left
+    position: relative
+    margin: 10px
+    overflow: hidden
+
+    @media (max-width: 980px)
+      width: 46%
+      margin: 10px 10px 10px 16.4px
+
+    @media (max-width: 680px)
+      width: 92%
+      margin: 50px 7px
+      float: none
+
+    @media (max-width: 400px)
+      width: 95%
+      margin: 50px 0px
+
+    &:after
+      content: ' '
+      display: block
+      padding-top: 100%
+
+  .project-meta
+    position: absolute
+    color: white
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: fade-out(#FF6C0C, 0.2)
+    padding: 30px
+    opacity: 0
+    transform: scale(1.4)
+    transition: all 200ms ease-in-out
+
+
+    .title
+      font-size: 26px
+      padding-bottom: 10px
+
+    .description
+      padding-bottom: 10px
+
+  .project-thumb:hover .project-meta
+    opacity: 1
+    transform: scale(1)
+
+
+  .col-4.portfolio-wrap
+    left: 50%
+    top: 2%
+    transform: translate(-51.2%,0)
+    position: relative
+    max-width: 840px
+
+    a:nth-child(odd)
+      top: -100px
+
+      @media (max-width: 680px)
+        top: 0
+
+  .flex.flex--center.portfolio
+    flex-direction: column
