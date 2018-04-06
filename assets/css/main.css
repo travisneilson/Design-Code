@@ -743,7 +743,7 @@ section.projects {
     padding: 30px;
     opacity: 0;
     transform: scale(1.4);
-    transition: all 200ms ease-in-out; }
+    transition: all 400ms ease-in-out; }
     section.projects .project-meta .title {
       font-size: 26px;
       padding-bottom: 10px; }
