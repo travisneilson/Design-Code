@@ -1,0 +1,22 @@
+section.contact
+  .flex.flex--center
+    .col-3.flex-start
+      .header-arrow
+      h2.large.home-lead I would love
+        br
+        |to hear from you
+  .flex.flex--center
+    .col-3
+      .form-wrap
+        form(action="//formspree.io/jamesdanstone@gmail.com", name="contact", method="post")
+          div.input
+              span.label Name
+              input(type="text", name="name")
+          div.input
+              span.label Email
+              input(type="text", name="_replyto")
+          div.input
+              span.label Message
+              textarea(name="message", cols="40", rows="5")
+          div.actions
+              input(type="submit", value="send")

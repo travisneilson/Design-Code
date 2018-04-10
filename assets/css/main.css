@@ -709,25 +709,17 @@ section.projects {
   section.projects .project-thumb {
     display: block;
     background-size: cover;
-    width: 47.5%;
+    width: calc(50% - 20px);
     min-width: 0%;
     float: left;
     position: relative;
     margin: 10px;
     overflow: hidden; }
-    @media (max-width: 980px) {
-      section.projects .project-thumb {
-        width: 46%;
-        margin: 10px 10px 10px 16.4px; } }
     @media (max-width: 680px) {
       section.projects .project-thumb {
-        width: 92%;
-        margin: 50px 7px;
+        width: calc(100% - 20px);
+        margin: 50px 0;
         float: none; } }
-    @media (max-width: 400px) {
-      section.projects .project-thumb {
-        width: 95%;
-        margin: 50px 0px; } }
     section.projects .project-thumb:after {
       content: ' ';
       display: block;
@@ -742,16 +734,16 @@ section.projects {
     background: rgba(255, 108, 12, 0.8);
     padding: 30px;
     opacity: 0;
-    transform: scale(1.4);
     transition: all 400ms ease-in-out; }
     section.projects .project-meta .title {
       font-size: 26px;
       padding-bottom: 10px; }
     section.projects .project-meta .description {
-      padding-bottom: 10px; }
+      padding: 0 45px 10px 0; }
+    section.projects .project-meta .tools {
+      padding: 0 45px 10px 0; }
   section.projects .project-thumb:hover .project-meta {
-    opacity: 1;
-    transform: scale(1); }
+    opacity: 1; }
   section.projects .col-4.portfolio-wrap {
     left: 50%;
     top: 2%;
@@ -766,6 +758,43 @@ section.projects {
   section.projects .flex.flex--center.portfolio {
     -ms-flex-direction: column;
         flex-direction: column; }
+
+section.contact {
+  background-color: #111c4e; }
+  section.contact .col-3.flex-start {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    position: relative;
+    text-align: left;
+    margin-right: 320px; }
+    @media (max-width: 980px) {
+      section.contact .col-3.flex-start {
+        margin-right: 310px; } }
+  section.contact .home-lead {
+    color: white;
+    text-align: left;
+    white-space: nowrap; }
+  section.contact .header-arrow {
+    position: absolute;
+    background-image: url("../img/Header-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 65px;
+    width: 600px;
+    padding: 0;
+    margin: 0;
+    top: 95px;
+    left: 0px; }
+    @media (max-width: 680px) {
+      section.contact .header-arrow {
+        width: 400px; } }
+    @media (max-width: 420px) {
+      section.contact .header-arrow {
+        width: 350px;
+        top: 68px; } }
 
 .home-wrap {
   display: -ms-flexbox;
