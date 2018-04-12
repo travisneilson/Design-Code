@@ -4,15 +4,18 @@ section.projects
   background:
     color: #ffdbc4
 
+  .flex.flex--center.project-header
+    justify-content: center
+
+    @media (max-width: 980px)
+      justify-content: flex-end
+
   .col-4.flex-end
     display: flex
     justify-content: flex-end
     position: relative
     text-align: right
     margin-left: 480px
-
-    @media (max-width: 980px)
-      margin-left: 310px
 
     @media (max-width: 980px)
       margin-left: 310px
@@ -65,8 +68,6 @@ section.projects
     transform: scale(1)
 
     @media (max-width:680px)
-      transform: scale(0.9)
-      right: 15px
       top: 0
 
   .col-2
@@ -85,7 +86,7 @@ section.projects
     justify-content: start
 
     @media (max-width: 680px)
-      width: 100%
+      width: auto
 
   .project-thumb
     display: block
@@ -98,9 +99,12 @@ section.projects
     overflow: hidden
 
     @media (max-width: 680px)
-      width: calc(100% - 20px)
+      width: calc(100% - 8px)
       margin: 50px 0
       float: none
+
+    @media (max-width:420px)
+      width: calc(100% - 10px)
 
     &:after
       content: ' '

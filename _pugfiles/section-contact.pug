@@ -11,12 +11,12 @@ section.contact
         form(action="//formspree.io/jamesdanstone@gmail.com", name="contact", method="post")
           div.input
               span.label Name
-              input(type="text", name="name")
+              input(id="name", class="form-input", type="text", name="name")
           div.input
               span.label Email
-              input(type="text", name="_replyto")
+              input(id="email", class="form-input", type="text", name="_replyto")
           div.input
               span.label Message
-              textarea(name="message", cols="40", rows="5")
+              textarea(id="message", class="form-input", name="message", cols="40", rows="5")
           div.actions
-              input(type="submit", value="send")
+              input(id="submit", type="submit", value="send")
