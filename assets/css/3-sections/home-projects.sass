@@ -4,15 +4,18 @@ section.projects
   background:
     color: #ffdbc4
 
+  .flex.flex--center.project-header
+    justify-content: center
+
+    @media (max-width: 980px)
+      justify-content: flex-end
+
   .col-4.flex-end
     display: flex
     justify-content: flex-end
     position: relative
     text-align: right
     margin-left: 480px
-
-    @media (max-width: 980px)
-      margin-left: 310px
 
     @media (max-width: 980px)
       margin-left: 310px
@@ -65,8 +68,6 @@ section.projects
     transform: scale(1)
 
     @media (max-width:680px)
-      transform: scale(0.9)
-      right: 15px
       top: 0
 
   .col-2
@@ -85,30 +86,25 @@ section.projects
     justify-content: start
 
     @media (max-width: 680px)
-      width: 100%
+      width: auto
 
   .project-thumb
     display: block
     background-size: cover
-    width: 47.5%
+    width: calc(50% - 20px)
     min-width: 0%
     float: left
     position: relative
     margin: 10px
     overflow: hidden
 
-    @media (max-width: 980px)
-      width: 46%
-      margin: 10px 10px 10px 16.4px
-
     @media (max-width: 680px)
-      width: 92%
-      margin: 50px 7px
+      width: calc(100% - 8px)
+      margin: 50px 0
       float: none
 
-    @media (max-width: 400px)
-      width: 95%
-      margin: 50px 0px
+    @media (max-width:420px)
+      width: calc(100% - 10px)
 
     &:after
       content: ' '
@@ -125,8 +121,7 @@ section.projects
     background: fade-out(#FF6C0C, 0.2)
     padding: 30px
     opacity: 0
-    transform: scale(1.4)
-    transition: all 200ms ease-in-out
+    transition: all 400ms ease-in-out
 
 
     .title
@@ -134,11 +129,13 @@ section.projects
       padding-bottom: 10px
 
     .description
-      padding-bottom: 10px
+      padding: 0 45px 10px 0
+
+    .tools
+      padding: 0 45px 10px 0
 
   .project-thumb:hover .project-meta
     opacity: 1
-    transform: scale(1)
 
 
   .col-4.portfolio-wrap

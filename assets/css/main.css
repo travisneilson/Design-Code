@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic);
-@import url(https://fonts.googleapis.com/css?family=Merriweather+serif:400,400italic);
+@import url("https://fonts.googleapis.com/css?family=Merriweather:900");
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -436,7 +436,6 @@ body {
   min-height: 100vh; }
 
 body {
-  background: #EEE;
   font-size: 14px;
   line-height: 1.6;
   font-family: 'Fira Sans', sans-serif;
@@ -625,6 +624,13 @@ section.cta {
 section.projects {
   padding: 0;
   background-color: #ffdbc4; }
+  section.projects .flex.flex--center.project-header {
+    -ms-flex-pack: center;
+        justify-content: center; }
+    @media (max-width: 980px) {
+      section.projects .flex.flex--center.project-header {
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
   section.projects .col-4.flex-end {
     display: -ms-flexbox;
     display: flex;
@@ -633,9 +639,6 @@ section.projects {
     position: relative;
     text-align: right;
     margin-left: 480px; }
-    @media (max-width: 980px) {
-      section.projects .col-4.flex-end {
-        margin-left: 310px; } }
     @media (max-width: 980px) {
       section.projects .col-4.flex-end {
         margin-left: 310px; } }
@@ -682,8 +685,6 @@ section.projects {
     transform: scale(1); }
     @media (max-width: 680px) {
       section.projects .flex-video {
-        transform: scale(0.9);
-        right: 15px;
         top: 0; } }
   section.projects .col-2 {
     position: relative;
@@ -705,29 +706,24 @@ section.projects {
         justify-content: start; }
     @media (max-width: 680px) {
       section.projects .col-2.order-last {
-        width: 100%; } }
+        width: auto; } }
   section.projects .project-thumb {
     display: block;
     background-size: cover;
-    width: 47.5%;
+    width: calc(50% - 20px);
     min-width: 0%;
     float: left;
     position: relative;
     margin: 10px;
     overflow: hidden; }
-    @media (max-width: 980px) {
-      section.projects .project-thumb {
-        width: 46%;
-        margin: 10px 10px 10px 16.4px; } }
     @media (max-width: 680px) {
       section.projects .project-thumb {
-        width: 92%;
-        margin: 50px 7px;
+        width: calc(100% - 8px);
+        margin: 50px 0;
         float: none; } }
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
       section.projects .project-thumb {
-        width: 95%;
-        margin: 50px 0px; } }
+        width: calc(100% - 10px); } }
     section.projects .project-thumb:after {
       content: ' ';
       display: block;
@@ -742,16 +738,16 @@ section.projects {
     background: rgba(255, 108, 12, 0.8);
     padding: 30px;
     opacity: 0;
-    transform: scale(1.4);
-    transition: all 200ms ease-in-out; }
+    transition: all 400ms ease-in-out; }
     section.projects .project-meta .title {
       font-size: 26px;
       padding-bottom: 10px; }
     section.projects .project-meta .description {
-      padding-bottom: 10px; }
+      padding: 0 45px 10px 0; }
+    section.projects .project-meta .tools {
+      padding: 0 45px 10px 0; }
   section.projects .project-thumb:hover .project-meta {
-    opacity: 1;
-    transform: scale(1); }
+    opacity: 1; }
   section.projects .col-4.portfolio-wrap {
     left: 50%;
     top: 2%;
@@ -766,6 +762,84 @@ section.projects {
   section.projects .flex.flex--center.portfolio {
     -ms-flex-direction: column;
         flex-direction: column; }
+
+section.contact {
+  background-color: #111c4e; }
+  section.contact .col-3.flex-start {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    position: relative;
+    text-align: left;
+    margin-right: 320px; }
+    @media (max-width: 980px) {
+      section.contact .col-3.flex-start {
+        margin-right: 310px; } }
+  section.contact .home-lead {
+    color: white;
+    text-align: left;
+    white-space: nowrap; }
+  section.contact .header-arrow {
+    position: absolute;
+    background-image: url("../img/Header-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 65px;
+    width: 600px;
+    padding: 0;
+    margin: 0;
+    top: 95px;
+    left: 0px; }
+    @media (max-width: 680px) {
+      section.contact .header-arrow {
+        width: 400px; } }
+    @media (max-width: 420px) {
+      section.contact .header-arrow {
+        width: 350px;
+        top: 68px; } }
+  section.contact .form-wrap {
+    position: relative; }
+  section.contact form {
+    width: 660px; }
+    @media (max-width: 680px) {
+      section.contact form {
+        width: auto; } }
+  section.contact .input {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    width: 100%;
+    padding: 10px 0; }
+  section.contact .input:hover .label {
+    opacity: 0.7;
+    font-size: 7px; }
+  section.contact .form-input {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 5px 0; }
+  section.contact .label {
+    position: absolute;
+    text-align: left;
+    padding: 0 5px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    transition: all 200ms ease-in-out; }
+  section.contact #submit {
+    background: none;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 20px; }
 
 .home-wrap {
   display: -ms-flexbox;
@@ -791,6 +865,9 @@ section.projects {
   .home-sections .flex--center {
     -ms-flex-pack: center;
         justify-content: center; }
+  .home-sections .flex--end {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
   .home-sections .flex--space-around {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
