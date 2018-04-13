@@ -551,7 +551,7 @@ h2 {
   background: white;
   padding: 30px 0 20px;
   transform: translateY(-100%);
-  transition: all 0.3s ease-in-out; }
+  transition: all 200ms ease-in-out; }
   .home-wrap .mobile-nav a {
     color: #999; }
     .home-wrap .mobile-nav a:hover, .home-wrap .mobile-nav a:active {
@@ -590,17 +590,17 @@ h2 {
     display: block;
     transform: translateY(0%); } }
 
-section.no-padding.skills {
+section.no-padding.about {
   padding: 0;
   background-color: #111c4e; }
   @media (max-width: 680px) {
-    section.no-padding.skills {
+    section.no-padding.about {
       height: 80vh; } }
-  section.no-padding.skills .animation-wrap {
+  section.no-padding.about .animation-wrap {
     margin: 0px;
     height: 100%;
     overflow: hidden; }
-  section.no-padding.skills #lottie {
+  section.no-padding.about #lottie {
     width: 100%;
     height: 100%;
     display: block;
@@ -609,7 +609,7 @@ section.no-padding.skills {
     text-align: center;
     opacity: 1; }
     @media (max-width: 680px) {
-      section.no-padding.skills #lottie {
+      section.no-padding.about #lottie {
         transform: scale(1.5); } }
 
 section.cta {
@@ -666,6 +666,10 @@ section.projects {
       section.projects .header-arrow {
         width: 350px;
         top: 68px; } }
+    @media (max-width: 380px) {
+      section.projects .header-arrow {
+        width: 250px;
+        top: 40px; } }
   section.projects .quote {
     font-family: Merriweather;
     font-size: 20px;
@@ -799,6 +803,10 @@ section.contact {
       section.contact .header-arrow {
         width: 350px;
         top: 68px; } }
+    @media (max-width: 380px) {
+      section.contact .header-arrow {
+        width: 250px;
+        top: 40px; } }
   section.contact .form-wrap {
     position: relative; }
   section.contact form {
@@ -839,7 +847,10 @@ section.contact {
     width: 100%;
     padding: 10px 0;
     margin-top: 40px;
-    font-size: 20px; }
+    font-size: 20px;
+    transition: all 100ms ease-in-out; }
+    section.contact #submit:hover {
+      background: rgba(255, 255, 255, 0.2); }
 
 .home-wrap {
   display: -ms-flexbox;
@@ -919,6 +930,10 @@ section.contact {
 @media (max-width: 420px) {
   .home-lead {
     font-size: 32px; } }
+
+@media (max-width: 380px) {
+  .home-lead {
+    font-size: 24px; } }
 
 @media (max-width: 680px) {
   p {
