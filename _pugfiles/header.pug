@@ -6,17 +6,16 @@ mixin nav-content()
     li: a(href="#contact") Contact
 
 .mobile-nav
-  
+  +nav-content()
 
 header
   .header-position
     h1.logo James Stone
-    
+
     nav.site-nav
       +nav-content()
 
-    
+
     a(href="mailto:jamesdanstone@gmail.com").email-link +email me
-    
+
     .mobile-nav-toggle: span
-  
