@@ -747,11 +747,25 @@ section.projects {
       font-size: 26px;
       padding-bottom: 10px; }
     section.projects .project-meta .description {
-      padding: 0 45px 10px 0; }
+      padding: 0 45px 10px 0;
+      position: relative;
+      opacity: 0;
+      left: 400px;
+      transition: all 600ms 400ms ease-in-out; }
     section.projects .project-meta .tools {
-      padding: 0 45px 10px 0; }
+      padding: 0 45px 10px 0;
+      position: relative;
+      opacity: 0;
+      left: 400px;
+      transition: all 600ms 1000ms ease-in-out; }
   section.projects .project-thumb:hover .project-meta {
     opacity: 1; }
+  section.projects .project-thumb:hover .description {
+    opacity: 1;
+    left: 0; }
+  section.projects .project-thumb:hover .tools {
+    opacity: 1;
+    left: 0; }
   section.projects .col-4.portfolio-wrap {
     left: 50%;
     top: 2%;
