@@ -39,6 +39,10 @@ section.contact
       width: 350px
       top: 68px
 
+    @media (max-width:380px)
+      width: 250px
+      top: 40px
+
   .form-wrap
     position: relative
 
@@ -53,23 +57,38 @@ section.contact
     justify-content: flex-start
     width: 100%
     padding: 10px 0
+    resize: none
 
   .input:hover .label
+    font-size: 7px
+    padding: 3px 6px
+
+  .input:focus-within .label
     opacity: 0.7
     font-size: 7px
+    padding: 3px 6px
+
+  .input:valid .label
+    opacity: 0.7
+    font-size: 7px
+    padding: 3px 6px
 
 
   .form-input
     display: flex
     width: 100%
-    padding: 5px 0
+    padding: 10px 5px
 
   .label
     position: absolute
     text-align: left
-    padding: 0 5px
+    padding: 10px 5px
     user-select: none
+    top: auto
     transition: all 200ms ease-in-out
+
+  #message
+    resize: none
 
   #submit
     background: none
@@ -81,3 +100,7 @@ section.contact
     padding: 10px 0
     margin-top: 40px
     font-size: 20px
+    transition: all 100ms ease-in-out
+
+    &:hover
+      background: rgba(white, 0.2)

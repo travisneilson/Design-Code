@@ -2,7 +2,7 @@ section.projects
   padding: 0
 
   background:
-    color: #ffdbc4
+    color: seashell
 
   .flex.flex--center.project-header
     justify-content: center
@@ -45,6 +45,10 @@ section.projects
     @media (max-width:420px)
       width: 350px
       top: 68px
+
+    @media (max-width:380px)
+      width: 250px
+      top: 40px
 
 
   .quote
@@ -130,12 +134,30 @@ section.projects
 
     .description
       padding: 0 45px 10px 0
+      position: relative
+      opacity: 0
+      left: 400px
+      transition: all 200ms ease-in-out
 
     .tools
       padding: 0 45px 10px 0
+      position: relative
+      opacity: 0
+      left: 400px
+      transition: all 200ms ease-in-out
 
   .project-thumb:hover .project-meta
     opacity: 1
+
+  .project-thumb:hover .description
+    opacity: 1
+    left: 0
+    transition: all 600ms 400ms ease-in-out
+
+  .project-thumb:hover .tools
+    opacity: 1
+    left: 0
+    transition: all 600ms 1000ms ease-in-out
 
 
   .col-4.portfolio-wrap
