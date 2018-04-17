@@ -57,12 +57,18 @@ section.contact
     justify-content: flex-start
     width: 100%
     padding: 10px 0
+    resize: none
 
   .input:hover .label
     font-size: 7px
     padding: 3px 6px
 
   .input:focus-within .label
+    opacity: 0.7
+    font-size: 7px
+    padding: 3px 6px
+
+  .input:valid .label
     opacity: 0.7
     font-size: 7px
     padding: 3px 6px
@@ -80,6 +86,9 @@ section.contact
     user-select: none
     top: auto
     transition: all 200ms ease-in-out
+
+  #message
+    resize: none
 
   #submit
     background: none
