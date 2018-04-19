@@ -549,7 +549,6 @@ h2 {
   position: absolute;
   width: 100%;
   background: white;
-  padding: 10px  0 0 0;
   transform: translateY(-100%);
   transition: all 400ms ease-in-out; }
   .home-wrap .mobile-nav a {
