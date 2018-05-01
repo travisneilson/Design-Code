@@ -52,40 +52,42 @@ section.contact
     @media (max-width:680px)
       width: auto
 
-  .input
+  .input-wrap
     display: flex
     justify-content: flex-start
     width: 100%
     padding: 10px 0
     resize: none
 
-  .input:hover .label
-    font-size: 7px
-    padding: 3px 6px
-
-  .input:focus-within .label
-    opacity: 0.7
-    font-size: 7px
-    padding: 3px 6px
-
-  .input:valid .label
-    opacity: 0.7
-    font-size: 7px
-    padding: 3px 6px
-
-
   .form-input
+    position: relative
     display: flex
     width: 100%
-    padding: 10px 5px
+    padding: 15px 10px
+    background-color: white
 
-  .label
-    position: absolute
-    text-align: left
-    padding: 10px 5px
-    user-select: none
-    top: auto
-    transition: all 200ms ease-in-out
+    &:focus + label
+      opacity: 1
+      font-size: 9px
+      padding: 3px 12px
+      color: #000
+      font-weight: bold
+
+    &:valid + label
+      opacity: 1
+      font-size: 9px
+      padding: 3px 12px
+      font-weight: bold
+
+  .input-wrap
+    label
+      position: absolute
+      text-align: left
+      color: #777
+      padding: 15px 10px
+      pointer-events: none
+      top: auto
+      transition: all 200ms ease-in-out
 
   #message
     resize: none

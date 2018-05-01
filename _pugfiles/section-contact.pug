@@ -9,14 +9,14 @@ section.contact#contact
     .col-3
       .form-wrap
         form(action="//formspree.io/jamesdanstone@gmail.com", name="contact", method="post")
-          div.input
-              span.label Name
-              input(id="name", class="form-input", type="text", name="name")
-          div.input
-              span.label Email
-              input(id="email", class="form-input", type="text", name="_replyto")
-          div.input
-              span.label Message
-              textarea(id="message", class="form-input", name="message", cols="40", rows="5")
+          div.input-wrap
+              input(id="name", class="form-input", type="text", name="name", required)
+              label Name
+          div.input-wrap
+              input(id="email", class="form-input", type="text", name="_replyto", required)
+              label Email
+          div.input-wrap
+              textarea(id="message", class="form-input", type="text" name="message", cols="40", rows="5", required)
+              label Message
           div.actions
               input(id="submit", type="submit", value="send")

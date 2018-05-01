@@ -833,7 +833,7 @@ section.contact {
     @media (max-width: 680px) {
       section.contact form {
         width: auto; } }
-  section.contact .input {
+  section.contact .input-wrap {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: start;
@@ -841,30 +841,30 @@ section.contact {
     width: 100%;
     padding: 10px 0;
     resize: none; }
-  section.contact .input:hover .label {
-    font-size: 7px;
-    padding: 3px 6px; }
-  section.contact .input:focus-within .label {
-    opacity: 0.7;
-    font-size: 7px;
-    padding: 3px 6px; }
-  section.contact .input:valid .label {
-    opacity: 0.7;
-    font-size: 7px;
-    padding: 3px 6px; }
   section.contact .form-input {
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    padding: 10px 5px; }
-  section.contact .label {
+    padding: 15px 10px;
+    background-color: white; }
+    section.contact .form-input:focus + label {
+      opacity: 1;
+      font-size: 9px;
+      padding: 3px 12px;
+      color: #000;
+      font-weight: bold; }
+    section.contact .form-input:valid + label {
+      opacity: 1;
+      font-size: 9px;
+      padding: 3px 12px;
+      font-weight: bold; }
+  section.contact .input-wrap label {
     position: absolute;
     text-align: left;
-    padding: 10px 5px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    color: #777;
+    padding: 15px 10px;
+    pointer-events: none;
     top: auto;
     transition: all 200ms ease-in-out; }
   section.contact #message {
