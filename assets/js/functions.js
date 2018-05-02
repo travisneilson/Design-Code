@@ -1,4 +1,6 @@
-// skills svg animation
+// -----------------------------------------------------------------------------
+// About svg animation
+// -----------------------------------------------------------------------------
 
 var params = {
   container: document.getElementById('lottie'),
@@ -11,6 +13,7 @@ var params = {
 var anim;
 
 anim = lottie.loadAnimation(params);
+
 
 // -----------------------------------------------------------------------------
 // Global functionality
@@ -66,3 +69,21 @@ anim = lottie.loadAnimation(params);
     });
 
 })(jQuery);
+
+
+// -----------------------------------------------------------------------------
+// headroom.js
+// -----------------------------------------------------------------------------
+
+(function() {
+
+  var elem = document.querySelector("header");
+
+  var headroom  = new Headroom(elem, {
+    'offset': 220,
+    'tolerance': 5
+  });
+
+  headroom.init();
+
+}());

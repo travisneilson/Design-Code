@@ -9,12 +9,12 @@
   "author": "Shane Osbourne",
   "license": "ISC",
   "devDependencies": {
-  "browser-sync": "^2.8.0",
-  "gulp": "^3.9.0",
-  "gulp-autoprefixer": "^2.3.1",
-  "gulp-jade": "^1.0.1",
-  "gulp-sass": "^2.0.4",
-  "gulp-pug": "^4.0.0",
+    "browser-sync": "^2.8.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-jade": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-pug": "^4.0.0"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
+  "dependencies": {
+    "headroom.js": "^0.9.4"
+  }
 }

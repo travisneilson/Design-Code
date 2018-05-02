@@ -14,14 +14,17 @@
   {{ content }}
 
   {% if page.url == "/index.html" %}
+  <script src="{{ "/assets/js/headroom.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/data.json" | relative_url }}"></script>
   <script src="{{ "/assets/js/lottie.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/functions.js" | relative_url }}"></script>
   {% endif %}
 
+  <script src="{{ "/assets/js/headroom.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/data.json" | relative_url }}"></script>
   <script src="{{ "/assets/js/lottie.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/functions.js" | relative_url }}"></script>
+
 
   </body>
 </html>
