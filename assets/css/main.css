@@ -547,7 +547,7 @@ h2 {
 
 .home-wrap .mobile-nav {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: white;
   transform: translateY(-100%);
