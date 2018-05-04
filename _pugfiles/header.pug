@@ -1,5 +1,5 @@
 mixin nav-content()
-  ul
+  ul(class='nav-li')
     li: a(href="#about") About
     li: a(href="#projects") Projects
     li: a(href="#contact") Contact
@@ -7,7 +7,7 @@ mixin nav-content()
 .mobile-nav
   +nav-content()
 
-header(class='header') 
+header(class='header')
   .header-position
     h1.logo James Stone
 

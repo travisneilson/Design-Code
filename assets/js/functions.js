@@ -29,6 +29,15 @@ anim = lottie.loadAnimation(params);
             scrollDuration: 300
         };
 
+    function onMobileNavUlClick (e) {
+        var $this = $(this),
+            $navigation = $('.mobile-nav'),
+            $hamburger = $('.mobile-nav-toggle');
+
+        $navigation.toggleClass('is-open');
+        $hamburger.toggleClass('is-open');
+        }
+
     function onMobileToggleClick (e) {
         var $this = $(this),
             $navigation = $('.mobile-nav');
@@ -55,6 +64,7 @@ anim = lottie.loadAnimation(params);
     function bindings () {
         // Toggle mobile navigation (mobileNav)
         $('.mobile-nav-toggle').on('click', onMobileToggleClick);
+        $('.nav-li').on('click', onMobileNavUlClick);
 
         // Smooth scroll (smoothScroll)
         $('a[href^="#"]').on('click', onBlankLinkClick);
