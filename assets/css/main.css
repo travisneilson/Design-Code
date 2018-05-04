@@ -780,16 +780,28 @@ section.projects {
       opacity: 0;
       left: 400px;
       transition: all 200ms ease-in-out; }
-  section.projects .project-thumb:hover .project-meta {
-    opacity: 1; }
-  section.projects .project-thumb:hover .description {
-    opacity: 1;
-    left: 0;
-    transition: all 600ms 400ms ease-in-out; }
-  section.projects .project-thumb:hover .tools {
-    opacity: 1;
-    left: 0;
-    transition: all 600ms 1000ms ease-in-out; }
+  @media (max-width: 820px) {
+    section.projects .project-thumb:hover, section.projects .project-thumb:active .project-meta {
+      opacity: 1; }
+    section.projects .project-thumb:hover, section.projects .project-thumb:active .description {
+      opacity: 1;
+      left: 0;
+      transition: all 600ms 400ms ease-in-out; }
+    section.projects .project-thumb:hover, section.projects .project-thumb:active .tools {
+      opacity: 1;
+      left: 0;
+      transition: all 600ms 1000ms ease-in-out; } }
+  @media (min-width: 821px) {
+    section.projects .project-thumb:hover .project-meta {
+      opacity: 1; }
+    section.projects .project-thumb:hover .description {
+      opacity: 1;
+      left: 0;
+      transition: all 600ms 400ms ease-in-out; }
+    section.projects .project-thumb:hover .tools {
+      opacity: 1;
+      left: 0;
+      transition: all 600ms 1000ms ease-in-out; } }
   section.projects .col-4.portfolio-wrap {
     left: 50%;
     top: 2%;
@@ -848,7 +860,8 @@ section.contact {
   section.contact .form-wrap {
     position: relative; }
   section.contact form {
-    width: 660px; }
+    width: 660px;
+    padding-bottom: 50px; }
     @media (max-width: 680px) {
       section.contact form {
         width: auto; } }
