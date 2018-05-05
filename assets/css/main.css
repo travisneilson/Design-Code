@@ -741,7 +741,8 @@ section.projects {
     float: left;
     position: relative;
     margin: 10px;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: all 150ms ease-in-out; }
     @media (max-width: 680px) {
       section.projects .project-thumb {
         width: calc(100% - 8px);
@@ -765,21 +766,35 @@ section.projects {
     padding: 30px;
     opacity: 0;
     transition: all 400ms ease-in-out; }
-    section.projects .project-meta .title {
+  section.projects .meta-helper {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    section.projects .meta-helper .title {
       font-size: 26px;
       padding-bottom: 10px; }
-    section.projects .project-meta .description {
+    section.projects .meta-helper .description {
       padding: 0 45px 10px 0;
       position: relative;
       opacity: 0;
-      left: 400px;
+      left: 50%;
       transition: all 200ms ease-in-out; }
-    section.projects .project-meta .tools {
+    section.projects .meta-helper .tools {
       padding: 0 45px 10px 0;
       position: relative;
       opacity: 0;
-      left: 400px;
+      left: 50%;
       transition: all 200ms ease-in-out; }
+    section.projects .meta-helper .project-cta {
+      position: absolute;
+      color: white;
+      bottom: 0;
+      right: 50%;
+      text-decoration: underline;
+      opacity: 0;
+      transition: all 200ms ease-in-out; }
+  section.projects .project-thumb:hover {
+    transform: scale(1.02); }
   section.projects .project-thumb:hover .project-meta {
     opacity: 1; }
   section.projects .project-thumb:hover .description {
@@ -790,16 +805,20 @@ section.projects {
     opacity: 1;
     left: 0;
     transition: all 600ms 1000ms ease-in-out; }
+  section.projects .project-thumb:hover .project-cta {
+    opacity: 1;
+    right: 0;
+    transition: all 600ms 1600ms ease-in-out; }
   section.projects .col-4.portfolio-wrap {
     left: 50%;
     top: 2%;
     transform: translate(-51.2%, 0);
     position: relative;
     max-width: 840px; }
-    section.projects .col-4.portfolio-wrap a:nth-child(odd) {
+    section.projects .col-4.portfolio-wrap .project-thumb:nth-child(odd) {
       top: -100px; }
       @media (max-width: 680px) {
-        section.projects .col-4.portfolio-wrap a:nth-child(odd) {
+        section.projects .col-4.portfolio-wrap .project-thumb:nth-child(odd) {
           top: 0; } }
   section.projects .flex.flex--center.portfolio {
     -ms-flex-direction: column;

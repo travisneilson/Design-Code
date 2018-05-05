@@ -24,10 +24,11 @@ section.projects#projects
 
     .col-4.portfolio-wrap
       | {% for post in site.posts %}
-      a(style="background-image: url({{post.image}})").project-thumb
+      .project-thumb(style="background-image: url({{post.image}})")
         .project-meta
-          .title {{post.title}}
-          .description {{post.description}}
-          .tools {{post.tools}}
-          .project-cta
+          .meta-helper
+            .title {{post.title}}
+            .description {{post.description}}
+            .tools {{post.tools}}
+            a(href="{{post.url}}").project-cta Show me more
       | {% endfor %}
