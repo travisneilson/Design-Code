@@ -1,0 +1,46 @@
+section.social
+  padding: 0
+
+  background:
+    color: #111c4e
+
+  .col-3
+    position: relative
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    justify-content: center
+
+  ul.social-links
+    display: inline-flex
+    padding: 0
+    list-style: none
+
+  li.social-links
+    display: inline
+
+  .icon_stroke
+    fill-opacity: 0
+    stroke: white
+    stroke-miterlimit: 10
+    stroke-width:  4px
+
+  .icon_stroke-social
+    fill-rule: evenodd
+    clip-rule: evenodd
+    stroke: white
+    stroke-width: 4
+    fill: white
+    fill-opacity: 0
+    transform: scale(1)
+    transform-origin: center
+    transition: all 200ms ease-in-out
+
+
+    &:hover
+      fill-opacity: 1
+      stroke-width: 0
+      transform: scale(1.1)
+
+    &:active
+      fill: rbga(255, 255, 255, 0.8)

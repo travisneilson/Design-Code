@@ -31,11 +31,11 @@ webmaster_verifications:
 
 #social links
 instagram:
-behance:
-github:
+behance: https://www.behance.net/jamesdanstb3c3
+github: https://github.com/jamesdanstone
 codepen:
 medium:
-linkedin:
+linkedin: https://www.linkedin.com/in/james-stone-3a9907b2/
 
 #logo
 logo: logo-js.svg
