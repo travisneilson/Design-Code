@@ -952,6 +952,9 @@ section.social {
       -ms-flex-pack: center;
           justify-content: center;
       padding: 0 20px; }
+      @media (max-width: 500px) {
+        section.social ul.social-links li {
+          padding: 0; } }
   section.social .icon_stroke {
     fill-opacity: 0;
     stroke: white;
