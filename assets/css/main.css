@@ -942,28 +942,35 @@ section.social {
     display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 0;
-    list-style: none; }
-  section.social li.social-links {
-    display: inline; }
+    list-style: none;
+    -ms-flex-pack: center;
+        justify-content: center; }
+    section.social ul.social-links li {
+      display: -ms-flexbox;
+      display: flex;
+      width: 30%;
+      -ms-flex-pack: center;
+          justify-content: center;
+      padding: 0 20px; }
   section.social .icon_stroke {
     fill-opacity: 0;
     stroke: white;
     stroke-miterlimit: 10;
-    stroke-width: 4px; }
+    stroke-width: 3px; }
   section.social .icon_stroke-social {
     fill-rule: evenodd;
     clip-rule: evenodd;
     stroke: white;
-    stroke-width: 4;
+    stroke-width: 3;
     fill: white;
     fill-opacity: 0;
     transform: scale(1);
     transform-origin: center;
-    transition: all 200ms ease-in-out; }
+    transition: all 400ms ease-in-out; }
     section.social .icon_stroke-social:hover {
       fill-opacity: 1;
       stroke-width: 0;
-      transform: scale(1.1); }
+      transform: scale(1.05); }
     section.social .icon_stroke-social:active {
       fill: rbga(255, 255, 255, 0.8); }
 

@@ -15,32 +15,37 @@ section.social
     display: inline-flex
     padding: 0
     list-style: none
+    justify-content: center
 
-  li.social-links
-    display: inline
+    li
+      display: flex
+      width: 30%
+      justify-content: center
+      padding: 0 20px
+
 
   .icon_stroke
     fill-opacity: 0
     stroke: white
     stroke-miterlimit: 10
-    stroke-width:  4px
+    stroke-width:  3px
 
   .icon_stroke-social
     fill-rule: evenodd
     clip-rule: evenodd
     stroke: white
-    stroke-width: 4
+    stroke-width: 3
     fill: white
     fill-opacity: 0
     transform: scale(1)
     transform-origin: center
-    transition: all 200ms ease-in-out
+    transition: all 400ms ease-in-out
 
 
     &:hover
       fill-opacity: 1
       stroke-width: 0
-      transform: scale(1.1)
+      transform: scale(1.05)
 
     &:active
       fill: rbga(255, 255, 255, 0.8)
