@@ -1,19 +1,24 @@
 section.about
   padding: 0
+  position: relative
+  height: 100vh
+  overflow-y: hidden
 
   background:
-    color: #111c4e
+    color: seashell
 
   @media (max-width: 680px)
-    height: 80vh
+    height: 100vh
 
   .animation-wrap
     margin: 0px
-    height: 100%
-    overflow: hidden
+    width: 100%
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
 
-    @media (max-width: 820px)
-      padding-top: 85px 
+    @media (max-width: 680px)
+      height: 100%
 
   #lottie
     width: 100%

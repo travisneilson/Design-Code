@@ -611,17 +611,22 @@ h2 {
 
 section.about {
   padding: 0;
-  background-color: #111c4e; }
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: seashell; }
   @media (max-width: 680px) {
     section.about {
-      height: 80vh; } }
+      height: 100vh; } }
   section.about .animation-wrap {
     margin: 0px;
-    height: 100%;
-    overflow: hidden; }
-    @media (max-width: 820px) {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    @media (max-width: 680px) {
       section.about .animation-wrap {
-        padding-top: 85px; } }
+        height: 100%; } }
   section.about #lottie {
     width: 100%;
     height: 100%;
