@@ -11,7 +11,17 @@
   </head>
   <body class="{% if page.home %}home blog logged-in{% endif %} {{ page.type }} {%if page.body-name%}{{ page.body-name }}{% endif %}">
 
+  <div class="home-wrap">
+
+    {% include header.html %}
+
+    <div class="home-sections">
+
       {{ content }}
+
+    </div>
+
+  </div>
 
   {% if page.url == "/index.html" %}
   <script src="{{ "/assets/js/headroom.js" | relative_url }}"></script>
@@ -24,7 +34,3 @@
   <script src="{{ "/assets/js/data.json" | relative_url }}"></script>
   <script src="{{ "/assets/js/lottie.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/functions.js" | relative_url }}"></script>
-
-
-  </body>
-</html>

@@ -450,7 +450,7 @@ h2 {
   height: 0;
   margin-bottom: 0.88889rem;
   overflow: hidden;
-  padding-bottom: 56%;
+  padding-bottom: 55%;
   position: relative; }
 
 .flex-video iframe,
@@ -654,24 +654,20 @@ section.projects {
   section.projects .flex.flex--center.project-header {
     -ms-flex-pack: center;
         justify-content: center; }
-    @media (max-width: 980px) {
-      section.projects .flex.flex--center.project-header {
-        -ms-flex-pack: end;
-            justify-content: flex-end; } }
   section.projects .col-4.flex-end {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
         justify-content: flex-end;
     position: relative;
-    text-align: right;
+    text-align: left;
     margin-left: 480px; }
     @media (max-width: 980px) {
       section.projects .col-4.flex-end {
         margin-left: 310px; } }
   section.projects .home-lead {
     color: black;
-    text-align: right;
+    text-align: center;
     white-space: nowrap; }
   section.projects .header-arrow {
     position: absolute;
@@ -731,12 +727,14 @@ section.projects {
       section.projects .col-2 {
         height: auto;
         display: block; } }
-  section.projects .col-2.order-last {
-    width: 400px;
+  section.projects .col-3.order-last {
+    width: 100%;
     -ms-flex-pack: start;
-        justify-content: start; }
+        justify-content: start;
+    padding-bottom: 50px;
+    /*Added padding to the bottom of video after removing the text for the projects section, remove if ever changed back.*/ }
     @media (max-width: 680px) {
-      section.projects .col-2.order-last {
+      section.projects .col-3.order-last {
         width: auto; } }
   section.projects .project-thumb {
     display: block;
@@ -821,11 +819,9 @@ section.projects {
     transform: translate(-51.2%, 0);
     position: relative;
     max-width: 840px; }
-    section.projects .col-4.portfolio-wrap .project-thumb:nth-child(odd) {
-      top: -100px; }
-      @media (max-width: 680px) {
-        section.projects .col-4.portfolio-wrap .project-thumb:nth-child(odd) {
-          top: 0; } }
+    @media (max-width: 680px) {
+      section.projects .col-4.portfolio-wrap .project-thumb:nth-child(odd) {
+        top: 0; } }
   section.projects .flex.flex--center.portfolio {
     -ms-flex-direction: column;
         flex-direction: column; }
@@ -838,14 +834,13 @@ section.contact {
     -ms-flex-pack: start;
         justify-content: flex-start;
     position: relative;
-    text-align: left;
-    margin-right: 320px; }
+    text-align: center; }
     @media (max-width: 980px) {
       section.contact .col-3.flex-start {
         margin-right: 310px; } }
   section.contact .home-lead {
     color: white;
-    text-align: left;
+    text-align: center;
     white-space: nowrap; }
   section.contact .header-arrow {
     position: absolute;
