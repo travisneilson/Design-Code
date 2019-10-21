@@ -829,15 +829,10 @@ section.projects {
 section.contact {
   background-color: #111c4e; }
   section.contact .col-3.flex-start {
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-pack: start;
         justify-content: flex-start;
     position: relative;
     text-align: center; }
-    @media (max-width: 980px) {
-      section.contact .col-3.flex-start {
-        margin-right: 310px; } }
   section.contact .home-lead {
     color: white;
     text-align: center;
@@ -962,7 +957,7 @@ section.social {
     stroke-width: 3px; }
   section.social .icon_stroke-social {
     fill-rule: evenodd;
-    clip-rule: evenodd;
+    clip-rule: inherit;
     stroke: white;
     stroke-width: 3;
     fill: white;
