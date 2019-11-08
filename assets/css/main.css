@@ -489,13 +489,13 @@ h2 {
     text-indent: 101%;
     white-space: nowrap;
     max-width: 135px;
-    background-image: url("../img/logo-js.svg");
+    background-image: url("../img/JDS_logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 80px;
+    height: 50px;
     padding: 0;
-    margin: 0; }
+    margin: 10px; }
   .home-wrap header .site-nav ul {
     list-style: none;
     margin: 20px 0;
@@ -552,7 +552,7 @@ h2 {
   background-color: white;
   transform: translateY(-100%);
   transition: all 400ms ease-in-out;
-  padding-top: 10px; }
+  padding-top: 15px; }
   .home-wrap .mobile-nav a {
     color: #999; }
     .home-wrap .mobile-nav a:hover, .home-wrap .mobile-nav a:active {
@@ -608,6 +608,28 @@ h2 {
   .home-wrap .headroom--unpinned {
     transform: translateY(-100%);
     width: 100%; } }
+
+Section.temporary {
+  padding: 0;
+  background-color: seashell; }
+  Section.temporary .flex.flex--center.project-header {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  Section.temporary .col-3.flex-start {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    position: relative;
+    text-align: center; }
+    @media (max-width: 820px) {
+      Section.temporary .col-3.flex-start {
+        padding-top: 60px; } }
+  Section.temporary .home-lead {
+    color: black;
+    text-align: left;
+    white-space: normal;
+    font-size: 30px; }
 
 section.about {
   padding: 0;
@@ -727,14 +749,14 @@ section.projects {
       section.projects .col-2 {
         height: auto;
         display: block; } }
-  section.projects .col-3.order-last {
+  section.projects .col-4.order-last {
     width: 100%;
     -ms-flex-pack: start;
         justify-content: start;
     padding-bottom: 50px;
     /*Added padding to the bottom of video after removing the text for the projects section, remove if ever changed back.*/ }
     @media (max-width: 680px) {
-      section.projects .col-3.order-last {
+      section.projects .col-4.order-last {
         width: auto; } }
   section.projects .project-thumb {
     display: block;

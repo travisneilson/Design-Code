@@ -1,36 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> {% if page.title %} {{ page.title }} @ {% endif %} </title>
-    <meta name="viewport" content="width=device-width">
-    <link href="{{ "/assets/css/main.css" | relative_url }}" rel="stylesheet">
-    {% if page.type =="post" %}{{ page.styles }}{% endif %}
-    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-  </head>
-  <body class="{% if page.home %}home blog logged-in{% endif %} {{ page.type }} {%if page.body-name%}{{ page.body-name }}{% endif %}">
+---
+layout: default
+---
+<main class="project">
+	<section id="contact-content">
+		<img id="project-image" src="{{ site.baseurl }}/{{ site.image_path }}/{{ page.image }}">
+		<h1 id="project-title">{{ page.title }}</h1>
+		<h2 id="project-date">{{ page.date }}</h2>
 
-  <div class="home-wrap">
+		{{ content }}
 
-    {% include header.html %}
+	</section>
 
-    <div class="home-sections">
-
-      {{ content }}
-
-    </div>
-
-  </div>
-
-  {% if page.url == "/index.html" %}
-  <script src="{{ "/assets/js/headroom.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/data.json" | relative_url }}"></script>
-  <script src="{{ "/assets/js/lottie.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/functions.js" | relative_url }}"></script>
-  {% endif %}
-
-  <script src="{{ "/assets/js/headroom.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/data.json" | relative_url }}"></script>
-  <script src="{{ "/assets/js/lottie.js" | relative_url }}"></script>
-  <script src="{{ "/assets/js/functions.js" | relative_url }}"></script>
+</main>
