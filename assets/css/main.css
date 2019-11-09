@@ -489,11 +489,11 @@ h2 {
     text-indent: 101%;
     white-space: nowrap;
     max-width: 135px;
-    background-image: url("../img/JDS_logo.svg");
+    background-image: url("../img/james_stone_logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 50px;
+    height: 71px;
     padding: 0;
     margin: 10px; }
   .home-wrap header .site-nav ul {
@@ -552,7 +552,7 @@ h2 {
   background-color: white;
   transform: translateY(-100%);
   transition: all 400ms ease-in-out;
-  padding-top: 15px; }
+  padding-top: 45px; }
   .home-wrap .mobile-nav a {
     color: #999; }
     .home-wrap .mobile-nav a:hover, .home-wrap .mobile-nav a:active {
@@ -588,7 +588,8 @@ h2 {
     .home-wrap header .email-link {
       display: none; }
     .home-wrap header .logo {
-      height: 45px; }
+      height: 80px;
+      max-width: 176px; }
     .home-wrap header .mobile-nav-toggle {
       display: -ms-flexbox;
       display: flex; }
@@ -624,12 +625,12 @@ Section.temporary {
     text-align: center; }
     @media (max-width: 820px) {
       Section.temporary .col-3.flex-start {
-        padding-top: 60px; } }
+        padding-top: 100px; } }
   Section.temporary .home-lead {
     color: black;
-    text-align: left;
+    text-align: center;
     white-space: normal;
-    font-size: 30px; }
+    font-size: 20px; }
 
 section.about {
   padding: 0;
