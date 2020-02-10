@@ -5,9 +5,9 @@
 var params = {
   container: document.getElementById('lottie'),
   renderer: 'svg',
-  loop: true,
+  loop: false,
   autoplay: true,
-  path: 'assets/js/data.json'
+  path: 'assets/js/hello_6.json'
 };
 
 var anim;

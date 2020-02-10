@@ -613,8 +613,15 @@ h2 {
 
 Section.temporary {
   padding: 0;
-  height: 80vh;
+  height: 100vh;
   background-color: #fdfcff; }
+  @media (max-width: 480px) {
+    Section.temporary {
+      height: 80vh; } }
+  @media (max-width: 480px) {
+    Section.temporary {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
   Section.temporary .flex.flex--center.project-header {
     -ms-flex-pack: center;
         justify-content: center; }
@@ -636,28 +643,36 @@ Section.temporary {
   Section.temporary .title {
     text-align: left;
     font-size: 100px;
-    padding-top: 100px;
+    padding-top: 180px;
     color: #5a132b; }
+    @media (max-width: 480px) {
+      Section.temporary .title {
+        padding-top: 100px; } }
+    @media (max-width: 2000px) and (orientation: portrait) {
+      Section.temporary .title {
+        padding: 200px 0; } }
 
-section.about {
+section.hello {
   padding: 0;
-  position: relative;
+  position: absolute;
   height: 100vh;
+  width: 90vw;
   overflow-y: hidden;
-  background-color: seashell; }
+  background-color: none; }
   @media (max-width: 680px) {
-    section.about {
+    section.hello {
       height: 100vh; } }
-  section.about .animation-wrap {
+  section.hello .animation-wrap {
     margin: 0px;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    z-index: 100; }
     @media (max-width: 680px) {
-      section.about .animation-wrap {
+      section.hello .animation-wrap {
         height: 100%; } }
-  section.about #lottie {
+  section.hello #lottie {
     width: 100%;
     height: 100%;
     display: block;
@@ -666,8 +681,11 @@ section.about {
     text-align: center;
     opacity: 1; }
     @media (max-width: 680px) {
-      section.about #lottie {
+      section.hello #lottie {
         transform: scale(1.5); } }
+  @media (max-width: 820px) {
+    section.hello {
+      width: 100vw; } }
 
 section.cta {
   background-color: #EEE; }

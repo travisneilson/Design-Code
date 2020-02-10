@@ -1,11 +1,16 @@
 Section.temporary
   padding: 0
-  height: 80vh
+  height: 100vh
 
+  @media (max-width: 480px)
+    height: 80vh
+
+  @media (max-width: 480px)
+    padding-top: 100px
+    padding-bottom: 100px
 
   background:
     color: #fdfcff
-
 
   .flex.flex--center.project-header
     justify-content: center
@@ -28,39 +33,11 @@ Section.temporary
   .title
     text-align: left
     font-size: 100px
-    padding-top: 100px
+    padding-top: 180px
     color: #5a132b
 
-section.about
-  padding: 0
-  position: relative
-  height: 100vh
-  overflow-y: hidden
+    @media (max-width: 480px)
+      padding-top: 100px
 
-  background:
-    color: seashell
-
-  @media (max-width: 680px)
-    height: 100vh
-
-  .animation-wrap
-    margin: 0px
-    width: 100%
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-
-    @media (max-width: 680px)
-      height: 100%
-
-  #lottie
-    width: 100%
-    height: 100%
-    display: block
-    overflow: hidden
-    transform: translate3d(0,0,0)
-    text-align: center
-    opacity: 1
-
-    @media (max-width: 680px)
-      transform: scale(1.5)
+    @media (max-width: 2000px) and (orientation:portrait)
+      padding: 200px 0
