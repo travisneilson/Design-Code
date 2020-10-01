@@ -47,3 +47,4 @@ gulp.task("deploy", ["jekyll-build"], function () {
 });
 ```
 -->
+*The design and development of this website is truly amazing.*
