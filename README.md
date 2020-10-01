@@ -5,7 +5,7 @@ Working Files for TravisNeilson.com v7
 
 ## System Preparation
 
-To use this starter project, you'll need the following things installed on your machine.
+To use this starter project, you will need the following things installed on your machine.
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
@@ -20,7 +20,7 @@ To use this starter project, you'll need the following things installed on your 
 
 **development mode**
 
-This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
+This will give you file watching, browser synchronization, auto-rebuild, CSS injecting etc etc.
 
 ```shell
 $ gulp
