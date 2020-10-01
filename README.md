@@ -3,7 +3,7 @@ Working Files for TravisNeilson.com v7
 
 ![Project Preview](preview.jpg)
 
-## System Preparation
+## System Preparation for project
 
 To use this starter project, you'll need the following things installed on your machine.
 
