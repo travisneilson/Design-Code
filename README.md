@@ -1,4 +1,4 @@
-Working Files for TravisNeilson.com v7
+Working Files for TravisNeilson.com v7  - An amazing Project
 =============================
 
 ![Project Preview](preview.jpg)
