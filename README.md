@@ -5,7 +5,7 @@ Working Files for TravisNeilson.com v7
 
 ## System Preparation
 
-To use this starter project, you'll need the following things installed on your machine.
+To use this starter project, you'll need the following things installed on your system.
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
