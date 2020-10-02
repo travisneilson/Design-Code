@@ -13,7 +13,7 @@ To use this starter project, you'll need the following things installed on your 
 
 ## Local Installation
 
-1. Clone this repo, or download it into a directory of your choice.
+1. Clone this repository, or download it into a directory of your choice.
 2. Inside the directory, run `npm install`.
 
 ## Usage
