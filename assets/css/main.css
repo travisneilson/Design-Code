@@ -8,15 +8,16 @@
 html {
   font-family: sans-serif;
   /* 1 */
-  -ms-text-size-adjust: 100%;
+  -ms-text-size-adjust: 90%;
   /* 2 */
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 90%;
   /* 2 */ }
 
 /**
  * Remove default margin.
  */
 body {
+  box sizing:border box;
   margin: 0; }
 
 /* HTML5 display definitions
@@ -92,7 +93,7 @@ a:hover {
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 abbr[title] {
-  border-bottom: 1px dotted; }
+  border-bottom: 2px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
