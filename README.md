@@ -29,6 +29,7 @@ $ gulp
 **jekyll**
 
 As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
+One of the best guide towards web design.
 
 
 <!--
