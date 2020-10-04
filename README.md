@@ -18,7 +18,7 @@ To use this starter project, you'll need the following things installed on your 
 
 ## Usage
 
-**Development project**
+##Development project
 
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
